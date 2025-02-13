@@ -93,13 +93,19 @@ function generateHTML(data) {
                     margin-top: 20px;
                 }
                 .box:hover {
-                    background-color: #ADC9D1;
+                    background-color: #85A1AE;
                 }
                 .hidden {
                     display: none;
                 }
                 .visible {
                     display: block;
+                }
+                .slider-container {
+                    margin-top: 20px;
+                }
+                .slider {
+                    width: 100%;
                 }
             </style>
         </head>
@@ -109,19 +115,35 @@ function generateHTML(data) {
             <div class="container">
                 <div class="box" id="infoBox">
                     <h2>Duscha kortare</h2>
-                    <p id="moreInfo" class="hidden">Genom att duscha kortare kan du spara vatten och energi. Det är bra för både miljön och din plånbok!</p>
+                    <p id="moreInfo" class="hidden">
+                        Du sparar ungefär <span id="waterSavings">56</span> liter vatten per vecka genom att duscha kortare.
+                    </p>
+                    <div class="slider-container hidden" id="sliderContainer">
+                        <input type="range" min="0" max="20" value="7" class="slider" id="waterSlider">
+                    </div>
                 </div>
             </div>
             <script>
                 document.getElementById('infoBox').addEventListener('click', function() {
                     var moreInfo = document.getElementById('moreInfo');
+                    var sliderContainer = document.getElementById('sliderContainer');
                     if (moreInfo.classList.contains('hidden')) {
                         moreInfo.classList.remove('hidden');
                         moreInfo.classList.add('visible');
+                        sliderContainer.classList.remove('hidden');
+                        sliderContainer.classList.add('visible');
                     } else {
                         moreInfo.classList.remove('visible');
                         moreInfo.classList.add('hidden');
+                        sliderContainer.classList.remove('visible');
+                        sliderContainer.classList.add('hidden');
                     }
+                });
+
+                document.getElementById('waterSlider').addEventListener('input', function() {
+                    var sliderValue = document.getElementById('waterSlider').value;
+                    var waterSavings = sliderValue * 8;
+                    document.getElementById('waterSavings').innerText = waterSavings;
                 });
             </script>
         </body>
