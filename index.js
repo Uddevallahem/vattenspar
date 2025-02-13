@@ -182,10 +182,10 @@ function generateHTML(data) {
     <div class="box" id="infoBox2">
         <h2>Stäng av kranen</h2>
         <p id="questionDuscha2" class="hidden" style="font-style: italic;">
-            Hur många gånger i veckan stänger ni av kranen medan ni borstar tänderna?
+            Hur många är ni i hushållet?
         </p>
         <div class="slider-container hidden" id="sliderContainer2">
-            <input type="range" min="0" max="20" value="7" class="slider" id="waterSlider2">
+            <input type="range" min="1" max="8" value="7" class="slider" id="waterSlider2">
             <span class="slider-value" id="sliderValue2">7</span>
             <div class="slider-labels">
                 <span>0</span>
@@ -261,13 +261,13 @@ document.getElementById('infoBox2').addEventListener('click', function(event) {
 
             document.getElementById('waterSlider2').addEventListener('input', function() {
                 var slider2 = document.getElementById('waterSlider2');
-                var sliderValue2 = slider2.value; // Ändra till slider2.value
+                var sliderValue2 = slider2.value;
                 var waterSavings2 = sliderValue2 * 8; // Här kan man ändra 8 till vad ekvationen egentligen skall vara
                 document.getElementById('waterSavings2').innerText = waterSavings2;
                 var sliderValueElement2 = document.getElementById('sliderValue2');
-                sliderValueElement2.innerText = sliderValue2; // Ändra till sliderValue2
+                sliderValueElement2.innerText = sliderValue2;
                 var sliderWidth2 = slider2.offsetWidth;
-                var newLeft2 = (sliderValue2 / 20) * sliderWidth2;
+                var newLeft2 = ((sliderValue2 - 1) / 7) * sliderWidth2; // Justera för det nya intervallet 1-8
                 sliderValueElement2.style.left = newLeft2 + 'px';
             });
 
