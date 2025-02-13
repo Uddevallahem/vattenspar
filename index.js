@@ -54,7 +54,7 @@ function generateHTML(data) {
         <head>
             <meta charset="UTF-8">
             <title>Vattenutmaningen</title>
-            <link rel="icon" type="image/x-icon" href="images/favicon.png">
+            <link rel="icon" type="image/x-icon" href="images/favicon.ico">
             <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap" rel="stylesheet">
             <style>
     /* Här är det CSS-kommentarer */
