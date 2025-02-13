@@ -84,7 +84,7 @@ function generateHTML(data) {
                     margin-top: 20px;
                 }
                 .box {
-                    background-color: #4CAF50;
+                    background-color: #446F82;
                     color: white;
                     padding: 20px;
                     border-radius: 5px;
@@ -93,7 +93,7 @@ function generateHTML(data) {
                     margin-top: 20px;
                 }
                 .box:hover {
-                    background-color: #45a049;
+                    background-color: #ADC9D1;
                 }
                 .hidden {
                     display: none;
