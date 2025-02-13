@@ -69,7 +69,7 @@ function generateHTML(data) {
                     font-family: 'Twisted System', sans-serif;
                 }
                 .pokal {
-                    width: 30px;
+                    width: 50px;
                     height: auto;
                 }
             </style>
