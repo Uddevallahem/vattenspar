@@ -143,7 +143,7 @@ function generateHTML(data) {
                             <span>20</span>
                         </div>
                     <p id="moreInfo" class="hidden">
-                        Du sparar ungefär <b><span id="waterSavings">56</span> liter vatten per vecka<b> genom att duscha kortare.
+                        Du sparar ungefär <b><span id="waterSavings">56</span> liter vatten per vecka</b> genom att duscha kortare.
                     </p>
                     </div>
                 </div>
