@@ -57,19 +57,7 @@ function generateHTML(data) {
         </head>
         <body>
             <h1>Vattenutmaningen 🏆</h1>
-            <p><em>(Exempelvis - Kan vi spara 10% tillsammans?)</em></p>
-            <h2>Projektinformation:</h2>
-            <p><strong>Namn:</strong> ${data.name}</p>
-            <p><strong>Version:</strong> ${data.version}</p>
-            <p><strong>Huvudfil:</strong> ${data.main}</p>
-            <h2>Scripts:</h2>
-            <ul>
-                ${Object.entries(data.scripts).map(([key, value]) => `<li><strong>${key}:</strong> ${value}</li>`).join('')}
-            </ul>
-            <h2>Dependencies:</h2>
-            <ul>
-                ${Object.entries(data.dependencies).map(([key, value]) => `<li><strong>${key}:</strong> ${value}</li>`).join('')}
-            </ul>
+            <p>Välkommen till Vattenutmaningen! Här kan vi tillsammans spara vatten och göra en insats för miljön.</p>
         </body>
         </html>
     `;
