@@ -134,7 +134,7 @@ function generateHTML(data) {
                     <p id="moreInfo" class="hidden">
                         Du sparar ungefär <span id="waterSavings">56</span> liter vatten per vecka genom att duscha kortare.
                     </p>
-                    <p id="moreInfo" class="hidden">
+                    <p id="questionDuscha" class="hidden">
                         Hur många gånger i veckan duschar ni?
                     </p>
                     <div class="slider-container hidden" id="sliderContainer">
@@ -152,15 +152,20 @@ function generateHTML(data) {
                 document.getElementById('infoBox').addEventListener('click', function(event) {
                     if (event.target.id !== 'waterSlider') {
                         var moreInfo = document.getElementById('moreInfo');
+                        var questionDuscha = document.getElementById('questionDuscha');
                         var sliderContainer = document.getElementById('sliderContainer');
                         if (moreInfo.classList.contains('hidden')) {
                             moreInfo.classList.remove('hidden');
                             moreInfo.classList.add('visible');
+                            questionDuscha.classList.remove('hidden');
+                            questionDuscha.classList.add('visible');
                             sliderContainer.classList.remove('hidden');
                             sliderContainer.classList.add('visible');
                         } else {
                             moreInfo.classList.remove('visible');
                             moreInfo.classList.add('hidden');
+                            questionDuscha.classList.remove('hidden');
+                            questionDuscha.classList.add('visible');
                             sliderContainer.classList.remove('visible');
                             sliderContainer.classList.add('hidden');
                         }
