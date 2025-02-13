@@ -68,10 +68,15 @@ function generateHTML(data) {
                 h1 {
                     font-family: 'Twisted System', sans-serif;
                 }
+                .pokal {
+                    width: 100px;
+                    height: auto;
+                }
             </style>
         </head>
         <body>
             <h1>Vattenutmaningen 🏆</h1>
+            <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/pokal_blue_ill.png" alt="Pokal" class="pokal">
             <p>Välkommen till Vattenutmaningen! Här kan vi tillsammans spara vatten och göra en insats för miljön.</p>
         </body>
         </html>
