@@ -132,10 +132,7 @@ function generateHTML(data) {
             <div class="container">
                 <div class="box" id="infoBox">
                     <h2>Duscha kortare</h2>
-                    <p id="moreInfo" class="hidden" style="font-style: italic;">
-                        Du sparar ungefär <span id="waterSavings">56</span> liter vatten per vecka genom att duscha kortare.
-                    </p>
-                    <p id="questionDuscha" class="hidden">
+                    <p id="questionDuscha" class="hidden" style="font-style: italic;">
                         Hur många gånger i veckan duschar ni?
                     </p>
                     <div class="slider-container hidden" id="sliderContainer">
@@ -145,6 +142,9 @@ function generateHTML(data) {
                             <span>0</span>
                             <span>20</span>
                         </div>
+                    <p id="moreInfo" class="hidden">
+                        Du sparar ungefär <span id="waterSavings">56</span> liter vatten per vecka genom att duscha kortare.
+                    </p>
                     </div>
                 </div>
             </div>
