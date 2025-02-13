@@ -1,7 +1,10 @@
 name = "vattenutmaningen"
-type = "javascript"
+main = "index.js"
+compatibility_date = "2025-02-13"
 
 account_id = "14feb7c47c7bfc6eea20ab0471fab993"
 workers_dev = true
 
-compatibility_date = "2025-02-13"
+[env.production]
+route = "vila3631.workers.dev/*"
+zone_id = ""
