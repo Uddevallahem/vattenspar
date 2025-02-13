@@ -54,6 +54,21 @@ function generateHTML(data) {
         <head>
             <meta charset="UTF-8">
             <title>Vattenutmaningen 🏆</title>
+            <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap" rel="stylesheet">
+            <style>
+                @font-face {
+                    font-family: 'Twisted System';
+                    src: url('https://raw.githubusercontent.com/uddevallahem/vattenspar/main/fonts/TwistedSystem.otf') format('opentype');
+                    font-weight: normal;
+                    font-style: normal;
+                }
+                body {
+                    font-family: 'Aleo', sans-serif;
+                }
+                h1 {
+                    font-family: 'Twisted System', sans-serif;
+                }
+            </style>
         </head>
         <body>
             <h1>Vattenutmaningen 🏆</h1>
