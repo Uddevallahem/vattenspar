@@ -53,7 +53,7 @@ function generateHTML(data) {
         <html>
         <head>
             <meta charset="UTF-8">
-            <title>Vattenutmaningen 🏆</title>
+            <title>Vattenutmaningen</title>
             <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap" rel="stylesheet">
             <style>
                 @font-face {
@@ -75,8 +75,7 @@ function generateHTML(data) {
             </style>
         </head>
         <body>
-            <h1>Vattenutmaningen 🏆</h1>
-            <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/pokal_blue_ill.png" alt="Pokal" class="pokal">
+            <h1>Vattenutmaningen <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/pokal_blue_ill.png" alt="Pokal" class="pokal"></h1>
             <p>Välkommen till Vattenutmaningen! Här kan vi tillsammans spara vatten och göra en insats för miljön.</p>
         </body>
         </html>
