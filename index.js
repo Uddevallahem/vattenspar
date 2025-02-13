@@ -123,6 +123,29 @@ function generateHTML(data) {
                     justify-content: space-between;
                     margin-top: 10px;
                 }
+                @media (max-width: 600px) {
+                    body {
+                    padding: 10px;
+                    }
+                    .container {
+                    width: 100%;
+                    padding: 10px;
+                    }
+                    .box {
+                    width: 100%;
+                    padding: 15px;
+                    }
+                    .slider-container {
+                    width: 100%;
+                    }
+                    .slider-value {
+                    top: -20px;
+                    font-size: 14px;
+                    }
+                    .slider-labels span {
+                    font-size: 12px;
+                    }
+                }
             </style>
         </head>
         <body>
@@ -150,7 +173,8 @@ function generateHTML(data) {
             </div>
             <script>
 // Här är det JavaScript-kommentarer
-                document.getElementById('infoBox').addEventListener('click', function(event) {
+       
+    document.getElementById('infoBox').addEventListener('click', function(event) {
     if (event.target.id !== 'waterSlider') {
         var moreInfo = document.getElementById('moreInfo');
         var questionDuscha = document.getElementById('questionDuscha');
@@ -165,8 +189,8 @@ function generateHTML(data) {
         } else {
             moreInfo.classList.remove('visible');
             moreInfo.classList.add('hidden');
-            questionDuscha.classList.remove('visible'); // Ta bort 'visible'
-            questionDuscha.classList.add('hidden'); // Lägg till 'hidden'
+            questionDuscha.classList.remove('visible');
+            questionDuscha.classList.add('hidden'); 
             sliderContainer.classList.remove('visible');
             sliderContainer.classList.add('hidden');
         }
