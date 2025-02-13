@@ -123,12 +123,33 @@ function generateHTML(data) {
                     justify-content: space-between;
                     margin-top: 10px;
                 }
+                .progress-container {
+                width: 100%;
+                background-color: #f3f3f3;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                overflow: hidden;
+                margin-bottom: 20px;
+                }
+                .progress-bar {
+                width: 0;
+                height: 30px;
+                background-color: #4caf50;
+                text-align: center;
+                line-height: 30px;
+                color: white;
+                transition: width 0.3s ease;
+                }
             </style>
         </head>
         <body>
 <!-- Här är det HTML-kommentarer -->
             <h1>Vattenutmaningen <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/pokal_blue_ill.png" alt="Pokal" class="pokal"></h1>
             <p>Välkommen till Vattenutmaningen! Här kan vi tillsammans spara vatten och göra en insats för miljön.</p>
+            <h2>Totala besparning för samtliga hyresgäster under 2025:</h2>
+            <div class="progress-container">
+                <div class="progress-bar" id="totalSavingsBar"></div>
+            </div>
             <div class="container">
                 <div class="box" id="infoBox">
                     <h2>Duscha kortare</h2>
@@ -173,18 +194,28 @@ function generateHTML(data) {
         }
     }
 });
+        
+        document.getElementById('waterSlider').addEventListener('input', function() {
+            var slider = document.getElementById('waterSlider');
+            var sliderValue = slider.value;
+            var waterSavings = sliderValue * 8; // Här kan man ändra 8 till vad ekvationen egentligen skall vara
+            document.getElementById('waterSavings').innerText = waterSavings;
+            var sliderValueElement = document.getElementById('sliderValue');
+            sliderValueElement.innerText = sliderValue;
+            var sliderWidth = slider.offsetWidth;
+            var newLeft = (sliderValue / 20) * sliderWidth;
+            sliderValueElement.style.left = newLeft + 'px';
+        });
 
-document.getElementById('waterSlider').addEventListener('input', function() {
-    var slider = document.getElementById('waterSlider');
-    var sliderValue = slider.value;
-    var waterSavings = sliderValue * 8; // Här kan man ändra 8 till vad ekvationen egentligen skall vara
-    document.getElementById('waterSavings').innerText = waterSavings;
-    var sliderValueElement = document.getElementById('sliderValue');
-    sliderValueElement.innerText = sliderValue;
-    var sliderWidth = slider.offsetWidth;
-    var newLeft = (sliderValue / 20) * sliderWidth;
-    sliderValueElement.style.left = newLeft + 'px';
-});
+        document.addEventListener('DOMContentLoaded', function() {
+            var totalSavingsBar = document.getElementById('totalSavingsBar');
+            var maxSavings = 216000000;
+            var currentSavings = 85507000;
+            var progressPercentage = (currentSavings / maxSavings) * 100;
+            totalSavingsBar.style.width = progressPercentage + '%';
+            totalSavingsBar.innerHTML = currentSavings.toLocaleString() + ' / ' + maxSavings.toLocaleString();
+        });
+
             </script>
         </body>
         </html>
