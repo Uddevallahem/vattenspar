@@ -165,8 +165,8 @@ function generateHTML(data) {
                         } else {
                             moreInfo.classList.remove('visible');
                             moreInfo.classList.add('hidden');
-                            questionDuscha.classList.remove('hidden');
                             questionDuscha.classList.add('visible');
+                            questionDuscha.classList.remove('hidden');
                             sliderContainer.classList.remove('visible');
                             sliderContainer.classList.add('hidden');
                         }
