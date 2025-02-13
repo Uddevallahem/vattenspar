@@ -160,25 +160,26 @@ function generateHTML(data) {
                 <div class="progress-bar" id="totalSavingsBar"></div>
                 <p id="savingsText">Ni har tillsammans sparat 85 507 000 liter vatten, fantastiskt jobbat!</p>
             </div>
-            <div class="container">
-               
-                <div class="box" id="infoBox">
-                    <h2>Duscha kortare</h2>
-                    <p id="questionDuscha" class="hidden">
-                        Hur många gånger i veckan duschar ni?
-                    </p>
-                    <div class="slider-container hidden" id="sliderContainer">
-                        <input type="range" min="0" max="20" value="7" class="slider" id="waterSlider">
-                        <span class="slider-value" id="sliderValue">7</span>
-                        <div class="slider-labels">
-                            <span>0</span>
-                            <span>20</span>
-                        </div>
-                    <p id="moreInfo" class="hidden">
-                        Du sparar ungefär <b><span id="waterSavings">56</span> liter vatten per vecka</b> genom att duscha kortare.
-                    </p>
-                    </div>
-                        <div class="box" id="infoBox2">
+         <div class="container">
+    <div class="box" id="infoBox">
+        <h2>Duscha kortare</h2>
+        <p id="questionDuscha" class="hidden">
+            Hur många gånger i veckan duschar ni?
+        </p>
+        <div class="slider-container hidden" id="sliderContainer">
+            <input type="range" min="0" max="20" value="7" class="slider" id="waterSlider">
+            <span class="slider-value" id="sliderValue">7</span>
+            <div class="slider-labels">
+                <span>0</span>
+                <span>20</span>
+            </div>
+            <p id="moreInfo" class="hidden">
+                Du sparar ungefär <b><span id="waterSavings">56</span> liter vatten per vecka</b> genom att duscha kortare.
+            </p>
+        </div>
+    </div>
+
+    <div class="box" id="infoBox2">
         <h2>Stäng av kranen</h2>
         <p id="questionDuscha2" class="hidden" style="font-style: italic;">
             Hur många gånger i veckan stänger ni av kranen medan ni borstar tänderna?
@@ -196,8 +197,7 @@ function generateHTML(data) {
         </div>
     </div>
 </div>
-                </div>
-            </div>
+
             <script>
 // Här är det JavaScript-kommentarer
        
