@@ -76,6 +76,10 @@ function generateHTML(data) {
                 }
                 h1 {
                     font-family: 'Twisted System', sans-serif;
+                        font-size: 36px; /* Justera storleken efter behov */
+                        text-align: center; /* Centrera texten om det behövs */
+                        margin: 20px 0; /* Justera marginalerna efter behov */
+                    }
                 }
                 .pokal {
                     width: 30px;
