@@ -8,3 +8,7 @@ workers_dev = true
 [env.production]
 route = "vila3631.workers.dev/*"
 zone_id = ""
+
+# wrangler.toml (wrangler v3.88.0^)
+[observability.logs]
+enabled = true
