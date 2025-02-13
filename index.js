@@ -140,6 +140,13 @@ function generateHTML(data) {
                 color: white;
                 transition: width 0.3s ease;
                 }
+                #savingsText {
+                   text-align: center;
+                   margin-top: 10px;
+                   font-weight: bold;
+                   color: #4caf50;
+                }
+
             </style>
         </head>
         <body>
@@ -149,6 +156,7 @@ function generateHTML(data) {
             <h2>Totala besparning för samtliga hyresgäster under 2025:</h2>
             <div class="progress-container">
                 <div class="progress-bar" id="totalSavingsBar"></div>
+                <p id="savingsText">Ni har tillsammans sparat 85 507 000 liter vatten, fantastiskt jobbat!</p>
             </div>
             <div class="container">
                 <div class="box" id="infoBox">
