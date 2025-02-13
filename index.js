@@ -64,6 +64,12 @@ function generateHTML(data) {
                 }
                 body {
                     font-family: 'Aleo', sans-serif;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                    margin: 0;
+                    background-color: #f0f0f0;
                 }
                 h1 {
                     font-family: 'Twisted System', sans-serif;
@@ -72,13 +78,52 @@ function generateHTML(data) {
                     width: 30px;
                     height: auto;
                 }
+                .container {
+                    text-align: center;
+                }
+                .box {
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 20px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
+                .box:hover {
+                    background-color: #45a049;
+                }
+                .hidden {
+                    display: none;
+                }
+                .visible {
+                    display: block;
+                }
             </style>
         </head>
         <body>
             <h1>Vattenutmaningen <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/pokal_blue_ill.png" alt="Pokal" class="pokal"></h1>
             <p>Välkommen till Vattenutmaningen! Här kan vi tillsammans spara vatten och göra en insats för miljön.</p>
+            <div class="container">
+                <div class="box" id="infoBox">
+                    <h2>Duscha kortare</h2>
+                    <p id="moreInfo" class="hidden">Genom att duscha kortare kan du spara vatten och energi. Det är bra för både miljön och din plånbok!</p>
+                </div>
+            </div>
+            <script>
+                document.getElementById('infoBox').addEventListener('click', function() {
+                    var moreInfo = document.getElementById('moreInfo');
+                    if (moreInfo.classList.contains('hidden')) {
+                        moreInfo.classList.remove('hidden');
+                        moreInfo.classList.add('visible');
+                    } else {
+                        moreInfo.classList.remove('visible');
+                        moreInfo.classList.add('hidden');
+                    }
+                });
+            </script>
         </body>
         </html>
     `;
     return html;
 }
+
