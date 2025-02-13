@@ -167,8 +167,8 @@ function generateHTML(data) {
             Hur många gånger i veckan duschar ni?
         </p>
         <div class="slider-container hidden" id="sliderContainer">
-            <input type="range" min="0" max="20" value="7" class="slider" id="waterSlider">
-            <span class="slider-value" id="sliderValue">7</span>
+            <input type="range" min="0" max="20" value="0" class="slider" id="waterSlider">
+            <span class="slider-value" id="sliderValue">0</span>
             <div class="slider-labels">
                 <span>0</span>
                 <span>20</span>
@@ -185,11 +185,11 @@ function generateHTML(data) {
             Hur många är ni i hushållet?
         </p>
         <div class="slider-container hidden" id="sliderContainer2">
-            <input type="range" min="1" max="8" value="7" class="slider" id="waterSlider2">
-            <span class="slider-value" id="sliderValue2">7</span>
+            <input type="range" min="1" max="8" value="1" class="slider" id="waterSlider2">
+            <span class="slider-value" id="sliderValue2">1</span>
             <div class="slider-labels">
-                <span>0</span>
-                <span>20</span>
+                <span>1</span>
+                <span>8</span>
             </div>
             <p id="moreInfo2" class="hidden">
                 Du sparar ungefär <span id="waterSavings2">56</span> liter vatten per vecka genom att stänga av kranen.
