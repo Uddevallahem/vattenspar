@@ -259,6 +259,18 @@ document.getElementById('infoBox2').addEventListener('click', function(event) {
             sliderValueElement.style.left = newLeft + 'px';
         });
 
+            document.getElementById('waterSlider2').addEventListener('input', function() {
+                var slider2 = document.getElementById('waterSlider2');
+                var sliderValue2 = slider2.value; // Ändra till slider2.value
+                var waterSavings2 = sliderValue2 * 8; // Här kan man ändra 8 till vad ekvationen egentligen skall vara
+                document.getElementById('waterSavings2').innerText = waterSavings2;
+                var sliderValueElement2 = document.getElementById('sliderValue2');
+                sliderValueElement2.innerText = sliderValue2; // Ändra till sliderValue2
+                var sliderWidth2 = slider2.offsetWidth;
+                var newLeft2 = (sliderValue2 / 20) * sliderWidth2;
+                sliderValueElement2.style.left = newLeft2 + 'px';
+            });
+
         document.addEventListener('DOMContentLoaded', function() {
             var totalSavingsBar = document.getElementById('totalSavingsBar');
             var maxSavings = 216000000;
