@@ -25,14 +25,16 @@ async function handleRequest(request) {
 async function fetchData() {
     try {
         const response = await fetch('https://raw.githubusercontent.com/uddevallahem/vattenspar/main/package.json');
-        const contentType = response.headers.get('content-type');
+        const text = await response.text();
         if (!response.ok) {
             throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
         }
-        if (!contentType || !contentType.includes('application/json')) {
+        // Försök att parsa texten som JSON
+        try {
+            return JSON.parse(text);
+        } catch (error) {
             throw new Error('Received non-JSON response');
         }
-        return await response.json();
     } catch (error) {
         console.error('Error fetching data:', error);
         throw error;
