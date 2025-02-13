@@ -151,39 +151,39 @@ function generateHTML(data) {
             <script>
 // Här är det JavaScript-kommentarer
                 document.getElementById('infoBox').addEventListener('click', function(event) {
-                    if (event.target.id !== 'waterSlider') {
-                        var moreInfo = document.getElementById('moreInfo');
-                        var questionDuscha = document.getElementById('questionDuscha');
-                        var sliderContainer = document.getElementById('sliderContainer');
-                        if (moreInfo.classList.contains('hidden')) {
-                            moreInfo.classList.remove('hidden');
-                            moreInfo.classList.add('visible');
-                            questionDuscha.classList.remove('hidden');
-                            questionDuscha.classList.add('visible');
-                            sliderContainer.classList.remove('hidden');
-                            sliderContainer.classList.add('visible');
-                        } else {
-                            moreInfo.classList.remove('visible');
-                            moreInfo.classList.add('hidden');
-                            questionDuscha.classList.add('hidden');
-                            questionDuscha.classList.remove('hidden');
-                            sliderContainer.classList.remove('visible');
-                            sliderContainer.classList.add('hidden');
-                        }
-                    }
-                });
+    if (event.target.id !== 'waterSlider') {
+        var moreInfo = document.getElementById('moreInfo');
+        var questionDuscha = document.getElementById('questionDuscha');
+        var sliderContainer = document.getElementById('sliderContainer');
+        if (moreInfo.classList.contains('hidden')) {
+            moreInfo.classList.remove('hidden');
+            moreInfo.classList.add('visible');
+            questionDuscha.classList.remove('hidden');
+            questionDuscha.classList.add('visible');
+            sliderContainer.classList.remove('hidden');
+            sliderContainer.classList.add('visible');
+        } else {
+            moreInfo.classList.remove('visible');
+            moreInfo.classList.add('hidden');
+            questionDuscha.classList.remove('visible'); // Ta bort 'visible'
+            questionDuscha.classList.add('hidden'); // Lägg till 'hidden'
+            sliderContainer.classList.remove('visible');
+            sliderContainer.classList.add('hidden');
+        }
+    }
+});
 
-                document.getElementById('waterSlider').addEventListener('input', function() {
-                    var slider = document.getElementById('waterSlider');
-                    var sliderValue = slider.value;
-                    var waterSavings = sliderValue * 8;                                        // Här kan man ändra 8 till vad ekvationen egentligen skall vara
-                    document.getElementById('waterSavings').innerText = waterSavings;
-                    var sliderValueElement = document.getElementById('sliderValue');
-                    sliderValueElement.innerText = sliderValue;
-                    var sliderWidth = slider.offsetWidth;
-                    var newLeft = (sliderValue / 20) * sliderWidth;
-                    sliderValueElement.style.left = newLeft + 'px';
-                });
+document.getElementById('waterSlider').addEventListener('input', function() {
+    var slider = document.getElementById('waterSlider');
+    var sliderValue = slider.value;
+    var waterSavings = sliderValue * 8; // Här kan man ändra 8 till vad ekvationen egentligen skall vara
+    document.getElementById('waterSavings').innerText = waterSavings;
+    var sliderValueElement = document.getElementById('sliderValue');
+    sliderValueElement.innerText = sliderValue;
+    var sliderWidth = slider.offsetWidth;
+    var newLeft = (sliderValue / 20) * sliderWidth;
+    sliderValueElement.style.left = newLeft + 'px';
+});
             </script>
         </body>
         </html>
