@@ -145,6 +145,9 @@ function generateHTML(data) {
                     .slider-labels span {
                     font-size: 12px;
                     }
+                    #questionDuscha {
+                    font-size: 14px; /* Justera textstorleken för mindre skärmar */
+                    }
                 }
             </style>
         </head>
