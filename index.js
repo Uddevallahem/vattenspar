@@ -19,16 +19,22 @@ async function handleRequest(request) {
 }
 
 async function fetchData() {
-    const response = await fetch('https://example.com/data.json');
-    const contentType = response.headers.get('content-type');
-    if (!response.ok) {
-        throw new Error('Failed to fetch data');
+    try {
+        const response = await fetch('https://example.com/data.json');
+        const contentType = response.headers.get('content-type');
+        if (!response.ok) {
+            throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
+        }
+        if (!contentType || !contentType.includes('application/json')) {
+            throw new Error('Received non-JSON response');
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        throw error;
     }
-    if (!contentType || !contentType.includes('application/json')) {
-        throw new Error('Received non-JSON response');
-    }
-    return await response.json();
 }
+
 
 
 function handleError(error) {
@@ -59,15 +65,20 @@ async function handleRequest(request) {
 }
 
 async function fetchData() {
-    const response = await fetch('https://example.com/data.json');
-    const contentType = response.headers.get('content-type');
-    if (!response.ok) {
-        throw new Error('Failed to fetch data');
+    try {
+        const response = await fetch('https://example.com/data.json');
+        const contentType = response.headers.get('content-type');
+        if (!response.ok) {
+            throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
+        }
+        if (!contentType || !contentType.includes('application/json')) {
+            throw new Error('Received non-JSON response');
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        throw error;
     }
-    if (!contentType || !contentType.includes('application/json')) {
-        throw new Error('Received non-JSON response');
-    }
-    return await response.json();
 }
 
 function handleError(error) {
