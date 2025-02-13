@@ -76,7 +76,6 @@ function generateHTML(data) {
                 }
                 h1 {
                     font-family: 'Twisted System', sans-serif;
-                    }
                 }
                 .pokal {
                     width: 30px;
