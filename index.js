@@ -84,7 +84,7 @@ function generateHTML(data) {
                     margin-top: 20px;
                 }
                 .box {
-                    background-color: #4CAF50;
+                    background-color: #446F82;
                     color: white;
                     padding: 20px;
                     border-radius: 5px;
@@ -93,7 +93,7 @@ function generateHTML(data) {
                     margin-top: 20px;
                 }
                 .box:hover {
-                    background-color: #45a049;
+                    background-color: #85A1AE;
                 }
                 .hidden {
                     display: none;
@@ -103,16 +103,23 @@ function generateHTML(data) {
                 }
                 .slider-container {
                     margin-top: 20px;
-                    display: flex;
-                    align-items: center;
+                    position: relative;
+                    width: 100%;
                 }
                 .slider {
                     width: 100%;
-                    margin: 0 10px;
                 }
                 .slider-value {
+                    position: absolute;
+                    top: -25px;
+                    left: 50%;
+                    transform: translateX(-50%);
                     font-weight: bold;
-                    margin-left: 10px;
+                }
+                .slider-labels {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 10px;
                 }
             </style>
         </head>
@@ -126,10 +133,12 @@ function generateHTML(data) {
                         Du sparar ungefär <span id="waterSavings">56</span> liter vatten per vecka genom att duscha kortare.
                     </p>
                     <div class="slider-container hidden" id="sliderContainer">
-                        <span>0</span>
                         <input type="range" min="0" max="20" value="7" class="slider" id="waterSlider">
-                        <span>20</span>
                         <span class="slider-value" id="sliderValue">7</span>
+                        <div class="slider-labels">
+                            <span>0</span>
+                            <span>20</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -153,10 +162,15 @@ function generateHTML(data) {
                 });
 
                 document.getElementById('waterSlider').addEventListener('input', function() {
-                    var sliderValue = document.getElementById('waterSlider').value;
+                    var slider = document.getElementById('waterSlider');
+                    var sliderValue = slider.value;
                     var waterSavings = sliderValue * 8;
                     document.getElementById('waterSavings').innerText = waterSavings;
-                    document.getElementById('sliderValue').innerText = sliderValue;
+                    var sliderValueElement = document.getElementById('sliderValue');
+                    sliderValueElement.innerText = sliderValue;
+                    var sliderWidth = slider.offsetWidth;
+                    var newLeft = (sliderValue / 20) * sliderWidth;
+                    sliderValueElement.style.left = newLeft + 'px';
                 });
             </script>
         </body>
