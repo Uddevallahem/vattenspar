@@ -24,7 +24,7 @@ async function handleRequest(request) {
 
 async function fetchData() {
     try {
-        const response = await fetch('https://raw.githubusercontent.com/<användarnamn>/<repository>/main/package.json');
+        const response = await fetch('https://raw.githubusercontent.com/uddevallahem/vattenspar/main/package.json');
         const contentType = response.headers.get('content-type');
         if (!response.ok) {
             throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
