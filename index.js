@@ -123,33 +123,6 @@ function generateHTML(data) {
                     justify-content: space-between;
                     margin-top: 10px;
                 }
-                @media (max-width: 600px) {
-                    body {
-                    padding: 10px;
-                    }
-                    .container {
-                    width: 100%;
-                    padding: 10px;
-                    }
-                    .box {
-                    width: 100%;
-                    padding: 15px;
-                    }
-                    .slider-container {
-                    width: 100%;
-                    }
-                    .slider-value {
-                    top: -20px;
-                    font-size: 14px;
-                    }
-                    .slider-labels span {
-                    font-size: 12px;
-                    }
-                    #questionDuscha {
-                    font-style: italic;
-                    font-size: 14px; /* Justera textstorleken för mindre skärmar */
-                    }
-                }
             </style>
         </head>
         <body>
@@ -170,7 +143,7 @@ function generateHTML(data) {
                             <span>20</span>
                         </div>
                     <p id="moreInfo" class="hidden">
-                        Du sparar ungefär <span id="waterSavings">56</span> liter vatten per vecka genom att duscha kortare.
+                        Du sparar ungefär <b><span id="waterSavings">56</span> liter vatten per vecka<b> genom att duscha kortare.
                     </p>
                     </div>
                 </div>
