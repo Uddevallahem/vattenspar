@@ -147,7 +147,7 @@ function generateHTML(data) {
                    text-align: center;
                    margin-top: 10px;
                    font-weight: bold;
-                   color: #4caf50;
+                   color: #446F82;
                 }
             </style>
         </head>
