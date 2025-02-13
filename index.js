@@ -56,6 +56,7 @@ function generateHTML(data) {
             <title>Vattenutmaningen</title>
             <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap" rel="stylesheet">
             <style>
+    /* Här är det CSS-kommentarer */
                 @font-face {
                     font-family: 'Twisted System';
                     src: url('https://raw.githubusercontent.com/uddevallahem/vattenspar/main/fonts/TwistedSystem.otf') format('opentype');
@@ -124,6 +125,7 @@ function generateHTML(data) {
             </style>
         </head>
         <body>
+<!-- Här är det HTML-kommentarer -->
             <h1>Vattenutmaningen <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/pokal_blue_ill.png" alt="Pokal" class="pokal"></h1>
             <p>Välkommen till Vattenutmaningen! Här kan vi tillsammans spara vatten och göra en insats för miljön.</p>
             <div class="container">
@@ -143,6 +145,7 @@ function generateHTML(data) {
                 </div>
             </div>
             <script>
+// Här är det JavaScript-kommentarer
                 document.getElementById('infoBox').addEventListener('click', function(event) {
                     if (event.target.id !== 'waterSlider') {
                         var moreInfo = document.getElementById('moreInfo');
