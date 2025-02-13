@@ -20,11 +20,16 @@ async function handleRequest(request) {
 
 async function fetchData() {
     const response = await fetch('https://example.com/data.json');
+    const contentType = response.headers.get('content-type');
     if (!response.ok) {
         throw new Error('Failed to fetch data');
     }
+    if (!contentType || !contentType.includes('application/json')) {
+        throw new Error('Received non-JSON response');
+    }
     return await response.json();
 }
+
 
 function handleError(error) {
     return new Response(`Error: ${error.message}`, {
@@ -34,25 +39,42 @@ function handleError(error) {
 }
 
 addEventListener('fetch', event => {
-    event.respondWith(handleRequest(event.request))
+    event.respondWith(handleRequest(event.request).catch(handleError))
 })
 
 async function handleRequest(request) {
-    const data = await fetchData();
-    const sortedMonth = sortData(data, 'Minskning_månad');
-    const sortedYear = sortData(data, 'Minskning_år');
-    const totalSavings = data[0].Minskning_2025;
+    try {
+        const data = await fetchData();
+        const sortedMonth = sortData(data, 'Minskning_månad');
+        const sortedYear = sortData(data, 'Minskning_år');
+        const totalSavings = data[0].Minskning_2025;
 
-    const html = generateHTML(sortedMonth, sortedYear, totalSavings);
-    return new Response(html, {
-        headers: { 'content-type': 'text/html' },
-    });
+        const html = generateHTML(sortedMonth, sortedYear, totalSavings);
+        return new Response(html, {
+            headers: { 'content-type': 'text/html' },
+        });
+    } catch (error) {
+        return handleError(error);
+    }
 }
 
 async function fetchData() {
-    // Hämta data från en extern källa
     const response = await fetch('https://example.com/data.json');
+    const contentType = response.headers.get('content-type');
+    if (!response.ok) {
+        throw new Error('Failed to fetch data');
+    }
+    if (!contentType || !contentType.includes('application/json')) {
+        throw new Error('Received non-JSON response');
+    }
     return await response.json();
+}
+
+function handleError(error) {
+    return new Response(`Error: ${error.message}`, {
+        status: 500,
+        headers: { 'content-type': 'text/plain' },
+    });
 }
 
 function sortData(data, key) {
