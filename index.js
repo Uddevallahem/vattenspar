@@ -51,7 +51,10 @@ function handleError(error) {
 function generateHTML(data) {
     let html = `
         <html>
-        <head><title>Vattenutmaningen 🏆</title></head>
+        <head>
+            <meta charset="UTF-8">
+            <title>Vattenutmaningen 🏆</title>
+        </head>
         <body>
             <h1>Vattenutmaningen 🏆</h1>
             <p><em>(Exempelvis - Kan vi spara 10% tillsammans?)</em></p>
