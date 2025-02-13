@@ -102,7 +102,7 @@ function generateHTML(data) {
                     display: block;
                 }
                 .slider-container {
-                    margin-top: 20px;
+                    margin-top: 40px;
                     position: relative;
                     width: 100%;
                 }
