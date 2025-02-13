@@ -65,8 +65,9 @@ function generateHTML(data) {
                 body {
                     font-family: 'Aleo', sans-serif;
                     display: flex;
-                    justify-content: center;
+                    flex-direction: column;
                     align-items: center;
+                    justify-content: center;
                     height: 100vh;
                     margin: 0;
                     background-color: #f0f0f0;
@@ -80,6 +81,7 @@ function generateHTML(data) {
                 }
                 .container {
                     text-align: center;
+                    margin-top: 20px;
                 }
                 .box {
                     background-color: #4CAF50;
@@ -88,6 +90,7 @@ function generateHTML(data) {
                     border-radius: 5px;
                     cursor: pointer;
                     transition: all 0.3s ease;
+                    margin-top: 20px;
                 }
                 .box:hover {
                     background-color: #45a049;
@@ -126,4 +129,3 @@ function generateHTML(data) {
     `;
     return html;
 }
-
