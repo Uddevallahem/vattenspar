@@ -146,6 +146,7 @@ function generateHTML(data) {
                     font-size: 12px;
                     }
                     #questionDuscha {
+                    font-style: italic;
                     font-size: 14px; /* Justera textstorleken för mindre skärmar */
                     }
                 }
@@ -158,7 +159,7 @@ function generateHTML(data) {
             <div class="container">
                 <div class="box" id="infoBox">
                     <h2>Duscha kortare</h2>
-                    <p id="questionDuscha" class="hidden" style="font-style: italic;">
+                    <p id="questionDuscha" class="hidden">
                         Hur många gånger i veckan duschar ni?
                     </p>
                     <div class="slider-container hidden" id="sliderContainer">
