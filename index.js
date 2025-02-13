@@ -1,6 +1,6 @@
 addEventListener('fetch', event => {
-    event.respondWith(handleRequest(event.request).catch(handleError))
-})
+    event.respondWith(handleRequest(event.request).catch(handleError));
+});
 
 async function handleRequest(request) {
     try {
@@ -11,53 +11,11 @@ async function handleRequest(request) {
 
         const html = generateHTML(sortedMonth, sortedYear, totalSavings);
         return new Response(html, {
-            headers: { 'content-type': 'text/html' },
-        });
-    } catch (error) {
-        return handleError(error);
-    }
-}
-
-async function fetchData() {
-    try {
-        const response = await fetch('https://example.com/data.json');
-        const contentType = response.headers.get('content-type');
-        if (!response.ok) {
-            throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
-        }
-        if (!contentType || !contentType.includes('application/json')) {
-            throw new Error('Received non-JSON response');
-        }
-        return await response.json();
-    } catch (error) {
-        console.error('Error fetching data:', error);
-        throw error;
-    }
-}
-
-
-
-function handleError(error) {
-    return new Response(`Error: ${error.message}`, {
-        status: 500,
-        headers: { 'content-type': 'text/plain' },
-    });
-}
-
-addEventListener('fetch', event => {
-    event.respondWith(handleRequest(event.request).catch(handleError))
-})
-
-async function handleRequest(request) {
-    try {
-        const data = await fetchData();
-        const sortedMonth = sortData(data, 'Minskning_månad');
-        const sortedYear = sortData(data, 'Minskning_år');
-        const totalSavings = data[0].Minskning_2025;
-
-        const html = generateHTML(sortedMonth, sortedYear, totalSavings);
-        return new Response(html, {
-            headers: { 'content-type': 'text/html' },
+            headers: {
+                'content-type': 'text/html',
+                'Access-Control-Allow-Origin': '*', // Lägg till denna rad
+                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', // Lägg till denna rad
+            },
         });
     } catch (error) {
         return handleError(error);
@@ -84,7 +42,11 @@ async function fetchData() {
 function handleError(error) {
     return new Response(`Error: ${error.message}`, {
         status: 500,
-        headers: { 'content-type': 'text/plain' },
+        headers: {
+            'content-type': 'text/plain',
+            'Access-Control-Allow-Origin': '*', // Lägg till denna rad
+            'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', // Lägg till denna rad
+        },
     });
 }
 
