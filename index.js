@@ -13,8 +13,8 @@ async function handleRequest(request) {
         return new Response(html, {
             headers: {
                 'content-type': 'text/html',
-                'Access-Control-Allow-Origin': '*', // Lägg till denna rad
-                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', // Lägg till denna rad
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
             },
         });
     } catch (error) {
@@ -24,7 +24,7 @@ async function handleRequest(request) {
 
 async function fetchData() {
     try {
-        const response = await fetch('https://example.com/data.json');
+        const response = await fetch('https://raw.githubusercontent.com/<användarnamn>/<repository>/main/package.json');
         const contentType = response.headers.get('content-type');
         if (!response.ok) {
             throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
@@ -44,8 +44,8 @@ function handleError(error) {
         status: 500,
         headers: {
             'content-type': 'text/plain',
-            'Access-Control-Allow-Origin': '*', // Lägg till denna rad
-            'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', // Lägg till denna rad
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
         },
     });
 }
