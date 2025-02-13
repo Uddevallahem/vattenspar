@@ -84,7 +84,7 @@ function generateHTML(data) {
                     margin-top: 20px;
                 }
                 .box {
-                    background-color: #446F82;
+                    background-color: #4CAF50;
                     color: white;
                     padding: 20px;
                     border-radius: 5px;
@@ -93,7 +93,7 @@ function generateHTML(data) {
                     margin-top: 20px;
                 }
                 .box:hover {
-                    background-color: #85A1AE;
+                    background-color: #45a049;
                 }
                 .hidden {
                     display: none;
@@ -103,9 +103,16 @@ function generateHTML(data) {
                 }
                 .slider-container {
                     margin-top: 20px;
+                    display: flex;
+                    align-items: center;
                 }
                 .slider {
                     width: 100%;
+                    margin: 0 10px;
+                }
+                .slider-value {
+                    font-weight: bold;
+                    margin-left: 10px;
                 }
             </style>
         </head>
@@ -119,24 +126,29 @@ function generateHTML(data) {
                         Du sparar ungefär <span id="waterSavings">56</span> liter vatten per vecka genom att duscha kortare.
                     </p>
                     <div class="slider-container hidden" id="sliderContainer">
+                        <span>0</span>
                         <input type="range" min="0" max="20" value="7" class="slider" id="waterSlider">
+                        <span>20</span>
+                        <span class="slider-value" id="sliderValue">7</span>
                     </div>
                 </div>
             </div>
             <script>
-                document.getElementById('infoBox').addEventListener('click', function() {
-                    var moreInfo = document.getElementById('moreInfo');
-                    var sliderContainer = document.getElementById('sliderContainer');
-                    if (moreInfo.classList.contains('hidden')) {
-                        moreInfo.classList.remove('hidden');
-                        moreInfo.classList.add('visible');
-                        sliderContainer.classList.remove('hidden');
-                        sliderContainer.classList.add('visible');
-                    } else {
-                        moreInfo.classList.remove('visible');
-                        moreInfo.classList.add('hidden');
-                        sliderContainer.classList.remove('visible');
-                        sliderContainer.classList.add('hidden');
+                document.getElementById('infoBox').addEventListener('click', function(event) {
+                    if (event.target.id !== 'waterSlider') {
+                        var moreInfo = document.getElementById('moreInfo');
+                        var sliderContainer = document.getElementById('sliderContainer');
+                        if (moreInfo.classList.contains('hidden')) {
+                            moreInfo.classList.remove('hidden');
+                            moreInfo.classList.add('visible');
+                            sliderContainer.classList.remove('hidden');
+                            sliderContainer.classList.add('visible');
+                        } else {
+                            moreInfo.classList.remove('visible');
+                            moreInfo.classList.add('hidden');
+                            sliderContainer.classList.remove('visible');
+                            sliderContainer.classList.add('hidden');
+                        }
                     }
                 });
 
@@ -144,6 +156,7 @@ function generateHTML(data) {
                     var sliderValue = document.getElementById('waterSlider').value;
                     var waterSavings = sliderValue * 8;
                     document.getElementById('waterSavings').innerText = waterSavings;
+                    document.getElementById('sliderValue').innerText = sliderValue;
                 });
             </script>
         </body>
