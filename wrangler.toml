@@ -1,5 +1,7 @@
 name = "vattenutmaningen"
 type = "javascript"
+
 account_id = "14feb7c47c7bfc6eea20ab0471fab993"
 workers_dev = true
-main = "index.js"
+
+compatibility_date = "2025-02-13"
