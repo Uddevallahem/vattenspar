@@ -124,21 +124,24 @@ function generateHTML(data) {
                     margin-top: 10px;
                 }
                 .progress-container {
-                width: 100%;
-                background-color: #f3f3f3;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-                overflow: hidden;
-                margin-bottom: 20px;
+                    width: 100%;
+                    max-width: 600px; /* Sätt en maxbredd för progressbaren */
+                    background-color: #f3f3f3;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    margin-bottom: 20px;
+                    margin: 0 auto; /* Centrera progressbaren */
                 }
+                
                 .progress-bar {
-                width: 0;
-                height: 30px;
-                background-color: #4caf50;
-                text-align: center;
-                line-height: 30px;
-                color: white;
-                transition: width 0.3s ease;
+                    width: 0;
+                    height: 30px;
+                    background-color: #85A1AE;
+                    text-align: center;
+                    line-height: 30px;
+                    color: white;
+                    transition: width 0.3s ease;
                 }
                 #savingsText {
                    text-align: center;
@@ -146,7 +149,6 @@ function generateHTML(data) {
                    font-weight: bold;
                    color: #4caf50;
                 }
-
             </style>
         </head>
         <body>
@@ -221,7 +223,6 @@ function generateHTML(data) {
             var currentSavings = 85507000;
             var progressPercentage = (currentSavings / maxSavings) * 100;
             totalSavingsBar.style.width = progressPercentage + '%';
-            totalSavingsBar.innerHTML = currentSavings.toLocaleString() + ' / ' + maxSavings.toLocaleString();
         });
 
             </script>
