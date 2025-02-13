@@ -167,7 +167,7 @@ function generateHTML(data) {
                 document.getElementById('waterSlider').addEventListener('input', function() {
                     var slider = document.getElementById('waterSlider');
                     var sliderValue = slider.value;
-                    var waterSavings = sliderValue * 8;
+                    var waterSavings = sliderValue * 8;                                        // Här kan man ändra 8 till vad ekvationen egentligen skall vara
                     document.getElementById('waterSavings').innerText = waterSavings;
                     var sliderValueElement = document.getElementById('sliderValue');
                     sliderValueElement.innerText = sliderValue;
