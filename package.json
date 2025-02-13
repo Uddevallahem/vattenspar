@@ -1,0 +1,11 @@
+  "name": "vattenutmaningen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "wrangler dev",
+    "deploy": "wrangler publish"
+  },
+  "dependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
