@@ -188,23 +188,41 @@ function generateHTML(data) {
 <!-- Här är det HTML-kommentarer -->
             <h1>Vattenutmaningen <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/vattendroppar_blue_ill.png" alt="Pokal" class="pokal"></h1>
             <p>Välkommen till Vattenutmaningen! Här kan vi tillsammans spara vatten och göra en insats för miljön.</p>
+
+            
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboards</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</head>
+<body>
     <h1>Leaderboards <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/pokal_blue_ill.png" alt="Pokal" class="pokal"></h1>
-    <div id="monthly-leaderboard">
+    <div id="monthly-leaderboard" class="leaderboard">
         <h2>Topp 3 fastigheter som sparat mest vatten den här månaden</h2>
         <ol id="monthly-list">
-            <li id="monthly-first"> <b><span id="monthly-first1"></b>  &nbsp;</span><span id="monthly-first2"></span> </li>
-            <li id="monthly-second"> <b><span id="monthly-second1"></b>  &nbsp;</span><span id="monthly-second2"></span> </li>
-            <li id="monthly-third"> <b><span id="monthly-third1"></b>  &nbsp;</span><span id="monthly-third2"></span> </li>
+            <li id="monthly-first"> <b><span id="monthly-first1"></b>   </span><span id="monthly-first2"></span> </li>
+            <li id="monthly-second"> <b><span id="monthly-second1"></b>   </span><span id="monthly-second2"></span> </li>
+            <li id="monthly-third"> <b><span id="monthly-third1"></b>   </span><span id="monthly-third2"></span> </li>
         </ol>
     </div>
-    <div id="yearly-leaderboard">
+    <div id="yearly-leaderboard" class="leaderboard">
         <h2>Topp 3 fastigheter som sparat mest vatten det här året (2025)</h2>
         <ol id="yearly-list">
-            <li id="yearly-first"> <b><span id="yearly-first1"></b>  &nbsp; </span><span id="yearly-first2"></span> </li>
-            <li id="yearly-second"> <b><span id="yearly-second1"></b>  &nbsp; </span><span id="yearly-second2"></span> </li>
-            <li id="yearly-third"> <b><span id="yearly-third1"></b>  &nbsp; </span><span id="yearly-third2"></span> </li>
+            <li id="yearly-first"> <b><span id="yearly-first1"></b>    </span><span id="yearly-first2"></span> </li>
+            <li id="yearly-second"> <b><span id="yearly-second1"></b>    </span><span id="yearly-second2"></span> </li>
+            <li id="yearly-third"> <b><span id="yearly-third1"></b>    </span><span id="yearly-third2"></span> </li>
         </ol>
     </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+    
                 <h2>Totala besparning för samtliga hyresgäster under 2025:</h2>
             <div class="progress-container">
                 <div class="progress-bar" id="totalSavingsBar"></div>
