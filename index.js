@@ -142,15 +142,19 @@ function generateHTML(data) {
                     border-radius: 5px;
                     overflow: hidden;
                     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-                    padding-top: 20px; /* Lägg till lite padding från toppen om det behövs */
-
+                    padding-top: 10px; /* Justera padding om det behövs */
                 }
-                   .progress-container h1 {
+                
+                .title-container-progress {
+                    padding-top: 20px; /* Lägger till avstånd ovanför titeln om du vill ha lite luft */
+                }
+                
+                .progress-container h1 {
                     margin: 0; /* Ta bort extra marginaler */
                     font-size: 24px; /* Justera storlek om nödvändigt */
-                    display: flex;
-                    align-items: left; /* Centrera titel och ikon horisontellt */
+                    text-align: center; /* Gör så att titeln centreras */
                 }
+                
                 .progress-bar {
                     width: 0;
                     height: 30px;
@@ -253,11 +257,14 @@ function generateHTML(data) {
 
 
 
-                <div class="progress-container">
-                <h1>Totala besparning för samtliga hyresgäster under 2025:</h1>
-                <div class="progress-bar" id="totalSavingsBar"></div>
-                <p id="savingsText">Ni har tillsammans sparat 85 507 000 liter vatten, fantastiskt jobbat!</p>
-            </div>
+<div class="progress-container">
+    <div class="title-container-progress">
+        <h1>Totala besparning för samtliga hyresgäster under 2025:</h1>
+    </div>
+    <div class="progress-bar" id="totalSavingsBar"></div>
+    <p id="savingsText">Ni har tillsammans sparat 85 507 000 liter vatten, fantastiskt jobbat!</p>
+</div>
+
 
          <div class="container">
     <div class="box" id="infoBox">
