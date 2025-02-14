@@ -131,9 +131,15 @@ function generateHTML(data) {
                     justify-content: space-between;
                     margin-top: 10px;
                 }
+                
+                .title-container-progress {
+                    padding-bottom: 10px; /* Lägger till lite avstånd mellan titeln och progressboxen */
+                    text-align: center; /* Centrerar titeln om du vill ha det så */
+                    font-size: 24px;                
+                }
                 .progress-container {
                     position: absolute;
-                    top: 20px;
+                    top: 60px;
                     right: 20px;
                     width: 100%;
                     max-width: 600px; /* Sätt en maxbredd för progressbaren */
@@ -144,17 +150,7 @@ function generateHTML(data) {
                     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
                     padding-top: 10px; /* Justera padding om det behövs */
                 }
-                
-                .title-container-progress {
-                    padding-top: 20px; /* Lägger till avstånd ovanför titeln om du vill ha lite luft */
-                }
-                
-                .progress-container h1 {
-                    margin: 0; /* Ta bort extra marginaler */
-                    font-size: 24px; /* Justera storlek om nödvändigt */
-                    text-align: center; /* Gör så att titeln centreras */
-                }
-                
+                                
                 .progress-bar {
                     width: 0;
                     height: 30px;
@@ -256,11 +252,10 @@ function generateHTML(data) {
 </html>
 
 
-
-<div class="progress-container">
     <div class="title-container-progress">
         <h1>Totala besparning för samtliga hyresgäster under 2025:</h1>
     </div>
+<div class="progress-container">
     <div class="progress-bar" id="totalSavingsBar"></div>
     <p id="savingsText">Ni har tillsammans sparat 85 507 000 liter vatten, fantastiskt jobbat!</p>
 </div>
