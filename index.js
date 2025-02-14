@@ -155,26 +155,31 @@ function generateHTML(data) {
                 }
 
                 .leaderboard-container {
-                    position: fixed; /* Fixera i hörnet */
-                    top: 20px; /* Justera avståndet från toppen */
-                    left: 20px; /* Justera avståndet från vänster */
+                    position: absolute; /* Placera i hörnet */
+                    top: 20px; /* Justera avstånd från toppen */
+                    left: 20px; /* Justera avstånd från vänster */
                     display: flex;
                     flex-direction: column;
-                    align-items: flex-start; /* Flytta leaderboards till vänster */
-                    width: auto%;
-                    padding: 10px; /* Lägg till lite padding till vänster */
-                    background-color: rgba(255, 255, 255, 0.9); /* Gör det lätt transparent */
-                    border-radius: 5px;
-                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                    align-items: flex-start;
+                    width: auto; /* Anpassa bredden efter innehållet */
+                }
+                .leaderboard-container h1 {
+                    margin: 0; /* Ta bort extra marginaler */
+                    font-size: 24px; /* Justera storlek om nödvändigt */
+                    display: flex;
+                    align-items: center; /* Centrera titel och ikon horisontellt */
+                }
+                .leaderboard-container h1 img {
+                    margin-left: 10px; /* Ge lite utrymme mellan text och ikon */
                 }
                 .leaderboard {
-                    align-self: flex-start; 
-                    margin: 20px 0;
+                    align-self: flex-start;
+                    margin: 10px 0;
                     width: 50%;
                     border: 1px solid #ccc;
                     padding: 10px;
                     border-radius: 5px;
-                    background-color: #fff;;
+                    background-color: transparent; /* Ingen vit bakgrund */
                 }
                 h2 {
                     text-align: left;
@@ -186,6 +191,8 @@ function generateHTML(data) {
                     padding: 10px;
                     border-radius: 5px;
                     background-color: #fff;
+                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
                 }
                 ol {
                     padding-left: 20px;
