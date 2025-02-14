@@ -176,7 +176,7 @@ function generateHTML(data) {
                 ol {
                     padding-left: 0;
                     list-style-position: inside;
-                    text-align: center; /* Centrera texten i listan */
+                    text-align: left; 
                 }
                 li {
                     margin: 5px 0;
