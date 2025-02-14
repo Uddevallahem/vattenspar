@@ -329,7 +329,7 @@ document.getElementById('infoBox2').addEventListener('click', function(event) {
             });
 
             document.addEventListener('DOMContentLoaded', function() {
-                    const fileUrl = 'path/to/your/Data.xlsx'; // Ange rätt sökväg till din Excel-fil
+                    const fileUrl = 'https://github.com/Uddevallahem/vattenspar/blob/5876da66e6c7f165fe2f63f3ef44cc41bcae978f/Data.xlsx'; 
                 
                     fetch(fileUrl)
                     .then(response => response.arrayBuffer())
