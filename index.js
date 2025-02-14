@@ -166,6 +166,7 @@ function generateHTML(data) {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
+                    padding-top: 20px; /* Lägg till lite padding från toppen om det behövs */
                 }
                 .leaderboard-container h1 {
                     margin: 0; /* Ta bort extra marginaler */
