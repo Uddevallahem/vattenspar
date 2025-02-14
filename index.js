@@ -133,9 +133,11 @@ function generateHTML(data) {
                 }
                 
                 .title-container-progress {
-                    padding-bottom: 10px; /* Lägger till lite avstånd mellan titeln och progressboxen */
-                    text-align: center; /* Centrerar titeln om du vill ha det så */
-                    font-size: 24px;                
+                    position: absolute;
+                    top: 60px;
+                    right: 20px;
+                    width: 100%;
+                    padding-top: 10px; /* Lägger till lite avstånd mellan titeln och progressboxen */
                 }
                 .progress-container {
                     position: absolute;
