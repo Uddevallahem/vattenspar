@@ -136,7 +136,6 @@ function generateHTML(data) {
                     position: absolute;
                     top: 60px;
                     right: 20px;
-                    width: 100%;
                     padding-top: 10px; /* Lägger till lite avstånd mellan titeln och progressboxen */
                 }
                 .progress-container {
