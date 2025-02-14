@@ -166,7 +166,7 @@ function generateHTML(data) {
                     width: auto; /* Anpassa bredden efter innehållet */
                 }
                 .leaderboard-container h1 {
-                    margin: 0; /* Ta bort extra marginaler */
+                    margin: 20; /* Ta bort extra marginaler */
                     font-size: 24px; /* Justera storlek om nödvändigt */
                     display: flex;
                     align-items: center; /* Centrera titel och ikon horisontellt */
@@ -177,7 +177,7 @@ function generateHTML(data) {
                 .leaderboard {
                     align-self: flex-start;
                     margin: 10px 0;
-                    width: 50%;
+                    width: 40%;
                     border: 1px solid #ccc;
                     padding: 10px;
                     border-radius: 5px;
