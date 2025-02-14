@@ -167,7 +167,7 @@ function generateHTML(data) {
                 }
                 #monthly-leaderboard, #yearly-leaderboard {
                     margin: 20px auto;
-                    width: 50%;
+                    width: 20%;
                     border: 1px solid #ccc;
                     padding: 10px;
                     border-radius: 5px;
@@ -348,9 +348,9 @@ document.getElementById('infoBox2').addEventListener('click', function(event) {
                         document.getElementById('monthly-third').textContent formatPercentage(sheet['B100'].v);
             
                         // Yearly leaderboard
-                        document.getElementById('yearly-first').textContent = formatPercentage(sheet['C98'].v);
-                        document.getElementById('yearly-second').textContent = formatPercentage(sheet['C99'].v);
-                        document.getElementById('yearly-third').textContent = formatPercentage(sheet['C100'].v);
+                        document.getElementById('yearly-first').textContent = sheet['C98'].v;
+                        document.getElementById('yearly-second').textContent = sheet['C99'].v;
+                        document.getElementById('yearly-third').textContent = sheet['C100'].v;
                     })
                     .catch(error => console.error('Error fetching or parsing the Excel file:', error));
             });
