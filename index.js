@@ -187,7 +187,7 @@ function generateHTML(data) {
                 }
                 #monthly-leaderboard, #yearly-leaderboard {
                     margin: 20px auto;
-                    width: 80%;
+                    width: 60%;
                     border: 1px solid #ccc;
                     padding: 10px;
                     border-radius: 5px;
