@@ -136,6 +136,8 @@ function generateHTML(data) {
                     overflow: hidden;
                     margin-bottom: 20px;
                     margin: 0 auto; /* Centrera progressbaren */
+                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
                 }
                 
                 .progress-bar {
@@ -221,8 +223,8 @@ function generateHTML(data) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
 </head>
 <body>
-    <h1>Leaderboards <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/pokal_blue_ill.png" alt="Pokal" class="pokal"></h1>
     <div class="leaderboard-container">
+    <h1>Leaderboards <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/pokal_blue_ill.png" alt="Pokal" class="pokal"></h1>
         <div id="monthly-leaderboard" class="leaderboard">
             <h2>Topp 3 fastigheter som sparat mest vatten den här månaden</h2>
             <ol id="monthly-list">
