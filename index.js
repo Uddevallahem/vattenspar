@@ -142,7 +142,6 @@ function generateHTML(data) {
                     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
                 }
-                
                 .progress-bar {
                     width: 0;
                     height: 30px;
@@ -186,7 +185,7 @@ function generateHTML(data) {
                     background-color: transparent; /* Ingen vit bakgrund */
                 }
                 #monthly-leaderboard, #yearly-leaderboard {
-                    margin: 20px auto;
+                    margin: 20px 0;
                     width: 60%;
                     border: 1px solid #ccc;
                     border-radius: 5px;
