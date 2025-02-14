@@ -108,6 +108,8 @@ function generateHTML(data) {
                     cursor: pointer;
                     transition: all 0.3s ease;
                     margin-top: 20px;
+                    width: 100%; /* Gör boxen responsiv */
+                    max-width: 400px; /* Maxbredd */
                 }
                 
                 .box:hover {
@@ -126,6 +128,7 @@ function generateHTML(data) {
                     margin-top: 40px;
                     position: relative;
                     width: 100%;
+                    max-width: 400px; /* Maxbredd för slider */
                 }
                 
                 .slider {
@@ -247,6 +250,10 @@ function generateHTML(data) {
                     #monthly-leaderboard, #yearly-leaderboard {
                         width: 80%;
                     }
+                
+                    .box {
+                        width: 90%;
+                    }
                 }
                 
                 @media (max-width: 900px) {
@@ -265,7 +272,11 @@ function generateHTML(data) {
                     }
                 
                     .box {
-                        width: 80%;
+                        width: 90%;
+                    }
+                
+                    .slider-container {
+                        max-width: 350px;
                     }
                 }
                 
@@ -288,6 +299,22 @@ function generateHTML(data) {
                 
                     .box {
                         width: 100%;
+                        margin: 10px 0;
+                    }
+                
+                    .slider-container {
+                        max-width: 300px;
+                    }
+                
+                    .title-container-progress {
+                        position: relative;
+                        top: 10px;
+                        right: 0;
+                        padding-top: 10px;
+                    }
+                
+                    .progress-container {
+                        max-width: 95%;
                     }
                 }
             </style>
