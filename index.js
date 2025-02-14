@@ -153,6 +153,14 @@ function generateHTML(data) {
                    font-weight: bold;
                    color: #446F82;
                 }
+
+                .leaderboard-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start; /* Flytta leaderboards till vänster */
+                    width: 100%;
+                    padding-left: 20px; /* Lägg till lite padding till vänster */
+                }
                 .leaderboard {
                     align-self: flex-start; 
                     margin: 20px 0;
@@ -201,25 +209,28 @@ function generateHTML(data) {
 </head>
 <body>
     <h1>Leaderboards <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/pokal_blue_ill.png" alt="Pokal" class="pokal"></h1>
-    <div id="monthly-leaderboard" class="leaderboard">
-        <h2>Topp 3 fastigheter som sparat mest vatten den här månaden</h2>
-        <ol id="monthly-list">
-            <li id="monthly-first"> <b><span id="monthly-first1"></b>   </span><span id="monthly-first2"></span> </li>
-            <li id="monthly-second"> <b><span id="monthly-second1"></b>   </span><span id="monthly-second2"></span> </li>
-            <li id="monthly-third"> <b><span id="monthly-third1"></b>   </span><span id="monthly-third2"></span> </li>
-        </ol>
-    </div>
-    <div id="yearly-leaderboard" class="leaderboard">
-        <h2>Topp 3 fastigheter som sparat mest vatten det här året (2025)</h2>
-        <ol id="yearly-list">
-            <li id="yearly-first"> <b><span id="yearly-first1"></b>    </span><span id="yearly-first2"></span> </li>
-            <li id="yearly-second"> <b><span id="yearly-second1"></b>    </span><span id="yearly-second2"></span> </li>
-            <li id="yearly-third"> <b><span id="yearly-third1"></b>    </span><span id="yearly-third2"></span> </li>
-        </ol>
+    <div class="leaderboard-container">
+        <div id="monthly-leaderboard" class="leaderboard">
+            <h2>Topp 3 fastigheter som sparat mest vatten den här månaden</h2>
+            <ol id="monthly-list">
+                <li id="monthly-first"> <b><span id="monthly-first1"></b>   </span><span id="monthly-first2"></span> </li>
+                <li id="monthly-second"> <b><span id="monthly-second1"></b>   </span><span id="monthly-second2"></span> </li>
+                <li id="monthly-third"> <b><span id="monthly-third1"></b>   </span><span id="monthly-third2"></span> </li>
+            </ol>
+        </div>
+        <div id="yearly-leaderboard" class="leaderboard">
+            <h2>Topp 3 fastigheter som sparat mest vatten det här året (2025)</h2>
+            <ol id="yearly-list">
+                <li id="yearly-first"> <b><span id="yearly-first1"></b>    </span><span id="yearly-first2"></span> </li>
+                <li id="yearly-second"> <b><span id="yearly-second1"></b>    </span><span id="yearly-second2"></span> </li>
+                <li id="yearly-third"> <b><span id="yearly-third1"></b>    </span><span id="yearly-third2"></span> </li>
+            </ol>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
     
