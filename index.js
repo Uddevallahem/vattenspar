@@ -184,16 +184,9 @@ function generateHTML(data) {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
-                    padding-top: 15px;
+                    padding-top: 5px;
                 }
-                
-                .leaderboard-container h1 {
-                    margin: 0;
-                    font-size: 24px;
-                    display: flex;
-                    align-items: center;
-                }
-                
+                                
                 .leaderboard-container h1 img {
                     margin-left: 10px;
                 }
