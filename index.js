@@ -157,12 +157,12 @@ function generateHTML(data) {
                 }
 
                 .leaderboard-container {
-                    position: relative; /* Placera i hörnet */
+                    position: absolute; /* Placera i hörnet */
                     margin-top: 20px; /* Justera avstånd från toppen */
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
-                    width: auto; /* Anpassa bredden efter innehållet */
+                    width: max-content; /* Anpassa bredden efter innehållet */
                 }
                 .leaderboard-container h1 {
                     margin: 0; /* Ta bort extra marginaler */
