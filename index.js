@@ -149,9 +149,41 @@ function generateHTML(data) {
                    font-weight: bold;
                    color: #446F82;
                 }
+                body {
+                    font-family: 'Aleo', sans-serif;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100vh;
+                    margin: 0;
+                    background-color: #f0f0f0;
+                }
+                
+                h1 {
+                    font-family: 'Twisted System', sans-serif;
+                }
+                
+                h2 {
+                    text-align: center;
+                }
+                
+                #monthly-leaderboard, #yearly-leaderboard {
+                    margin: 20px auto;
+                    width: 50%;
+                    border: 1px solid #ccc;
+                    padding: 10px;
+                    border-radius: 5px;
+                    background-color: #fff;
+                }
+                
+                ol {
+                    padding-left: 20px;
+                }
             </style>
         </head>
         <body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script> 
 <!-- Här är det HTML-kommentarer -->
             <h1>Vattenutmaningen <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/pokal_blue_ill.png" alt="Pokal" class="pokal"></h1>
             <p>Välkommen till Vattenutmaningen! Här kan vi tillsammans spara vatten och göra en insats för miljön.</p>
@@ -197,6 +229,37 @@ function generateHTML(data) {
         </div>
     </div>
 </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboards</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</head>
+<body>
+    <h1>Leaderboards</h1>
+    <div id="monthly-leaderboard">
+        <h2>Minskning den här månaden</h2>
+        <ol id="monthly-list">
+            <li id="monthly-first"></li>
+            <li id="monthly-second"></li>
+            <li id="monthly-third"></li>
+        </ol>
+    </div>
+    <div id="yearly-leaderboard">
+        <h2>Minskning under året</h2>
+        <ol id="yearly-list">
+            <li id="yearly-first"></li>
+            <li id="yearly-second"></li>
+            <li id="yearly-third"></li>
+        </ol>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
 
             <script>
 // Här är det JavaScript-kommentarer
@@ -271,13 +334,33 @@ document.getElementById('infoBox2').addEventListener('click', function(event) {
                 sliderValueElement2.style.left = newLeft2 + 'px';
             });
 
-        document.addEventListener('DOMContentLoaded', function() {
-            var totalSavingsBar = document.getElementById('totalSavingsBar');
-            var maxSavings = 216000000;
-            var currentSavings = 85507000;
-            var progressPercentage = (currentSavings / maxSavings) * 100;
-            totalSavingsBar.style.width = progressPercentage + '%';
-        });
+            document.addEventListener('DOMContentLoaded', function() {
+                var totalSavingsBar = document.getElementById('totalSavingsBar');
+                var maxSavings = 216000000;
+                var currentSavings = 85507000;
+                var progressPercentage = (currentSavings / maxSavings) * 100;
+                totalSavingsBar.style.width = progressPercentage + '%';
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('Data.xlsx')
+                    .then(response => response.arrayBuffer())
+                    .then(data => {
+                        const workbook = XLSX.read(data, { type: 'array' });
+                        const sheet = workbook.Sheets[workbook.SheetNames[0]];
+            
+                        // Monthly leaderboard
+                        document.getElementById('monthly-first').textContent = sheet['B98'].v;
+                        document.getElementById('monthly-second').textContent = sheet['B99'].v;
+                        document.getElementById('monthly-third').textContent = sheet['B100'].v;
+            
+                        // Yearly leaderboard
+                        document.getElementById('yearly-first').textContent = sheet['C98'].v;
+                        document.getElementById('yearly-second').textContent = sheet['C99'].v;
+                        document.getElementById('yearly-third').textContent = sheet['C100'].v;
+                    })
+                    .catch(error => console.error('Error fetching or parsing the Excel file:', error));
+            });
 
             </script>
         </body>
