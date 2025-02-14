@@ -150,16 +150,10 @@ function generateHTML(data) {
                 }
                 
                 .title-container-progress {
-                    position: absolute;
-                    top: 20px;
-                    right: 20px;
                     padding-top: 10px;
                 }
                 
                 .progress-container {
-                    position: absolute;
-                    top: 100px;
-                    right: 20px;
                     width: 100%;
                     max-width: 600px;
                     background-color: #f3f3f3;
@@ -167,7 +161,6 @@ function generateHTML(data) {
                     border-radius: 5px;
                     overflow: hidden;
                     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-                    padding-top: 20px;
                 }
                 
                 .progress-bar {
@@ -188,9 +181,6 @@ function generateHTML(data) {
                 }
                 
                 .leaderboard-container {
-                    position: absolute;
-                    top: 20px;
-                    left: 20px;
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
