@@ -143,6 +143,12 @@ function generateHTML(data) {
                     overflow: hidden;
                     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
                 }
+                   .progress-container h1 {
+                    margin: 0; /* Ta bort extra marginaler */
+                    font-size: 24px; /* Justera storlek om nödvändigt */
+                    display: flex;
+                    align-items: left; /* Centrera titel och ikon horisontellt */
+                }
                 .progress-bar {
                     width: 0;
                     height: 30px;
@@ -246,7 +252,7 @@ function generateHTML(data) {
 
 
                 <div class="progress-container">
-                <h2>Totala besparning för samtliga hyresgäster under 2025:</h2>
+                <h1>Totala besparning för samtliga hyresgäster under 2025:</h1>
                 <div class="progress-bar" id="totalSavingsBar"></div>
                 <p id="savingsText">Ni har tillsammans sparat 85 507 000 liter vatten, fantastiskt jobbat!</p>
             </div>
