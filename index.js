@@ -77,6 +77,9 @@ function generateHTML(data) {
                 h1 {
                     font-family: 'Twisted System', sans-serif;
                 }
+                h2 {
+                    text-align: left;
+                }
                 .pokal {
                     width: 30px;
                     height: auto;
@@ -182,18 +185,14 @@ function generateHTML(data) {
                     border-radius: 5px;
                     background-color: transparent; /* Ingen vit bakgrund */
                 }
-                h2 {
-                    text-align: left;
-                }
                 #monthly-leaderboard, #yearly-leaderboard {
                     margin: 20px auto;
-                    width: auto;
+                    width: 80%;
                     border: 1px solid #ccc;
                     padding: 10px;
                     border-radius: 5px;
                     background-color: #fff;
                     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-
                 }
                 ol {
                     padding-left: 20px;
