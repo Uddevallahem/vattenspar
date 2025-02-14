@@ -187,11 +187,6 @@ function generateHTML(data) {
 <!-- Här är det HTML-kommentarer -->
             <h1>Vattenutmaningen <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/pokal_blue_ill.png" alt="Pokal" class="pokal"></h1>
             <p>Välkommen till Vattenutmaningen! Här kan vi tillsammans spara vatten och göra en insats för miljön.</p>
-            <h2>Totala besparning för samtliga hyresgäster under 2025:</h2>
-            <div class="progress-container">
-                <div class="progress-bar" id="totalSavingsBar"></div>
-                <p id="savingsText">Ni har tillsammans sparat 85 507 000 liter vatten, fantastiskt jobbat!</p>
-            </div>
     <h1>Leaderboards</h1>
     <div id="monthly-leaderboard">
         <h2>Minskning den här månaden</h2>
@@ -209,7 +204,11 @@ function generateHTML(data) {
             <li id="yearly-third"></li>
         </ol>
     </div>
-    <script src="script.js"></script>
+                <h2>Totala besparning för samtliga hyresgäster under 2025:</h2>
+            <div class="progress-container">
+                <div class="progress-bar" id="totalSavingsBar"></div>
+                <p id="savingsText">Ni har tillsammans sparat 85 507 000 liter vatten, fantastiskt jobbat!</p>
+            </div>
 
          <div class="container">
     <div class="box" id="infoBox">
