@@ -184,18 +184,12 @@ function generateHTML(data) {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
-                    padding-top: 5px;
                 }
                                 
-                .leaderboard-container h1 img {
-                    margin-left: 10px;
-                }
-                
                 .leaderboard {
                     align-self: flex-start;
                     width: 25%;
                     border: 1px solid #ccc;
-                    padding: 10px;
                     border-radius: 5px;
                     background-color: transparent;
                 }
