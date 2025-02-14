@@ -153,16 +153,14 @@ function generateHTML(data) {
                    font-weight: bold;
                    color: #446F82;
                 }
-                body {
-                    font-family: 'Aleo', sans-serif;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    justify-content: center;
-                    height: 100vh;
-                    margin: 0;
-                    background-color: #f0f0f0;
-                    padding-left: 20px;
+                .leaderboard {
+                    align-self: flex-start; 
+                    margin: 20px 0;
+                    width: 50%;
+                    border: 1px solid #ccc;
+                    padding: 10px;
+                    border-radius: 5px;
+                    background-color: #fff;;
                 }
                 h2 {
                     text-align: left;
