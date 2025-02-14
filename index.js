@@ -329,7 +329,9 @@ document.getElementById('infoBox2').addEventListener('click', function(event) {
             });
 
             document.addEventListener('DOMContentLoaded', function() {
-                fetch('Data.xlsx')
+                    const fileUrl = 'path/to/your/Data.xlsx'; // Ange rätt sökväg till din Excel-fil
+                
+                    fetch(fileUrl)
                     .then(response => response.arrayBuffer())
                     .then(data => {
                         const workbook = XLSX.read(data, { type: 'array' });
