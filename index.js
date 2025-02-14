@@ -155,11 +155,17 @@ function generateHTML(data) {
                 }
 
                 .leaderboard-container {
+                    position: absolute; /* Fixera i hörnet */
+                    top: 20px; /* Justera avståndet från toppen */
+                    left: 20px; /* Justera avståndet från vänster */
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start; /* Flytta leaderboards till vänster */
-                    width: 100%;
-                    padding-left: 20px; /* Lägg till lite padding till vänster */
+                    width: auto%;
+                    padding: 10px; /* Lägg till lite padding till vänster */
+                    background-color: rgba(255, 255, 255, 0.9); /* Gör det lätt transparent */
+                    border-radius: 5px;
+                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
                 }
                 .leaderboard {
                     align-self: flex-start; 
