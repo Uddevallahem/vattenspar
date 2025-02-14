@@ -132,6 +132,9 @@ function generateHTML(data) {
                     margin-top: 10px;
                 }
                 .progress-container {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
                     width: 100%;
                     max-width: 600px; /* Sätt en maxbredd för progressbaren */
                     background-color: #f3f3f3;
@@ -139,9 +142,6 @@ function generateHTML(data) {
                     border-radius: 5px;
                     overflow: hidden;
                     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-                    margin-bottom: 20px;
-                    margin-left: auto;
-                    margin-right: 0;  
                 }
                 .progress-bar {
                     width: 0;
@@ -245,9 +245,8 @@ function generateHTML(data) {
 
 
 
-    
+                <div class="progress-container">
                 <h2>Totala besparning för samtliga hyresgäster under 2025:</h2>
-            <div class="progress-container">
                 <div class="progress-bar" id="totalSavingsBar"></div>
                 <p id="savingsText">Ni har tillsammans sparat 85 507 000 liter vatten, fantastiskt jobbat!</p>
             </div>
