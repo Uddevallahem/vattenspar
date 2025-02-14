@@ -171,7 +171,7 @@ function generateHTML(data) {
                     margin: 0; /* Ta bort extra marginaler */
                     font-size: 24px; /* Justera storlek om nödvändigt */
                     display: flex;
-                    align-items: center; /* Centrera titel och ikon horisontellt */
+                    align-items: left; /* Centrera titel och ikon horisontellt */
                 }
                 .leaderboard-container h1 img {
                     margin-left: 10px; /* Ge lite utrymme mellan text och ikon */
@@ -194,7 +194,6 @@ function generateHTML(data) {
                     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
                 }
                 ol {
-                    padding-left: 20px;
                     list-style-position: inside;
                     text-align: left; 
                 }
