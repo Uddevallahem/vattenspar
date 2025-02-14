@@ -159,26 +159,27 @@ function generateHTML(data) {
                     margin: 0;
                     background-color: #f0f0f0;
                 }
-                
                 h1 {
                     font-family: 'Twisted System', sans-serif;
                 }
-                
                 h2 {
                     text-align: center;
                 }
-                
                 #monthly-leaderboard, #yearly-leaderboard {
                     margin: 20px auto;
-                    width: 30%;
+                    width: 50%;
                     border: 1px solid #ccc;
                     padding: 10px;
                     border-radius: 5px;
                     background-color: #fff;
                 }
-                
                 ol {
-                    padding-left: 20px;
+                    padding-left: 0;
+                    list-style-position: inside;
+                    text-align: center; /* Centrera texten i listan */
+                }
+                li {
+                    margin: 5px 0;
                 }
             </style>
         </head>
@@ -337,16 +338,19 @@ document.getElementById('infoBox2').addEventListener('click', function(event) {
                         const workbook = XLSX.read(data, { type: 'array' });
                         const sheet = workbook.Sheets['Sheet1'];
                         console.log(sheet); 
-            
+                        function formatPercentage(value) {
+                            return (value * 100).toFixed(0) + '%';
+                        }
+                        
                         // Monthly leaderboard
-                        document.getElementById('monthly-first').textContent = sheet['B98'].v;
-                        document.getElementById('monthly-second').textContent = sheet['B99'].v;
-                        document.getElementById('monthly-third').textContent = sheet['B100'].v;
+                        document.getElementById('monthly-first').textContent = formatPercentage(sheet['B98'].v);
+                        document.getElementById('monthly-second').textContent = formatPercentage(sheet['B99'].v);
+                        document.getElementById('monthly-third').textContent formatPercentage(sheet['B100'].v);
             
                         // Yearly leaderboard
-                        document.getElementById('yearly-first').textContent = sheet['C98'].v;
-                        document.getElementById('yearly-second').textContent = sheet['C99'].v;
-                        document.getElementById('yearly-third').textContent = sheet['C100'].v;
+                        document.getElementById('yearly-first').textContent = formatPercentage(sheet['C98'].v);
+                        document.getElementById('yearly-second').textContent = formatPercentage(sheet['C99'].v);
+                        document.getElementById('yearly-third').textContent = formatPercentage(sheet['C100'].v);
                     })
                     .catch(error => console.error('Error fetching or parsing the Excel file:', error));
             });
