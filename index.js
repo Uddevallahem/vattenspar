@@ -138,10 +138,10 @@ function generateHTML(data) {
                     border: 1px solid #ccc;
                     border-radius: 5px;
                     overflow: hidden;
-                    margin-bottom: 20px;
-                    margin: 0 auto; /* Centrera progressbaren */
                     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-
+                    margin-bottom: 20px;
+                    margin-left: auto;
+                    margin-right: 0;  
                 }
                 .progress-bar {
                     width: 0;
