@@ -192,7 +192,9 @@ function generateHTML(data) {
     <div id="monthly-leaderboard">
         <h2>Topp 3 fastigheter som sparat mest vatten den här månaden</h2>
         <ol id="monthly-list">
-            <li id="monthly-first"></li>
+            <li id="monthly-first">
+                <span id="monthly-first1"></span> och <span id="monthly-first2"></span>
+            </li>
             <li id="monthly-second"></li>
             <li id="monthly-third"></li>
         </ol>
@@ -263,7 +265,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         console.log(sheet); 
                         
                         // Monthly leaderboard
-                        document.getElementById('monthly-first').textContent = sheet['B102'].v;
+                        document.getElementById('monthly-first1').textContent = sheet['B102'].v;
+                        document.getElementById('monthly-first2').textContent = sheet['B106'].v;
                         document.getElementById('monthly-second').textContent = sheet['B103'].v;
                         document.getElementById('monthly-third').textContent = sheet['B108'].v;
             
