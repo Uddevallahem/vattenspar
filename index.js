@@ -142,6 +142,8 @@ function generateHTML(data) {
                     border-radius: 5px;
                     overflow: hidden;
                     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                    padding-top: 20px; /* Lägg till lite padding från toppen om det behövs */
+
                 }
                    .progress-container h1 {
                     margin: 0; /* Ta bort extra marginaler */
