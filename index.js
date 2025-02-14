@@ -157,8 +157,9 @@ function generateHTML(data) {
                 }
 
                 .leaderboard-container {
-                    position: absolute; /* Placera i hörnet */
-                    margin-top: 20px; /* Justera avstånd från toppen */
+                    position: relative; /* Placera i hörnet */
+                    left: 20px;
+                    top: 20px; /* Justera avstånd från toppen */
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
