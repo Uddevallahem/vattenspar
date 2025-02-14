@@ -140,7 +140,7 @@ function generateHTML(data) {
                 }
                 .progress-container {
                     position: absolute;
-                    top: 20px;
+                    top: 60px;
                     right: 20px;
                     width: 100%;
                     max-width: 600px; /* Sätt en maxbredd för progressbaren */
