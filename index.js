@@ -169,7 +169,6 @@ function generateHTML(data) {
                     font-size: 24px; /* Justera storlek om nödvändigt */
                     display: flex;
                     align-items: center; /* Centrera titel och ikon horisontellt */
-                    width: max-content; /* Anpassa bredden efter innehållet */
                 }
                 .leaderboard-container h1 img {
                     margin-left: 10px; /* Ge lite utrymme mellan text och ikon */
@@ -177,7 +176,7 @@ function generateHTML(data) {
                 .leaderboard {
                     align-self: flex-start;
                     margin: 10px 0;
-                    width: 30%;
+                    width: 25%;
                     border: 1px solid #ccc;
                     padding: 10px;
                     border-radius: 5px;
