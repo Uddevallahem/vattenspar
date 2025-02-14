@@ -134,13 +134,13 @@ function generateHTML(data) {
                 
                 .title-container-progress {
                     position: absolute;
-                    top: 60px;
+                    top: 20px;
                     right: 20px;
                     padding-top: 10px; /* Lägger till lite avstånd mellan titeln och progressboxen */
                 }
                 .progress-container {
                     position: absolute;
-                    top: 60px;
+                    top: 20px;
                     right: 20px;
                     width: 100%;
                     max-width: 600px; /* Sätt en maxbredd för progressbaren */
@@ -149,7 +149,7 @@ function generateHTML(data) {
                     border-radius: 5px;
                     overflow: hidden;
                     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-                    padding-top: 10px; /* Justera padding om det behövs */
+                    padding-top: 20px; /* Justera padding om det behövs */
                 }
                                 
                 .progress-bar {
