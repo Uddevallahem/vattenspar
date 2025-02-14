@@ -53,6 +53,7 @@ function generateHTML(data) {
         <html>
         <head>
             <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Vattenutmaningen</title>
             <link rel="icon" type="image/x-icon" href="images/favicon.ico">
             <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap" rel="stylesheet">
@@ -73,26 +74,32 @@ function generateHTML(data) {
                     height: 100vh;
                     margin: 0;
                     background-color: #f0f0f0;
-                    padding-top: 20px; /* Lägg till lite padding från toppen om det behövs */
+                    padding-top: 20px;
                 }
+                
                 h1 {
                     font-family: 'Twisted System', sans-serif;
                 }
+                
                 h2 {
                     text-align: left;
                 }
+                
                 .pokal {
                     width: 30px;
                     height: auto;
                 }
+                
                 .vattendroppar {
                     width: 30px;
                     height: auto;
                 }
+                
                 .container {
                     text-align: center;
                     margin-top: 20px;
                 }
+                
                 .box {
                     background-color: #446F82;
                     color: white;
@@ -102,23 +109,29 @@ function generateHTML(data) {
                     transition: all 0.3s ease;
                     margin-top: 20px;
                 }
+                
                 .box:hover {
                     background-color: #85A1AE;
                 }
+                
                 .hidden {
                     display: none;
                 }
+                
                 .visible {
                     display: block;
                 }
+                
                 .slider-container {
                     margin-top: 40px;
                     position: relative;
                     width: 100%;
                 }
+                
                 .slider {
                     width: 100%;
                 }
+                
                 .slider-value {
                     position: absolute;
                     top: -25px;
@@ -126,6 +139,7 @@ function generateHTML(data) {
                     transform: translateX(-50%);
                     font-weight: bold;
                 }
+                
                 .slider-labels {
                     display: flex;
                     justify-content: space-between;
@@ -136,22 +150,23 @@ function generateHTML(data) {
                     position: absolute;
                     top: 20px;
                     right: 20px;
-                    padding-top: 10px; /* Lägger till lite avstånd mellan titeln och progressboxen */
+                    padding-top: 10px;
                 }
+                
                 .progress-container {
                     position: absolute;
                     top: 100px;
                     right: 20px;
                     width: 100%;
-                    max-width: 600px; /* Sätt en maxbredd för progressbaren */
+                    max-width: 600px;
                     background-color: #f3f3f3;
                     border: 1px solid #ccc;
                     border-radius: 5px;
                     overflow: hidden;
                     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-                    padding-top: 20px; /* Justera padding om det behövs */
+                    padding-top: 20px;
                 }
-                                
+                
                 .progress-bar {
                     width: 0;
                     height: 30px;
@@ -161,13 +176,14 @@ function generateHTML(data) {
                     color: white;
                     transition: width 0.3s ease;
                 }
+                
                 #savingsText {
-                   text-align: center;
-                   margin-top: 10px;
-                   font-weight: bold;
-                   color: #446F82;
+                    text-align: center;
+                    margin-top: 10px;
+                    font-weight: bold;
+                    color: #446F82;
                 }
-
+                
                 .leaderboard-container {
                     position: absolute;
                     top: 20px;
@@ -175,17 +191,20 @@ function generateHTML(data) {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
-                    padding-top: 20px; /* Lägg till lite padding från toppen om det behövs */
+                    padding-top: 20px;
                 }
+                
                 .leaderboard-container h1 {
-                    margin: 0; /* Ta bort extra marginaler */
-                    font-size: 24px; /* Justera storlek om nödvändigt */
+                    margin: 0;
+                    font-size: 24px;
                     display: flex;
-                    align-items: left; /* Centrera titel och ikon horisontellt */
+                    align-items: left;
                 }
+                
                 .leaderboard-container h1 img {
-                    margin-left: 10px; /* Ge lite utrymme mellan text och ikon */
+                    margin-left: 10px;
                 }
+                
                 .leaderboard {
                     align-self: flex-start;
                     margin: 10px 0;
@@ -193,8 +212,9 @@ function generateHTML(data) {
                     border: 1px solid #ccc;
                     padding: 10px;
                     border-radius: 5px;
-                    background-color: transparent; /* Ingen vit bakgrund */
+                    background-color: transparent;
                 }
+                
                 #monthly-leaderboard, #yearly-leaderboard {
                     margin: 20px 0;
                     width: 60%;
@@ -203,12 +223,72 @@ function generateHTML(data) {
                     background-color: #fff;
                     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
                 }
+                
                 ol {
                     list-style-position: inside;
-                    text-align: left; 
+                    text-align: left;
                 }
+                
                 li {
                     margin: 5px 0;
+                }
+                
+                /* Media Queries */
+                @media (max-width: 1200px) {
+                    .leaderboard-container {
+                        top: 40px;
+                        left: 10px;
+                    }
+                
+                    .leaderboard {
+                        width: 40%;
+                    }
+                
+                    #monthly-leaderboard, #yearly-leaderboard {
+                        width: 80%;
+                    }
+                }
+                
+                @media (max-width: 900px) {
+                    .leaderboard-container {
+                        top: 20px;
+                        left: 10px;
+                        padding-top: 10px;
+                    }
+                
+                    .leaderboard {
+                        width: 50%;
+                    }
+                
+                    #monthly-leaderboard, #yearly-leaderboard {
+                        width: 90%;
+                    }
+                
+                    .box {
+                        width: 80%;
+                    }
+                }
+                
+                @media (max-width: 600px) {
+                    body {
+                        padding-top: 10px;
+                    }
+                
+                    .leaderboard-container h1 {
+                        font-size: 20px;
+                    }
+                
+                    .leaderboard {
+                        width: 100%;
+                    }
+                
+                    #monthly-leaderboard, #yearly-leaderboard {
+                        width: 100%;
+                    }
+                
+                    .box {
+                        width: 100%;
+                    }
                 }
             </style>
         </head>
@@ -223,7 +303,6 @@ function generateHTML(data) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaderboards</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
