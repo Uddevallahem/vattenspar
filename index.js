@@ -190,7 +190,7 @@ function generateHTML(data) {
             <p>Välkommen till Vattenutmaningen! Här kan vi tillsammans spara vatten och göra en insats för miljön.</p>
     <h1>Leaderboards</h1>
     <div id="monthly-leaderboard">
-        <h2>Minskning den här månaden</h2>
+        <h2>Topp 3 fastigheter som sparat mest vatten den här månaden</h2>
         <ol id="monthly-list">
             <li id="monthly-first"></li>
             <li id="monthly-second"></li>
@@ -198,7 +198,7 @@ function generateHTML(data) {
         </ol>
     </div>
     <div id="yearly-leaderboard">
-        <h2>Minskning under året</h2>
+        <h2>Topp 3 fastigheter som sparat mest vatten det här året (2025)</h2>
         <ol id="yearly-list">
             <li id="yearly-first"></li>
             <li id="yearly-second"></li>
