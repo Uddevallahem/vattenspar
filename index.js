@@ -155,7 +155,7 @@ function generateHTML(data) {
                 }
 
                 .leaderboard-container {
-                    position: absolute; /* Fixera i hörnet */
+                    position: fixed; /* Fixera i hörnet */
                     top: 20px; /* Justera avståndet från toppen */
                     left: 20px; /* Justera avståndet från vänster */
                     display: flex;
@@ -181,7 +181,7 @@ function generateHTML(data) {
                 }
                 #monthly-leaderboard, #yearly-leaderboard {
                     margin: 20px auto;
-                    width: 30%;
+                    width: auto;
                     border: 1px solid #ccc;
                     padding: 10px;
                     border-radius: 5px;
