@@ -184,7 +184,7 @@ function generateHTML(data) {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
-                    padding-top: 10px;
+                    padding-top: 15px;
                 }
                 
                 .leaderboard-container h1 {
@@ -208,7 +208,7 @@ function generateHTML(data) {
                 }
                 
                 #monthly-leaderboard, #yearly-leaderboard {
-                    width: 80%;
+                    width: 100%;
                     border: 1px solid #ccc;
                     border-radius: 5px;
                     background-color: #fff;
