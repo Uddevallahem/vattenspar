@@ -177,7 +177,7 @@ function generateHTML(data) {
                 .leaderboard {
                     align-self: flex-start;
                     margin: 10px 0;
-                    width: 40%;
+                    width: 30%;
                     border: 1px solid #ccc;
                     padding: 10px;
                     border-radius: 5px;
