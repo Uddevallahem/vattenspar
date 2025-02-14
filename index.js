@@ -192,17 +192,17 @@ function generateHTML(data) {
     <div id="monthly-leaderboard">
         <h2>Topp 3 fastigheter som sparat mest vatten den här månaden</h2>
         <ol id="monthly-list">
-            <li id="monthly-first"> <span id="monthly-first1"></span><span id="monthly-first2"></span> </li>
-            <li id="monthly-second"> <span id="monthly-second1"></span><span id="monthly-second2"></span> </li>
-            <li id="monthly-third"> <span id="monthly-third1"></span><span id="monthly-third2"></span> </li>
+            <li id="monthly-first"> <span id="monthly-first1">   </span><span id="monthly-first2"></span> </li>
+            <li id="monthly-second"> <span id="monthly-second1">   </span><span id="monthly-second2"></span> </li>
+            <li id="monthly-third"> <span id="monthly-third1">   </span><span id="monthly-third2"></span> </li>
         </ol>
     </div>
     <div id="yearly-leaderboard">
         <h2>Topp 3 fastigheter som sparat mest vatten det här året (2025)</h2>
         <ol id="yearly-list">
-            <li id="yearly-first"> <span id="yearly-first1"></span><span id="yearly-first2"></span> </li>
-            <li id="yearly-second"> <span id="yearly-second1"></span><span id="yearly-second2"></span> </li>
-            <li id="yearly-third"> <span id="yearly-third1"></span><span id="yearly-third2"></span> </li>
+            <li id="yearly-first"> <span id="yearly-first1"></span>   <span id="yearly-first2"></span> </li>
+            <li id="yearly-second"> <span id="yearly-second1"></span>   <span id="yearly-second2"></span> </li>
+            <li id="yearly-third"> <span id="yearly-third1"></span>   <span id="yearly-third2"></span> </li>
         </ol>
     </div>
                 <h2>Totala besparning för samtliga hyresgäster under 2025:</h2>
