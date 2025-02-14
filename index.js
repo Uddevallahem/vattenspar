@@ -166,7 +166,8 @@ function generateHTML(data) {
                     width: auto; /* Anpassa bredden efter innehållet */
                 }
                 .leaderboard-container h1 {
-                    margin: 20; /* Ta bort extra marginaler */
+                    margin: 0; /* Ta bort extra marginaler */
+                    left: 20px;
                     font-size: 24px; /* Justera storlek om nödvändigt */
                     display: flex;
                     align-items: center; /* Centrera titel och ikon horisontellt */
