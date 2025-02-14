@@ -192,6 +192,25 @@ function generateHTML(data) {
                 <div class="progress-bar" id="totalSavingsBar"></div>
                 <p id="savingsText">Ni har tillsammans sparat 85 507 000 liter vatten, fantastiskt jobbat!</p>
             </div>
+    <h1>Leaderboards</h1>
+    <div id="monthly-leaderboard">
+        <h2>Minskning den här månaden</h2>
+        <ol id="monthly-list">
+            <li id="monthly-first"></li>
+            <li id="monthly-second"></li>
+            <li id="monthly-third"></li>
+        </ol>
+    </div>
+    <div id="yearly-leaderboard">
+        <h2>Minskning under året</h2>
+        <ol id="yearly-list">
+            <li id="yearly-first"></li>
+            <li id="yearly-second"></li>
+            <li id="yearly-third"></li>
+        </ol>
+    </div>
+    <script src="script.js"></script>
+
          <div class="container">
     <div class="box" id="infoBox">
         <h2>Duscha kortare</h2>
@@ -229,38 +248,6 @@ function generateHTML(data) {
         </div>
     </div>
 </div>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaderboards</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
-</head>
-<body>
-    <h1>Leaderboards</h1>
-    <div id="monthly-leaderboard">
-        <h2>Minskning den här månaden</h2>
-        <ol id="monthly-list">
-            <li id="monthly-first"></li>
-            <li id="monthly-second"></li>
-            <li id="monthly-third"></li>
-        </ol>
-    </div>
-    <div id="yearly-leaderboard">
-        <h2>Minskning under året</h2>
-        <ol id="yearly-list">
-            <li id="yearly-first"></li>
-            <li id="yearly-second"></li>
-            <li id="yearly-third"></li>
-        </ol>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
-
-
             <script>
 // Här är det JavaScript-kommentarer
        
