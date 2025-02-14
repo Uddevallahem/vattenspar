@@ -254,7 +254,7 @@ function generateHTML(data) {
 
 
     <div class="title-container-progress">
-        <h1>Totala besparning för samtliga hyresgäster under 2025:</h1>
+        <h1>Totala besparning för samtliga hyresgäster 2025:</h1>
     </div>
 <div class="progress-container">
     <div class="progress-bar" id="totalSavingsBar"></div>
