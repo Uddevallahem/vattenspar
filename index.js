@@ -263,9 +263,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         console.log(sheet); 
                         
                         // Monthly leaderboard
-                        document.getElementById('monthly-first').textContent = sheet['B98'].v;
-                        document.getElementById('monthly-second').textContent = sheet['B99'].v;
-                        document.getElementById('monthly-third').textContent = sheet['B100'].v;
+                        document.getElementById('monthly-first').textContent = `${sheet['B102'].v} och ${sheet['B106'].v}`;
+                        document.getElementById('monthly-second').textContent = sheet['B103'].v;
+                        document.getElementById('monthly-third').textContent = sheet['B108'].v;
             
                         // Yearly leaderboard
                         document.getElementById('yearly-first').textContent = sheet['C98'].v;
