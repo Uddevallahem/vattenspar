@@ -313,18 +313,8 @@ function generateHTML(data) {
             <h1>Vattenutmaningen <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/vattendroppar_blue_ill.png" alt="Pokal" class="pokal"></h1>
             <p>Välkommen till Vattenutmaningen! Här kan vi tillsammans spara vatten och göra en insats för miljön.</p>
 
-            
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Leaderboards</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
-</head>
-<body>
+    <h1>Leaderboards <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/pokal_blue_ill.png" alt="Pokal" class="pokal"></h1>      
     <div class="leaderboard-container">
-    <h1>Leaderboards <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/pokal_blue_ill.png" alt="Pokal" class="pokal"></h1>
         <div id="monthly-leaderboard" class="leaderboard">
             <h2>Topp 3 fastigheter som sparat mest vatten den här månaden</h2>
             <ol id="monthly-list">
@@ -342,9 +332,6 @@ function generateHTML(data) {
             </ol>
         </div>
     </div>
-    <script src="script.js"></script>
-</body>
-</html>
 
 
     <div class="title-container-progress">
