@@ -167,7 +167,7 @@ function generateHTML(data) {
                 }
                 #monthly-leaderboard, #yearly-leaderboard {
                     margin: 20px auto;
-                    width: 20%;
+                    width: 30%;
                     border: 1px solid #ccc;
                     padding: 10px;
                     border-radius: 5px;
@@ -192,19 +192,17 @@ function generateHTML(data) {
     <div id="monthly-leaderboard">
         <h2>Topp 3 fastigheter som sparat mest vatten den här månaden</h2>
         <ol id="monthly-list">
-            <li id="monthly-first">
-                <span id="monthly-first1"></span> och <span id="monthly-first2"></span>
-            </li>
-            <li id="monthly-second"></li>
-            <li id="monthly-third"></li>
+            <li id="monthly-first"> <span id="monthly-first1"></span><span id="monthly-first2"></span> </li>
+            <li id="monthly-second"> <span id="monthly-second1"></span><span id="monthly-second2"></span> </li>
+            <li id="monthly-third"> <span id="monthly-third1"></span><span id="monthly-third2"></span> </li>
         </ol>
     </div>
     <div id="yearly-leaderboard">
         <h2>Topp 3 fastigheter som sparat mest vatten det här året (2025)</h2>
         <ol id="yearly-list">
-            <li id="yearly-first"></li>
-            <li id="yearly-second"></li>
-            <li id="yearly-third"></li>
+            <li id="yearly-first"> <span id="yearly-first1"></span><span id="yearly-first2"></span> </li>
+            <li id="yearly-second"> <span id="yearly-second1"></span><span id="yearly-second2"></span> </li>
+            <li id="yearly-third"> <span id="yearly-third1"></span><span id="yearly-third2"></span> </li>
         </ol>
     </div>
                 <h2>Totala besparning för samtliga hyresgäster under 2025:</h2>
@@ -267,13 +265,19 @@ document.addEventListener('DOMContentLoaded', function() {
                         // Monthly leaderboard
                         document.getElementById('monthly-first1').textContent = sheet['B102'].v;
                         document.getElementById('monthly-first2').textContent = sheet['B106'].v;
-                        document.getElementById('monthly-second').textContent = sheet['B103'].v;
-                        document.getElementById('monthly-third').textContent = sheet['B108'].v;
+                        document.getElementById('monthly-second1').textContent = sheet['B103'].v;
+                        document.getElementById('monthly-second2').textContent = sheet['B107'].v;
+                        document.getElementById('monthly-third1').textContent = sheet['B104'].v;
+                        document.getElementById('monthly-third2').textContent = sheet['B108'].v;
+
             
                         // Yearly leaderboard
-                        document.getElementById('yearly-first').textContent = sheet['C98'].v;
-                        document.getElementById('yearly-second').textContent = sheet['C99'].v;
-                        document.getElementById('yearly-third').textContent = sheet['C100'].v;
+                        document.getElementById('yearly-first1').textContent = sheet['C102'].v;
+                        document.getElementById('yearly-first2').textContent = sheet['C106'].v;
+                        document.getElementById('yearly-second1').textContent = sheet['C103'].v;
+                        document.getElementById('yearly-second2').textContent = sheet['C107'].v;
+                        document.getElementById('yearly-third1').textContent = sheet['C104'].v;
+                        document.getElementById('yearly-third2').textContent = sheet['C108'].v;
                     })
                     .catch(error => console.error('Error fetching or parsing the Excel file:', error));
             });
