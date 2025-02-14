@@ -69,10 +69,11 @@ function generateHTML(data) {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: flex-start;
                     height: 100vh;
                     margin: 0;
                     background-color: #f0f0f0;
+                    padding-top: 20px; /* Lägg till lite padding från toppen om det behövs */
                 }
                 h1 {
                     font-family: 'Twisted System', sans-serif;
