@@ -184,14 +184,14 @@ function generateHTML(data) {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
-                    padding-top: 20px;
+                    padding-top: 10px;
                 }
                 
                 .leaderboard-container h1 {
                     margin: 0;
                     font-size: 24px;
                     display: flex;
-                    align-items: left;
+                    align-items: center;
                 }
                 
                 .leaderboard-container h1 img {
@@ -200,7 +200,6 @@ function generateHTML(data) {
                 
                 .leaderboard {
                     align-self: flex-start;
-                    margin: 10px 0;
                     width: 25%;
                     border: 1px solid #ccc;
                     padding: 10px;
@@ -209,8 +208,7 @@ function generateHTML(data) {
                 }
                 
                 #monthly-leaderboard, #yearly-leaderboard {
-                    margin: 20px 0;
-                    width: 60%;
+                    width: 80%;
                     border: 1px solid #ccc;
                     border-radius: 5px;
                     background-color: #fff;
