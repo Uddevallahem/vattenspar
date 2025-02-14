@@ -81,6 +81,10 @@ function generateHTML(data) {
                     width: 30px;
                     height: auto;
                 }
+                .vattendroppar {
+                    width: 30px;
+                    height: auto;
+                }
                 .container {
                     text-align: center;
                     margin-top: 20px;
@@ -159,9 +163,6 @@ function generateHTML(data) {
                     margin: 0;
                     background-color: #f0f0f0;
                 }
-                h1 {
-                    font-family: 'Twisted System', sans-serif;
-                }
                 h2 {
                     text-align: center;
                 }
@@ -188,7 +189,7 @@ function generateHTML(data) {
 <!-- Här är det HTML-kommentarer -->
             <h1>Vattenutmaningen <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/pokal_blue_ill.png" alt="Pokal" class="pokal"></h1>
             <p>Välkommen till Vattenutmaningen! Här kan vi tillsammans spara vatten och göra en insats för miljön.</p>
-    <h1>Leaderboards</h1>
+    <h1>Leaderboards <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/vattendroppar_blue_ill.png" alt="Pokal" class="pokal"></h1>
     <div id="monthly-leaderboard">
         <h2>Topp 3 fastigheter som sparat mest vatten den här månaden</h2>
         <ol id="monthly-list">
