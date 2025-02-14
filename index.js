@@ -189,7 +189,6 @@ function generateHTML(data) {
                     margin: 20px auto;
                     width: 60%;
                     border: 1px solid #ccc;
-                    padding: 10px;
                     border-radius: 5px;
                     background-color: #fff;
                     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
