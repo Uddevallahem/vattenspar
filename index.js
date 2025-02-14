@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         console.log(sheet); 
                         
                         // Monthly leaderboard
-                        document.getElementById('monthly-first').textContent = `${sheet['B102'].v} och ${sheet['B106'].v}`;
+                        document.getElementById('monthly-first').textContent = sheet['B102'].v;
                         document.getElementById('monthly-second').textContent = sheet['B103'].v;
                         document.getElementById('monthly-third').textContent = sheet['B108'].v;
             
