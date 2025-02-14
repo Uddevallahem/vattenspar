@@ -250,6 +250,40 @@ function generateHTML(data) {
 </div>
             <script>
 // Här är det JavaScript-kommentarer
+
+
+document.addEventListener('DOMContentLoaded', function() {
+                    const fileUrl = 'https://raw.githubusercontent.com/Uddevallahem/vattenspar/main/Data.xlsx'; 
+                
+                    fetch(fileUrl)
+                    .then(response => response.arrayBuffer())
+                    .then(data => {
+                        const workbook = XLSX.read(data, { type: 'array' });
+                        const sheet = workbook.Sheets['Sheet1'];
+                        console.log(sheet); 
+                        
+                        // Monthly leaderboard
+                        document.getElementById('monthly-first').textContent = sheet['B98'].v;
+                        document.getElementById('monthly-second').textContent = sheet['B99'].v;
+                        document.getElementById('monthly-third').textContent = sheet['B100'].v;
+            
+                        // Yearly leaderboard
+                        document.getElementById('yearly-first').textContent = sheet['C98'].v;
+                        document.getElementById('yearly-second').textContent = sheet['C99'].v;
+                        document.getElementById('yearly-third').textContent = sheet['C100'].v;
+                    })
+                    .catch(error => console.error('Error fetching or parsing the Excel file:', error));
+            });
+
+
+            document.addEventListener('DOMContentLoaded', function() {
+                var totalSavingsBar = document.getElementById('totalSavingsBar');
+                var maxSavings = 216000000;
+                var currentSavings = 85507000;
+                var progressPercentage = (currentSavings / maxSavings) * 100;
+                totalSavingsBar.style.width = progressPercentage + '%';
+            });
+            
        
     document.getElementById('infoBox').addEventListener('click', function(event) {
     if (event.target.id !== 'waterSlider') {
@@ -321,36 +355,7 @@ document.getElementById('infoBox2').addEventListener('click', function(event) {
                 sliderValueElement2.style.left = newLeft2 + 'px';
             });
 
-            document.addEventListener('DOMContentLoaded', function() {
-                var totalSavingsBar = document.getElementById('totalSavingsBar');
-                var maxSavings = 216000000;
-                var currentSavings = 85507000;
-                var progressPercentage = (currentSavings / maxSavings) * 100;
-                totalSavingsBar.style.width = progressPercentage + '%';
-            });
-
-            document.addEventListener('DOMContentLoaded', function() {
-                    const fileUrl = 'https://raw.githubusercontent.com/Uddevallahem/vattenspar/main/Data.xlsx'; 
-                
-                    fetch(fileUrl)
-                    .then(response => response.arrayBuffer())
-                    .then(data => {
-                        const workbook = XLSX.read(data, { type: 'array' });
-                        const sheet = workbook.Sheets['Sheet1'];
-                        console.log(sheet); 
-                        
-                        // Monthly leaderboard
-                        document.getElementById('monthly-first').textContent = sheet['B98'].v;
-                        document.getElementById('monthly-second').textContent = sheet['B99'].v;
-                        document.getElementById('monthly-third').textContent = sheet['B100'].v;
-            
-                        // Yearly leaderboard
-                        document.getElementById('yearly-first').textContent = sheet['C98'].v;
-                        document.getElementById('yearly-second').textContent = sheet['C99'].v;
-                        document.getElementById('yearly-third').textContent = sheet['C100'].v;
-                    })
-                    .catch(error => console.error('Error fetching or parsing the Excel file:', error));
-            });
+           
 
             </script>
         </body>
