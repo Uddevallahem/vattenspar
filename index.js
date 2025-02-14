@@ -333,7 +333,8 @@ document.getElementById('infoBox2').addEventListener('click', function(event) {
                     .then(response => response.arrayBuffer())
                     .then(data => {
                         const workbook = XLSX.read(data, { type: 'array' });
-                        const sheet = workbook.Sheets[workbook.SheetNames[0]];
+                        const sheet = workbook.Sheets['Sheet1'];
+                        console.log(sheet); 
             
                         // Monthly leaderboard
                         document.getElementById('monthly-first').textContent = sheet['B98'].v;
