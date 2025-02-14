@@ -338,8 +338,8 @@ document.getElementById('infoBox2').addEventListener('click', function(event) {
                         const workbook = XLSX.read(data, { type: 'array' });
                         const sheet = workbook.Sheets['Sheet1'];
                         console.log(sheet); 
-                        function formatPercentage(value) {
-                            return (value * 100).toFixed(0) + '%';
+                   //     function formatPercentage(value) {
+                   //         return (value * 100).toFixed(0) + '%';
                         }
                         
                         // Monthly leaderboard
