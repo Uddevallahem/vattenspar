@@ -192,9 +192,9 @@ function generateHTML(data) {
     <div id="monthly-leaderboard">
         <h2>Topp 3 fastigheter som sparat mest vatten den här månaden</h2>
         <ol id="monthly-list">
-            <li id="monthly-first"> <span id="monthly-first1">&nbsp;</span><span id="monthly-first2"></span> </li>
-            <li id="monthly-second"> <span id="monthly-second1">&nbsp;&nbsp;</span><span id="monthly-second2"></span> </li>
-            <li id="monthly-third"> <span id="monthly-third1">&nbsp;&nbsp;&nbsp;</span><span id="monthly-third2"></span> </li>
+            <li id="monthly-first"> <b><span id="monthly-first1"></b>  &nbsp;</span><span id="monthly-first2"></span> </li>
+            <li id="monthly-second"> <span id="monthly-second1"></span><span id="monthly-second2"></span> </li>
+            <li id="monthly-third"> <span id="monthly-third1"></span><span id="monthly-third2"></span> </li>
         </ol>
     </div>
     <div id="yearly-leaderboard">
