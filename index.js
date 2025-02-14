@@ -157,14 +157,15 @@ function generateHTML(data) {
                     font-family: 'Aleo', sans-serif;
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
+                    align-items: flex-start;
                     justify-content: center;
                     height: 100vh;
                     margin: 0;
                     background-color: #f0f0f0;
+                    padding-left: 20px;
                 }
                 h2 {
-                    text-align: center;
+                    text-align: left;
                 }
                 #monthly-leaderboard, #yearly-leaderboard {
                     margin: 20px auto;
@@ -175,7 +176,7 @@ function generateHTML(data) {
                     background-color: #fff;
                 }
                 ol {
-                    padding-left: 0;
+                    padding-left: 20px;
                     list-style-position: inside;
                     text-align: left; 
                 }
