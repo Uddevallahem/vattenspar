@@ -79,7 +79,7 @@ function generateHTML(data) {
                 
                 h1 {
                     font-family: 'Aleo', sans-serif;
-                    font-color: #FF0000;
+                    color: #FF0000;
                     text-align: left;
                 }
                 
@@ -127,7 +127,7 @@ function generateHTML(data) {
                 }
                 
                 .slider-container {
-                    margin-top: 40px;
+                    margin-top: 20px;
                     position: relative;
                     width: 100%;
                     max-width: 400px; /* Maxbredd för slider */
@@ -266,7 +266,6 @@ function generateHTML(data) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script> 
 <!-- Här är det HTML-kommentarer -->
             <h1>Vattenutmaningen <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/vattendroppar_blue_ill.png" alt="Pokal" class="pokal"></h1>
-            <p>Välkommen till Vattenutmaningen! Här kan vi tillsammans spara vatten och göra en insats för miljön.</p>
 
              <div class="container">
     <div class="box" id="infoBox">
