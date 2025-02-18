@@ -79,7 +79,7 @@ function generateHTML(data) {
                 
                 h1 {
                     font-family: 'Aleo', sans-serif;
-                    color: #FF0000;
+                    color: #446F83;
                     text-align: left;
                 }
                 
@@ -98,12 +98,12 @@ function generateHTML(data) {
                 }
                 
                 .container {
-                    text-align: left;
+                    text-align: center;
                     margin-top: 20px;
                 }
                 
                 .box {
-                    background-color: #446F82;
+                    background-color: #446F83;
                     color: white;
                     padding: 20px;
                     border-radius: 5px;
