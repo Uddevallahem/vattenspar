@@ -266,27 +266,7 @@ function generateHTML(data) {
             <h1>Vattenutmaningen <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/vattendroppar_blue_ill.png" alt="Pokal" class="pokal"></h1>
             <p>Välkommen till Vattenutmaningen! Här kan vi tillsammans spara vatten och göra en insats för miljön.</p>
 
-    <h1>Leaderboards <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/pokal_blue_ill.png" alt="Pokal" class="pokal"></h1>      
-    <div class="leaderboard-container">
-        <div id="monthly-leaderboard" class="leaderboard">
-            <h2>Topp 3 fastigheter som sparat mest vatten den här månaden</h2>
-            <ol id="monthly-list">
-                <li id="monthly-first"> <b><span id="monthly-first1"></b>   </span><span id="monthly-first2"></span> </li>
-                <li id="monthly-second"> <b><span id="monthly-second1"></b>   </span><span id="monthly-second2"></span> </li>
-                <li id="monthly-third"> <b><span id="monthly-third1"></b>   </span><span id="monthly-third2"></span> </li>
-            </ol>
-        </div>
-        <div id="yearly-leaderboard" class="leaderboard">
-            <h2>Topp 3 fastigheter som sparat mest vatten det här året (2025)</h2>
-            <ol id="yearly-list">
-                <li id="yearly-first"> <b><span id="yearly-first1"></b>    </span><span id="yearly-first2"></span> </li>
-                <li id="yearly-second"> <b><span id="yearly-second1"></b>    </span><span id="yearly-second2"></span> </li>
-                <li id="yearly-third"> <b><span id="yearly-third1"></b>    </span><span id="yearly-third2"></span> </li>
-            </ol>
-        </div>
-    </div>
-
-         <div class="container">
+             <div class="container">
     <div class="box" id="infoBox">
         <h2>Duscha kortare</h2>
         <p id="questionDuscha" class="hidden">
@@ -323,49 +303,32 @@ function generateHTML(data) {
         </div>
     </div>
 </div>
+
+
+<h1>Leaderboards <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/pokal_blue_ill.png" alt="Pokal" class="pokal"></h1>      
+    <div class="leaderboard-container">
+        <div id="monthly-leaderboard" class="leaderboard">
+            <h2>Topp 3 fastigheter som sparat mest vatten den här månaden</h2>
+            <ol id="monthly-list">
+                <li id="monthly-first"> <b><span id="monthly-first1"></b>   </span><span id="monthly-first2"></span> </li>
+                <li id="monthly-second"> <b><span id="monthly-second1"></b>   </span><span id="monthly-second2"></span> </li>
+                <li id="monthly-third"> <b><span id="monthly-third1"></b>   </span><span id="monthly-third2"></span> </li>
+            </ol>
+        </div>
+        <div id="yearly-leaderboard" class="leaderboard">
+            <h2>Topp 3 fastigheter som sparat mest vatten det här året (2025)</h2>
+            <ol id="yearly-list">
+                <li id="yearly-first"> <b><span id="yearly-first1"></b>    </span><span id="yearly-first2"></span> </li>
+                <li id="yearly-second"> <b><span id="yearly-second1"></b>    </span><span id="yearly-second2"></span> </li>
+                <li id="yearly-third"> <b><span id="yearly-third1"></b>    </span><span id="yearly-third2"></span> </li>
+            </ol>
+        </div>
+    </div>
+
+    
             <script>
 // Här är det JavaScript-kommentarer
-
-
-document.addEventListener('DOMContentLoaded', function() {
-                    const fileUrl = 'https://raw.githubusercontent.com/Uddevallahem/vattenspar/main/Data.xlsx'; 
-                
-                    fetch(fileUrl)
-                    .then(response => response.arrayBuffer())
-                    .then(data => {
-                        const workbook = XLSX.read(data, { type: 'array' });
-                        const sheet = workbook.Sheets['Sheet1'];
-                        console.log(sheet); 
-                        
-                        // Monthly leaderboard
-                        document.getElementById('monthly-first1').textContent = sheet['B102'].v;
-                        document.getElementById('monthly-first2').textContent = sheet['B106'].v;
-                        document.getElementById('monthly-second1').textContent = sheet['B103'].v;
-                        document.getElementById('monthly-second2').textContent = sheet['B107'].v;
-                        document.getElementById('monthly-third1').textContent = sheet['B104'].v;
-                        document.getElementById('monthly-third2').textContent = sheet['B108'].v;
-
-            
-                        // Yearly leaderboard
-                        document.getElementById('yearly-first1').textContent = sheet['C102'].v;
-                        document.getElementById('yearly-first2').textContent = sheet['C106'].v;
-                        document.getElementById('yearly-second1').textContent = sheet['C103'].v;
-                        document.getElementById('yearly-second2').textContent = sheet['C107'].v;
-                        document.getElementById('yearly-third1').textContent = sheet['C104'].v;
-                        document.getElementById('yearly-third2').textContent = sheet['C108'].v;
-                    })
-                    .catch(error => console.error('Error fetching or parsing the Excel file:', error));
-            });
-
-
-            document.addEventListener('DOMContentLoaded', function() {
-                var totalSavingsBar = document.getElementById('totalSavingsBar');
-                var maxSavings = 216000000;
-                var currentSavings = 85507000;
-                var progressPercentage = (currentSavings / maxSavings) * 100;
-                totalSavingsBar.style.width = progressPercentage + '%';
-            });
-            
+         
        
     document.getElementById('infoBox').addEventListener('click', function(event) {
     if (event.target.id !== 'waterSlider') {
@@ -437,6 +400,37 @@ document.getElementById('infoBox2').addEventListener('click', function(event) {
                 sliderValueElement2.style.left = newLeft2 + 'px';
             });
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+                    const fileUrl = 'https://raw.githubusercontent.com/Uddevallahem/vattenspar/main/Data.xlsx'; 
+                
+                    fetch(fileUrl)
+                    .then(response => response.arrayBuffer())
+                    .then(data => {
+                        const workbook = XLSX.read(data, { type: 'array' });
+                        const sheet = workbook.Sheets['Sheet1'];
+                        console.log(sheet); 
+                        
+                        // Monthly leaderboard
+                        document.getElementById('monthly-first1').textContent = sheet['B102'].v;
+                        document.getElementById('monthly-first2').textContent = sheet['B106'].v;
+                        document.getElementById('monthly-second1').textContent = sheet['B103'].v;
+                        document.getElementById('monthly-second2').textContent = sheet['B107'].v;
+                        document.getElementById('monthly-third1').textContent = sheet['B104'].v;
+                        document.getElementById('monthly-third2').textContent = sheet['B108'].v;
+
+            
+                        // Yearly leaderboard
+                        document.getElementById('yearly-first1').textContent = sheet['C102'].v;
+                        document.getElementById('yearly-first2').textContent = sheet['C106'].v;
+                        document.getElementById('yearly-second1').textContent = sheet['C103'].v;
+                        document.getElementById('yearly-second2').textContent = sheet['C107'].v;
+                        document.getElementById('yearly-third1').textContent = sheet['C104'].v;
+                        document.getElementById('yearly-third2').textContent = sheet['C108'].v;
+                    })
+                    .catch(error => console.error('Error fetching or parsing the Excel file:', error));
+            });
            
 
             </script>
