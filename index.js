@@ -69,7 +69,7 @@ function generateHTML(data) {
                     font-family: 'Aleo', sans-serif;
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
+                    align-items: left;
                     justify-content: flex-start;
                     height: 100vh;
                     margin: 0;
@@ -98,7 +98,7 @@ function generateHTML(data) {
                 }
                 
                 .container {
-                    text-align: center;
+                    text-align: left;
                     margin-top: 20px;
                 }
                 
@@ -152,7 +152,7 @@ function generateHTML(data) {
                 }
                                                  
                 #savingsText {
-                    text-align: center;
+                    text-align: left;
                     margin-top: 10px;
                     font-weight: bold;
                     color: #446F82;
