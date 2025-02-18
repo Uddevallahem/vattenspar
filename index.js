@@ -86,6 +86,10 @@ function generateHTML(data) {
                 h2 {
                     text-align: center;
                 }
+
+                h3 {
+                    text-align: left;
+                }
                 
                 .pokal {
                     width: 30px;
@@ -312,7 +316,7 @@ function generateHTML(data) {
 <h1>Leaderboards <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/pokal_blue_ill.png" alt="Pokal" class="pokal"></h1>      
     <div class="leaderboard-container">
         <div id="monthly-leaderboard" class="leaderboard">
-            <h2>Topp 3 fastigheter som sparat mest vatten den här månaden</h2>
+            <h3>Topp 3 fastigheter som sparat mest vatten den här månaden</h3>
             <ol id="monthly-list">
                 <li id="monthly-first"> <b><span id="monthly-first1"></b>   </span><span id="monthly-first2"></span> </li>
                 <li id="monthly-second"> <b><span id="monthly-second1"></b>   </span><span id="monthly-second2"></span> </li>
@@ -320,7 +324,7 @@ function generateHTML(data) {
             </ol>
         </div>
         <div id="yearly-leaderboard" class="leaderboard">
-            <h2>Topp 3 fastigheter som sparat mest vatten det här året (2025)</h2>
+            <h3>Topp 3 fastigheter som sparat mest vatten det här året (2025)</h3>
             <ol id="yearly-list">
                 <li id="yearly-first"> <b><span id="yearly-first1"></b>    </span><span id="yearly-first2"></span> </li>
                 <li id="yearly-second"> <b><span id="yearly-second1"></b>    </span><span id="yearly-second2"></span> </li>
