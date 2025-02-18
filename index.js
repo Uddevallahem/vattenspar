@@ -84,10 +84,6 @@ function generateHTML(data) {
                 }
                 
                 h2 {
-                    text-align: left;
-                }
-
-                h2Box {
                     text-align: center;
                 }
                 
@@ -103,7 +99,7 @@ function generateHTML(data) {
                 
                 .container {
                     text-align: center;
-                    margin-top: 20px;
+                    margin-top: 10px;
                 }
                 
                 .box {
@@ -268,12 +264,15 @@ function generateHTML(data) {
         </head>
         <body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script> 
-<!-- Här är det HTML-kommentarer -->
-            <h1>Vattenutmaningen <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/vattendroppar_blue_ill.png" alt="Pokal" class="pokal"></h1>
 
+
+
+<!-- Här är det HTML-kommentarer -->
+
+            <h1>Vattenutmaningen <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/vattendroppar_blue_ill.png" alt="Pokal" class="pokal"></h1>
              <div class="container">
     <div class="box" id="infoBox">
-        <h2Box>Duscha kortare</h2Box>
+        <h2>Duscha kortare</h2>
         <p id="questionDuscha" class="hidden">
             Hur många gånger i veckan duschar ni?
         </p>
