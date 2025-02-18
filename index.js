@@ -174,12 +174,12 @@ function generateHTML(data) {
                     border: 1px solid #ccc;
                     border-radius: 5px;
                     background-color: transparent;
-                    margin-top: 10px;
+                    margin-top: 20px;
 
                 }
                 
                 #monthly-leaderboard, #yearly-leaderboard {
-                    width: 100%;
+                    width: 25%;
                     border: 1px solid #ccc;
                     border-radius: 5px;
                     background-color: #fff;
