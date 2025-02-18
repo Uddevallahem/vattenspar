@@ -86,6 +86,10 @@ function generateHTML(data) {
                 h2 {
                     text-align: left;
                 }
+
+                h2Box {
+                    text-align: center;
+                }
                 
                 .pokal {
                     width: 30px;
@@ -269,7 +273,7 @@ function generateHTML(data) {
 
              <div class="container">
     <div class="box" id="infoBox">
-        <h2>Duscha kortare</h2>
+        <h2Box>Duscha kortare</h2Box>
         <p id="questionDuscha" class="hidden">
             Hur många gånger i veckan duschar ni?
         </p>
