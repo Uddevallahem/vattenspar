@@ -73,13 +73,13 @@ function generateHTML(data) {
                     justify-content: flex-start;
                     height: 100vh;
                     margin: 0;
-                    background-color: #f0f0f0;
+                    background-color: #ffffff;
                     padding-top: 20px;
                 }
                 
                 h1 {
                     font-family: 'Aleo', sans-serif;
-                    font-color: #446F83;
+                    font-color: #FF0000;
                     text-align: left;
                 }
                 
