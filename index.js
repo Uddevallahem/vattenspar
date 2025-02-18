@@ -148,12 +148,7 @@ function generateHTML(data) {
                     justify-content: space-between;
                     margin-top: 10px;
                 }
-                
-                .title-container-progress {
-                    padding-top: 10px;
-                }
-
-                                  
+                                                 
                 #savingsText {
                     text-align: center;
                     margin-top: 10px;
@@ -262,16 +257,6 @@ function generateHTML(data) {
                         max-width: 300px;
                     }
                 
-                    .title-container-progress {
-                        position: relative;
-                        top: 10px;
-                        right: 0;
-                        padding-top: 10px;
-                    }
-                
-                    .progress-container {
-                        max-width: 95%;
-                    }
                 }
             </style>
         </head>
@@ -460,36 +445,3 @@ document.getElementById('infoBox2').addEventListener('click', function(event) {
     `;
     return html;
 }
-
-
- /*
-                .progress-container {
-                    width: 100%;
-                    max-width: 600px;
-                    background-color: #f3f3f3;
-                    border: 1px solid #ccc;
-                    border-radius: 5px;
-                    overflow: hidden;
-                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-                }
-                
-                .progress-bar {
-                    width: 0;
-                    height: 30px;
-                    background-color: #85A1AE;
-                    text-align: center;
-                    line-height: 30px;
-                    color: white;
-                    transition: width 0.3s ease;
-                }
-                */
-
-<!--
-    <div class="title-container-progress">
-        <h1>Totala besparning för samtliga hyresgäster 2025:</h1>
-    </div>
-<div class="progress-container">
-    <div class="progress-bar" id="totalSavingsBar"></div>
-    <p id="savingsText">Ni har tillsammans sparat 85 507 000 liter vatten, fantastiskt jobbat!</p>
-</div>
--->
