@@ -174,12 +174,12 @@ function generateHTML(data) {
                     border: 1px solid #ccc;
                     border-radius: 5px;
                     background-color: transparent;
-                    margin-top: 20px;
+                    margin-top: 20px;            /* Mellanrum mellan boxarna */
 
                 }
                 
                 #monthly-leaderboard, #yearly-leaderboard {
-                    width: 25%;
+                    width: 20%;                    /* Bredd på boxarna*/
                     border: 1px solid #ccc;
                     border-radius: 5px;
                     background-color: #fff;
