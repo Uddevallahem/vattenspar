@@ -166,8 +166,6 @@ function generateHTML(data) {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
-                    padding: 20px;
-
                 }
                                 
                 .leaderboard {
@@ -176,6 +174,8 @@ function generateHTML(data) {
                     border: 1px solid #ccc;
                     border-radius: 5px;
                     background-color: transparent;
+                    margin-top: 10px;
+
                 }
                 
                 #monthly-leaderboard, #yearly-leaderboard {
