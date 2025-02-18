@@ -109,7 +109,7 @@ function generateHTML(data) {
                     border-radius: 5px;
                     cursor: pointer;
                     transition: all 0.3s ease;
-                    margin-top: 40px;
+                    margin-top: 20px;
                     width: 100%; /* Gör boxen responsiv */
                     max-width: 400px; /* Maxbredd */
                 }
