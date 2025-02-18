@@ -78,7 +78,9 @@ function generateHTML(data) {
                 }
                 
                 h1 {
-                    font-family: 'Twisted System', sans-serif;
+                    font-family: 'Aleo', sans-serif;
+                    font-color: #446F83;
+                    text-align: left;
                 }
                 
                 h2 {
