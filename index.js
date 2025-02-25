@@ -133,7 +133,6 @@ function generateHTML(data) {
                 
                 .slider-value {
                     position: absolute;
-                    margin-top: -20px;
                     top: -25px;
                     left: 50%;
                     transform: translateX(-50%);
@@ -143,7 +142,7 @@ function generateHTML(data) {
                 .slider-labels {
                     display: flex;
                     justify-content: space-between;
-                    margin-top: 10px;
+                    margin-top: 30px;
                 }
                                                  
                 #savingsText {
