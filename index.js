@@ -9,8 +9,8 @@ async function handleRequest(request) {
         return new Response(html, {
             headers: {
                 'content-type': 'text/html',
-                'Access-Contr-Allow-Origin': '*',
-                'Access-Contr-Allow-Methods': 'GET, POST, OPTIONS',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
             },
         });
     } catch (error) {
@@ -32,7 +32,7 @@ async function fetchData() {
             throw new Error('Received non-JSON response');
         }
     } catch (error) {
-        conse.error('Error fetching data:', error);
+        console.error('Error fetching data:', error);
         throw error;
     }
 }
@@ -42,8 +42,8 @@ function handleError(error) {
         status: 500,
         headers: {
             'content-type': 'text/plain',
-            'Access-Contr-Allow-Origin': '*',
-            'Access-Contr-Allow-Methods': 'GET, POST, OPTIONS',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
         },
     });
 }
@@ -68,18 +68,18 @@ function generateHTML(data) {
                 body {
                     font-family: 'Aleo', sans-serif;
                     display: flex;
-                    flex-direction: cumn;
+                    flex-direction: column;
                     align-items: left;
                     justify-content: flex-start;
                     height: 100vh;
                     margin: 0;
-                    background-cor: #ffffff;
+                    background-color: #ffffff;
                     padding-top: 20px;
                 }
                 
                 h1 {
                     font-family: 'Aleo', sans-serif;
-                    cor: #446F83;
+                    color: #446F83;
                     text-align: left;
                 }
                 
@@ -107,8 +107,8 @@ function generateHTML(data) {
                 }
                 
                 .box {
-                    background-cor: #446F83;
-                    cor: white;
+                    background-color: #446F83;
+                    color: white;
                     padding: 20px;
                     border-radius: 5px;
                     cursor: pointer;
@@ -119,7 +119,7 @@ function generateHTML(data) {
                 }
                 
                 .box:hover {
-                    background-cor: #85A1AE;
+                    background-color: #85A1AE;
                 }
                 
                 .hidden {
@@ -142,11 +142,11 @@ function generateHTML(data) {
                 }
                 
                 .slider-value {
-                    position: absute;
+                    position: absolute;
                     top: -25px;
                     left: 50%;
                     transform: translateX(-50%);
-                    font-weight: bd;
+                    font-weight: bold;
                 }
                 
                 .slider-labels {
@@ -158,8 +158,8 @@ function generateHTML(data) {
                 #savingsText {
                     text-align: left;
                     margin-top: 10px;
-                    font-weight: bd;
-                    cor: #446F82;
+                    font-weight: bold;
+                    color: #446F82;
                 }
                 
                             
