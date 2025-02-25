@@ -91,16 +91,6 @@ function generateHTML(data) {
                     text-align: left;
                 }
                 
-                .pokal {
-                    width: 30px;
-                    height: auto;
-                }
-                
-                .vattendroppar {
-                    width: 30px;
-                    height: auto;
-                }
-                
                 .container {
                     text-align: center;
                     margin-top: 10px;
