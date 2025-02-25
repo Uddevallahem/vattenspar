@@ -129,6 +129,8 @@ function generateHTML(data) {
                 
                 .slider {
                     width: 100%;
+                    margin-top: 10px;
+                    
                 }
                 
                 .slider-value {
