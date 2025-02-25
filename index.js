@@ -121,9 +121,6 @@ function generateHTML(data) {
                     display: block;
                 }
 
-                #questionDuscha {
-                    margin-bottom: 15px; /* Justera värdet efter behov */
-                }
                 
                 .slider-container {
                     margin-top: 20px;
@@ -138,7 +135,7 @@ function generateHTML(data) {
                 
                 .slider-value {
                     position: absolute;
-                    top: -25px;
+                    top: -35px;
                     left: 50%;
                     transform: translateX(-50%);
                     font-weight: bold;
