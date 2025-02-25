@@ -143,7 +143,7 @@ function generateHTML(data) {
                 .slider-labels {
                     display: flex;
                     justify-content: space-between;
-                    margin-top: 10px;
+                    margin-top: 25px;
                 }
                                                  
                 #savingsText {
