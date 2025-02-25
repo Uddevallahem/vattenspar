@@ -120,6 +120,10 @@ function generateHTML(data) {
                 .visible {
                     display: block;
                 }
+
+                #questionDuscha {
+                    margin-bottom: 15px; /* Justera värdet efter behov */
+                }
                 
                 .slider-container {
                     margin-top: 20px;
