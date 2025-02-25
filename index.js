@@ -238,7 +238,7 @@ function generateHTML(data) {
 
 
     <div class="box" id="infoBox3">
-        <h2>Stäng av kranen</h2>
+        <h2>Borsta tänderna</h2>
         <p id="questionDuscha3" class="hidden" style="font-style: italic;">
             Hur många är ni i hushållet?
         </p>
@@ -256,7 +256,7 @@ function generateHTML(data) {
     </div>
 
     <div class="box" id="infoBox4">
-        <h2>Stäng av kranen</h2>
+        <h2>Tvåla</h2>
         <p id="questionDuscha4" class="hidden" style="font-style: italic;">
             Hur många är ni i hushållet?
         </p>
@@ -275,7 +275,7 @@ function generateHTML(data) {
 
 
     <div class="box" id="infoBox5">
-        <h2>Stäng av kranen</h2>
+        <h2>Läckande WC</h2>
         <p id="questionDuscha5" class="hidden" style="font-style: italic;">
             Hur många är ni i hushållet?
         </p>
@@ -294,7 +294,7 @@ function generateHTML(data) {
 
 
     <div class="box" id="infoBox6">
-        <h2>Stäng av kranen</h2>
+        <h2>Droppande kran</h2>
         <p id="questionDuscha6" class="hidden" style="font-style: italic;">
             Hur många är ni i hushållet?
         </p>
