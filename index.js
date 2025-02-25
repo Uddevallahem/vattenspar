@@ -9,8 +9,8 @@ async function handleRequest(request) {
         return new Response(html, {
             headers: {
                 'content-type': 'text/html',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+                'Access-Contr-Allow-Origin': '*',
+                'Access-Contr-Allow-Methods': 'GET, POST, OPTIONS',
             },
         });
     } catch (error) {
@@ -32,7 +32,7 @@ async function fetchData() {
             throw new Error('Received non-JSON response');
         }
     } catch (error) {
-        console.error('Error fetching data:', error);
+        conse.error('Error fetching data:', error);
         throw error;
     }
 }
@@ -42,8 +42,8 @@ function handleError(error) {
         status: 500,
         headers: {
             'content-type': 'text/plain',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+            'Access-Contr-Allow-Origin': '*',
+            'Access-Contr-Allow-Methods': 'GET, POST, OPTIONS',
         },
     });
 }
@@ -68,18 +68,18 @@ function generateHTML(data) {
                 body {
                     font-family: 'Aleo', sans-serif;
                     display: flex;
-                    flex-direction: column;
+                    flex-direction: cumn;
                     align-items: left;
                     justify-content: flex-start;
                     height: 100vh;
                     margin: 0;
-                    background-color: #ffffff;
+                    background-cor: #ffffff;
                     padding-top: 20px;
                 }
                 
                 h1 {
                     font-family: 'Aleo', sans-serif;
-                    color: #446F83;
+                    cor: #446F83;
                     text-align: left;
                 }
                 
@@ -107,8 +107,8 @@ function generateHTML(data) {
                 }
                 
                 .box {
-                    background-color: #446F83;
-                    color: white;
+                    background-cor: #446F83;
+                    cor: white;
                     padding: 20px;
                     border-radius: 5px;
                     cursor: pointer;
@@ -119,7 +119,7 @@ function generateHTML(data) {
                 }
                 
                 .box:hover {
-                    background-color: #85A1AE;
+                    background-cor: #85A1AE;
                 }
                 
                 .hidden {
@@ -142,11 +142,11 @@ function generateHTML(data) {
                 }
                 
                 .slider-value {
-                    position: absolute;
+                    position: absute;
                     top: -25px;
                     left: 50%;
                     transform: translateX(-50%);
-                    font-weight: bold;
+                    font-weight: bd;
                 }
                 
                 .slider-labels {
@@ -158,78 +158,19 @@ function generateHTML(data) {
                 #savingsText {
                     text-align: left;
                     margin-top: 10px;
-                    font-weight: bold;
-                    color: #446F82;
+                    font-weight: bd;
+                    cor: #446F82;
                 }
                 
-                .leaderboard-container {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                }
-                                
-                .leaderboard {
-                    align-self: flex-start;
-                    width: 25%;
-                    border: 1px solid #ccc;
-                    border-radius: 5px;
-                    background-color: transparent;
-                    margin-top: 20px;            /* Mellanrum mellan boxarna */
-
-                }
-                
-                #monthly-leaderboard, #yearly-leaderboard {
-                    width: 20%;                    /* Bredd på boxarna*/
-                    border: 1px solid #ccc;
-                    border-radius: 5px;
-                    background-color: #fff;
-                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-                }
-                
-                ol {
-                    list-style-position: inside;
-                    text-align: left;
-                }
-                
-                li {
-                    margin: 5px 0;
-                }
-                
+                            
                 /* Media Queries */
-                @media (max-width: 1200px) {
-                    .leaderboard-container {
-                        top: 40px;
-                        left: 10px;
-                    }
-                
-                    .leaderboard {
-                        width: 40%;
-                    }
-                
-                    #monthly-leaderboard, #yearly-leaderboard {
-                        width: 80%;
-                    }
-                
+                @media (max-width: 1200px) {               
                     .box {
                         width: 90%;
                     }
                 }
                 
-                @media (max-width: 900px) {
-                    .leaderboard-container {
-                        top: 20px;
-                        left: 10px;
-                        padding-top: 10px;
-                    }
-                
-                    .leaderboard {
-                        width: 50%;
-                    }
-                
-                    #monthly-leaderboard, #yearly-leaderboard {
-                        width: 90%;
-                    }
-                
+                @media (max-width: 900px) {              
                     .box {
                         width: 90%;
                     }
@@ -242,18 +183,6 @@ function generateHTML(data) {
                 @media (max-width: 600px) {
                     body {
                         padding-top: 10px;
-                    }
-                
-                    .leaderboard-container h1 {
-                        font-size: 20px;
-                    }
-                
-                    .leaderboard {
-                        width: 100%;
-                    }
-                
-                    #monthly-leaderboard, #yearly-leaderboard {
-                        width: 100%;
                     }
                 
                     .box {
@@ -274,8 +203,6 @@ function generateHTML(data) {
 
 
 <!-- Här är det HTML-kommentarer -->
-
-            <h1>Vattenutmaningen <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/vattendroppar_blue_ill.png" alt="Pokal" class="pokal"></h1>
              <div class="container">
     <div class="box" id="infoBox">
         <h2>Duscha kortare</h2>
@@ -315,25 +242,6 @@ function generateHTML(data) {
 </div>
 
 
-<h1>Leaderboards <img src="https://raw.githubusercontent.com/uddevallahem/vattenspar/main/images/pokal_blue_ill.png" alt="Pokal" class="pokal"></h1>      
-    <div class="leaderboard-container">
-        <div id="monthly-leaderboard" class="leaderboard">
-            <h3>Topp 3 fastigheter som sparat mest vatten den här månaden</h3>
-            <ol id="monthly-list">
-                <li id="monthly-first"> <b><span id="monthly-first1"></b>   </span><span id="monthly-first2"></span> </li>
-                <li id="monthly-second"> <b><span id="monthly-second1"></b>   </span><span id="monthly-second2"></span> </li>
-                <li id="monthly-third"> <b><span id="monthly-third1"></b>   </span><span id="monthly-third2"></span> </li>
-            </ol>
-        </div>
-        <div id="yearly-leaderboard" class="leaderboard">
-            <h3>Topp 3 fastigheter som sparat mest vatten det här året (2025)</h3>
-            <ol id="yearly-list">
-                <li id="yearly-first"> <b><span id="yearly-first1"></b>    </span><span id="yearly-first2"></span> </li>
-                <li id="yearly-second"> <b><span id="yearly-second1"></b>    </span><span id="yearly-second2"></span> </li>
-                <li id="yearly-third"> <b><span id="yearly-third1"></b>    </span><span id="yearly-third2"></span> </li>
-            </ol>
-        </div>
-    </div>
 
     
             <script>
@@ -410,38 +318,6 @@ document.getElementById('infoBox2').addEventListener('click', function(event) {
                 sliderValueElement2.style.left = newLeft2 + 'px';
             });
 
-
-
-document.addEventListener('DOMContentLoaded', function() {
-                    const fileUrl = 'https://raw.githubusercontent.com/Uddevallahem/vattenspar/main/Data.xlsx'; 
-                
-                    fetch(fileUrl)
-                    .then(response => response.arrayBuffer())
-                    .then(data => {
-                        const workbook = XLSX.read(data, { type: 'array' });
-                        const sheet = workbook.Sheets['Sheet1'];
-                        console.log(sheet); 
-                        
-                        // Monthly leaderboard
-                        document.getElementById('monthly-first1').textContent = sheet['B102'].v;
-                        document.getElementById('monthly-first2').textContent = sheet['B106'].v;
-                        document.getElementById('monthly-second1').textContent = sheet['B103'].v;
-                        document.getElementById('monthly-second2').textContent = sheet['B107'].v;
-                        document.getElementById('monthly-third1').textContent = sheet['B104'].v;
-                        document.getElementById('monthly-third2').textContent = sheet['B108'].v;
-
-            
-                        // Yearly leaderboard
-                        document.getElementById('yearly-first1').textContent = sheet['C102'].v;
-                        document.getElementById('yearly-first2').textContent = sheet['C106'].v;
-                        document.getElementById('yearly-second1').textContent = sheet['C103'].v;
-                        document.getElementById('yearly-second2').textContent = sheet['C107'].v;
-                        document.getElementById('yearly-third1').textContent = sheet['C104'].v;
-                        document.getElementById('yearly-third2').textContent = sheet['C108'].v;
-                    })
-                    .catch(error => console.error('Error fetching or parsing the Excel file:', error));
-            });
-           
 
             </script>
         </body>
