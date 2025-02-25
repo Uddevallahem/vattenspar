@@ -255,6 +255,65 @@ function generateHTML(data) {
         </div>
     </div>
 
+    <div class="box" id="infoBox4">
+        <h2>Stäng av kranen</h2>
+        <p id="questionDuscha4" class="hidden" style="font-style: italic;">
+            Hur många är ni i hushållet?
+        </p>
+        <div class="slider-container hidden" id="sliderContainer4">
+            <input type="range" min="1" max="8" value="1" class="slider" id="waterSlider4">
+            <span class="slider-value" id="sliderValue4">1</span>
+            <div class="slider-labels">
+                <span>1</span>
+                <span>8</span>
+            </div>
+            <p id="moreInfo4" class="hidden">
+                Du sparar ungefär <span id="waterSavings4">8</span> liter vatten per vecka genom att stänga av kranen.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="box" id="infoBox5">
+        <h2>Stäng av kranen</h2>
+        <p id="questionDuscha5" class="hidden" style="font-style: italic;">
+            Hur många är ni i hushållet?
+        </p>
+        <div class="slider-container hidden" id="sliderContainer5">
+            <input type="range" min="1" max="8" value="1" class="slider" id="waterSlider5">
+            <span class="slider-value" id="sliderValue5">1</span>
+            <div class="slider-labels">
+                <span>1</span>
+                <span>8</span>
+            </div>
+            <p id="moreInfo5" class="hidden">
+                Du sparar ungefär <span id="waterSavings5">8</span> liter vatten per vecka genom att stänga av kranen.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="box" id="infoBox6">
+        <h2>Stäng av kranen</h2>
+        <p id="questionDuscha6" class="hidden" style="font-style: italic;">
+            Hur många är ni i hushållet?
+        </p>
+        <div class="slider-container hidden" id="sliderContainer6">
+            <input type="range" min="1" max="8" value="1" class="slider" id="waterSlider6">
+            <span class="slider-value" id="sliderValue6">1</span>
+            <div class="slider-labels">
+                <span>1</span>
+                <span>8</span>
+            </div>
+            <p id="moreInfo6" class="hidden">
+                Du sparar ungefär <span id="waterSavings6">8</span> liter vatten per vecka genom att stänga av kranen.
+            </p>
+        </div>
+    </div>
+
+
+
+
 
     
 </div>
@@ -334,6 +393,80 @@ document.getElementById('infoBox3').addEventListener('click', function(event) {
 });
 
 
+document.getElementById('infoBox4').addEventListener('click', function(event) {
+    if (event.target.id !== 'waterSlider4') {
+        var moreInfo = document.getElementById('moreInfo4');
+        var questionDuscha = document.getElementById('questionDuscha4');
+        var sliderContainer = document.getElementById('sliderContainer4');
+        if (moreInfo.classList.contains('hidden')) {
+            moreInfo.classList.remove('hidden');
+            moreInfo.classList.add('visible');
+            questionDuscha.classList.remove('hidden');
+            questionDuscha.classList.add('visible');
+            sliderContainer.classList.remove('hidden');
+            sliderContainer.classList.add('visible');
+        } else {
+            moreInfo.classList.remove('visible');
+            moreInfo.classList.add('hidden');
+            questionDuscha.classList.remove('visible');
+            questionDuscha.classList.add('hidden');
+            sliderContainer.classList.remove('visible');
+            sliderContainer.classList.add('hidden');
+        }
+    }
+});
+
+
+document.getElementById('infoBox5').addEventListener('click', function(event) {
+    if (event.target.id !== 'waterSlider5') {
+        var moreInfo = document.getElementById('moreInfo5');
+        var questionDuscha = document.getElementById('questionDuscha5');
+        var sliderContainer = document.getElementById('sliderContainer5');
+        if (moreInfo.classList.contains('hidden')) {
+            moreInfo.classList.remove('hidden');
+            moreInfo.classList.add('visible');
+            questionDuscha.classList.remove('hidden');
+            questionDuscha.classList.add('visible');
+            sliderContainer.classList.remove('hidden');
+            sliderContainer.classList.add('visible');
+        } else {
+            moreInfo.classList.remove('visible');
+            moreInfo.classList.add('hidden');
+            questionDuscha.classList.remove('visible');
+            questionDuscha.classList.add('hidden');
+            sliderContainer.classList.remove('visible');
+            sliderContainer.classList.add('hidden');
+        }
+    }
+});
+
+
+document.getElementById('infoBox6').addEventListener('click', function(event) {
+    if (event.target.id !== 'waterSlider6') {
+        var moreInfo = document.getElementById('moreInfo6');
+        var questionDuscha = document.getElementById('questionDuscha6');
+        var sliderContainer = document.getElementById('sliderContainer6');
+        if (moreInfo.classList.contains('hidden')) {
+            moreInfo.classList.remove('hidden');
+            moreInfo.classList.add('visible');
+            questionDuscha.classList.remove('hidden');
+            questionDuscha.classList.add('visible');
+            sliderContainer.classList.remove('hidden');
+            sliderContainer.classList.add('visible');
+        } else {
+            moreInfo.classList.remove('visible');
+            moreInfo.classList.add('hidden');
+            questionDuscha.classList.remove('visible');
+            questionDuscha.classList.add('hidden');
+            sliderContainer.classList.remove('visible');
+            sliderContainer.classList.add('hidden');
+        }
+    }
+});
+
+
+
+
 
         
         document.getElementById('waterSlider').addEventListener('input', function() {
@@ -373,6 +506,44 @@ document.getElementById('infoBox3').addEventListener('click', function(event) {
                 var sliderWidth3 = slider3.offsetWidth;
                 var newLeft3 = ((sliderValue3 - 1) / 7) * sliderWidth3; // Justera för det nya intervallet 1-8
                 sliderValueElement3.style.left = newLeft3 + 'px';
+            });
+
+  document.getElementById('waterSlider4').addEventListener('input', function() {
+                var slider4 = document.getElementById('waterSlider4');
+                var sliderValue4 = slider4.value;
+                var waterSavings4 = sliderValue4 * 8; // Här kan man ändra 8 till vad ekvationen egentligen skall vara
+                document.getElementById('waterSavings4').innerText = waterSavings4;
+                var sliderValueElement4 = document.getElementById('sliderValue4');
+                sliderValueElement4.innerText = sliderValue4;
+                var sliderWidth4 = slider4.offsetWidth;
+                var newLeft4 = ((sliderValue4 - 1) / 7) * sliderWidth4; // Justera för det nya intervallet 1-8
+                sliderValueElement4.style.left = newLeft4 + 'px';
+            });
+
+
+  document.getElementById('waterSlider5').addEventListener('input', function() {
+                var slider5 = document.getElementById('waterSlider5');
+                var sliderValue5 = slider5.value;
+                var waterSavings5 = sliderValue5 * 8; // Här kan man ändra 8 till vad ekvationen egentligen skall vara
+                document.getElementById('waterSavings5').innerText = waterSavings5;
+                var sliderValueElement5 = document.getElementById('sliderValue5');
+                sliderValueElement5.innerText = sliderValue5;
+                var sliderWidth5 = slider5.offsetWidth;
+                var newLeft5 = ((sliderValue5 - 1) / 7) * sliderWidth5; // Justera för det nya intervallet 1-8
+                sliderValueElement5.style.left = newLeft5 + 'px';
+            });
+
+
+  document.getElementById('waterSlider6').addEventListener('input', function() {
+                var slider6 = document.getElementById('waterSlider6');
+                var sliderValue6 = slider6.value;
+                var waterSavings6 = sliderValue6 * 8; // Här kan man ändra 8 till vad ekvationen egentligen skall vara
+                document.getElementById('waterSavings6').innerText = waterSavings6;
+                var sliderValueElement6 = document.getElementById('sliderValue6');
+                sliderValueElement6.innerText = sliderValue6;
+                var sliderWidth6 = slider6.offsetWidth;
+                var newLeft6 = ((sliderValue6 - 1) / 7) * sliderWidth6; // Justera för det nya intervallet 1-8
+                sliderValueElement6.style.left = newLeft6 + 'px';
             });
 
 
