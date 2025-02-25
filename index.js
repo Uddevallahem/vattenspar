@@ -128,13 +128,12 @@ function generateHTML(data) {
                 }
                 
                 .slider {
-                    width: 100%;
-                    margin-top: 10px;
-                    
+                    width: 100%; 
                 }
                 
                 .slider-value {
                     position: absolute;
+                    margin-top: 20px;
                     top: -25px;
                     left: 50%;
                     transform: translateX(-50%);
