@@ -135,7 +135,7 @@ function generateHTML(data) {
                 
                 .slider-value {
                     position: absolute;
-                    margin-top: 20px;
+                    margin-top: 18px;
                     transform: translateX(-50%);
                     font-weight: bold;
                 }
