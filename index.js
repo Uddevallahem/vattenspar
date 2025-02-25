@@ -114,6 +114,7 @@ function generateHTML(data) {
                 
                 .hidden {
                     display: none;
+                    margin-bottom: 20px;
                 }
                 
                 .visible {
