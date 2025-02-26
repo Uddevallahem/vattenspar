@@ -477,7 +477,7 @@ document.getElementById('infoBox6').addEventListener('click', function(event) {
             var sliderValueElement = document.getElementById('sliderValue');
             sliderValueElement.innerText = sliderValue;
             var sliderWidth = slider.offsetWidth;
-            var newLeft = (sliderValue / 14) * sliderWidth;
+            var newLeft = (sliderValue / 14) * sliderWidth;    // Ändra 14 till något annat så siffrorna hamnar rätt på slidern
             sliderValueElement.style.left = newLeft + 'px';
         });
 
