@@ -203,11 +203,11 @@ function generateHTML(data) {
             Hur länge brukar du diska under rinnande vatten?
         </p>
         <div class="slider-container hidden" id="sliderContainer">
-            <input type="range" min="1" max="196" value="0" class="slider" id="waterSlider">
+            <input type="range" min="1" max="15" value="0" class="slider" id="waterSlider">
             <span class="slider-value" id="sliderValue">0</span>
             <div class="slider-labels">
                 <span>1</span>
-                <span>196</span>
+                <span>15</span>
             </div>
             <p id="moreInfo" class="hidden">
                 Du sparar ungefär <b><span id="waterSavings">0</span> liter vatten per disktillfälle</b> om du fyller din diskho med vatten istället för diskar under rinnande vatten.
@@ -477,7 +477,7 @@ document.getElementById('infoBox6').addEventListener('click', function(event) {
             var sliderValueElement = document.getElementById('sliderValue');
             sliderValueElement.innerText = sliderValue;
             var sliderWidth = slider.offsetWidth;
-            var newLeft = (sliderValue / 196) * sliderWidth;
+            var newLeft = (sliderValue / 15) * sliderWidth;
             sliderValueElement.style.left = newLeft + 'px';
         });
 
