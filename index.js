@@ -210,7 +210,10 @@ function generateHTML(data) {
                 <span>15</span>
             </div>
             <p id="moreInfo" class="hidden">
-                Du sparar ungefär <b><span id="waterSavings">0</span> liter vatten per disktillfälle</b> om du fyller din diskho med vatten istället för diskar under rinnande vatten.
+                Du sparar ungefär <b><span id="waterSavings">0</span> liter* vatten per disktillfälle</b> om du fyller din diskho med vatten istället för att diska under rinnande vatten.
+            </p>
+            <p id="moreInfo_1" class="hidden" style="font-style: italic;">
+                *<b><span id="waterSavings">0</span> liter* vatten per disktillfälle</b> om du har en ny köksblandare.
             </p>
         </div>
     </div>
