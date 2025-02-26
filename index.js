@@ -210,7 +210,7 @@ function generateHTML(data) {
                 <span>15</span>
             </div>
             <p id="moreInfo" class="hidden">
-                Du sparar ungefär <b><span id="waterSavings">0</span> liter* vatten per disktillfälle</b> om du fyller din diskho med vatten istället för att diska under rinnande vatten.
+                Du sparar upp till <b><span id="waterSavings">0</span> liter* vatten per disktillfälle</b> om du fyller din diskho med vatten istället för att diska under rinnande vatten.
             </p>
         </div>
     </div>
