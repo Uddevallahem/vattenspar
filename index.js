@@ -213,7 +213,7 @@ function generateHTML(data) {
                 Du sparar ungefär <b><span id="waterSavings">0</span> liter* vatten per disktillfälle</b> om du fyller din diskho med vatten istället för att diska under rinnande vatten.
             </p>
             <p id="moreInfo_1" class="hidden" style="font-style: italic;">
-                *<b><span id="waterSavings">0</span> liter* vatten per disktillfälle</b> om du har en ny köksblandare.
+                <b>* <span id="waterSavings_1">0</span> liter* vatten per disktillfälle</b> om du har en ny köksblandare.
             </p>
         </div>
     </div>
@@ -332,6 +332,8 @@ function generateHTML(data) {
         if (moreInfo.classList.contains('hidden')) {
             moreInfo.classList.remove('hidden');
             moreInfo.classList.add('visible');
+            moreInfo_1.classList.remove('hidden');
+            moreInfo_1.classList.add('visible');
             questionDuscha.classList.remove('hidden');
             questionDuscha.classList.add('visible');
             sliderContainer.classList.remove('hidden');
@@ -339,6 +341,8 @@ function generateHTML(data) {
         } else {
             moreInfo.classList.remove('visible');
             moreInfo.classList.add('hidden');
+            moreInfo_1.classList.remove('visible');
+            moreInfo_1.classList.add('hidden');    
             questionDuscha.classList.remove('visible');
             questionDuscha.classList.add('hidden'); 
             sliderContainer.classList.remove('visible');
@@ -475,7 +479,8 @@ document.getElementById('infoBox6').addEventListener('click', function(event) {
         document.getElementById('waterSlider').addEventListener('input', function() {
             var slider = document.getElementById('waterSlider');
             var sliderValue = slider.value;
-            var waterSavings = sliderValue * 14 - 14; // Här kan man ändra 8 till vad ekvationen egentligen skall vara
+            var waterSavings = sliderValue * 14 - 14; // Här kan man ändra till vad ekvationen egentligen skall vara
+            var waterSavings_1 = sliderValue * 7,4 - 14; // Här kan man ändra till vad ekvationen egentligen skall vara
             document.getElementById('waterSavings').innerText = waterSavings;
             var sliderValueElement = document.getElementById('sliderValue');
             sliderValueElement.innerText = sliderValue;
