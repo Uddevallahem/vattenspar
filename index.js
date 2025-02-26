@@ -203,10 +203,10 @@ function generateHTML(data) {
             Hur länge brukar du diska under rinnande vatten?
         </p>
         <div class="slider-container hidden" id="sliderContainer">
-            <input type="range" min="0" max="196" value="0" class="slider" id="waterSlider">
+            <input type="range" min="1" max="196" value="0" class="slider" id="waterSlider">
             <span class="slider-value" id="sliderValue">0</span>
             <div class="slider-labels">
-                <span>0</span>
+                <span>1</span>
                 <span>196</span>
             </div>
             <p id="moreInfo" class="hidden">
@@ -477,7 +477,7 @@ document.getElementById('infoBox6').addEventListener('click', function(event) {
             var sliderValueElement = document.getElementById('sliderValue');
             sliderValueElement.innerText = sliderValue;
             var sliderWidth = slider.offsetWidth;
-            var newLeft = (sliderValue / 20) * sliderWidth;
+            var newLeft = (sliderValue / 196) * sliderWidth;
             sliderValueElement.style.left = newLeft + 'px';
         });
 
