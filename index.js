@@ -198,19 +198,19 @@ function generateHTML(data) {
     
     
     <div class="box" id="infoBox">
-        <h2>Duscha kortare</h2>
+        <h2>Diska för hand</h2>
         <p id="questionDuscha" class="hidden">
-            Hur många gånger i veckan duschar ni?
+            Hur länge brukar du diska under rinnande vatten?
         </p>
         <div class="slider-container hidden" id="sliderContainer">
-            <input type="range" min="0" max="20" value="0" class="slider" id="waterSlider">
+            <input type="range" min="0" max="196" value="0" class="slider" id="waterSlider">
             <span class="slider-value" id="sliderValue">0</span>
             <div class="slider-labels">
                 <span>0</span>
-                <span>20</span>
+                <span>196</span>
             </div>
             <p id="moreInfo" class="hidden">
-                Du sparar ungefär <b><span id="waterSavings">0</span> liter vatten per vecka</b> genom att duscha kortare.
+                Du sparar ungefär <b><span id="waterSavings">0</span> liter vatten per disktillfälle</b> om du fyller din diskho med vatten istället för diskar under rinnande vatten.
             </p>
         </div>
     </div>
@@ -472,7 +472,7 @@ document.getElementById('infoBox6').addEventListener('click', function(event) {
         document.getElementById('waterSlider').addEventListener('input', function() {
             var slider = document.getElementById('waterSlider');
             var sliderValue = slider.value;
-            var waterSavings = sliderValue * 8; // Här kan man ändra 8 till vad ekvationen egentligen skall vara
+            var waterSavings = sliderValue * 14 - 14; // Här kan man ändra 8 till vad ekvationen egentligen skall vara
             document.getElementById('waterSavings').innerText = waterSavings;
             var sliderValueElement = document.getElementById('sliderValue');
             sliderValueElement.innerText = sliderValue;
