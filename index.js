@@ -128,10 +128,14 @@ function generateHTML(data) {
                     gap: 20px;
                     margin: 10px 0;
                     font-size: 18px;
+                    font-family: 'Aleo', sans-serif;
+                    color: #446F83;
                 }
                 
                 .radio-container input {
                     margin-right: 5px;
+                    color: #446F83;
+
                 }
 
                 .slider-container {
