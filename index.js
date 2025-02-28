@@ -523,7 +523,7 @@ function updateWaterSavings() {
     waterSavings.innerText = savings; // Uppdatera vattenbesparingen utan decimaler
 
     var sliderWidth = slider.offsetWidth;
-    var newLeft = ((sliderVal -1)/ 15) * sliderWidth; // Justera maxvärde om slidern har ett annat max
+    var newLeft = ((sliderVal -1)/ 14) * sliderWidth; // Justera maxvärde om slidern har ett annat max
     sliderValue.style.left = newLeft + 'px'; // Flytta etiketten till rätt position
 }
 
