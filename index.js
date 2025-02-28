@@ -516,7 +516,7 @@ function updateWaterSavings() {
 
     savings = Math.max(savings, 0);
 
-    savings = Math.floor(savings); 
+    savings = Math.round(savings); 
 
     // Uppdatera UI
     sliderValue.innerText = sliderVal; // Visar sliderns aktuella värde
@@ -531,18 +531,43 @@ updateWaterSavings();
 
 
 
+// Nummer 2 
+const slider2 = document.getElementById("waterSlider2");
+const sliderValue2 = document.getElementById("sliderValue2");
+const waterSavings2 = document.getElementById("waterSavings2");
 
-            document.getElementById('waterSlider2').addEventListener('input', function() {
-                var slider2 = document.getElementById('waterSlider2');
-                var sliderValue2 = slider2.value;
-                var waterSavings2 = sliderValue2 * 8; // Här kan man ändra 8 till vad ekvationen egentligen skall vara
-                document.getElementById('waterSavings2').innerText = waterSavings2;
-                var sliderValueElement2 = document.getElementById('sliderValue2');
-                sliderValueElement2.innerText = sliderValue2;
-                var sliderWidth2 = slider2.offsetWidth;
-                var newLeft2 = ((sliderValue2 - 1) / 7) * sliderWidth2; // Justera för det nya intervallet 1-8
-                sliderValueElement2.style.left = newLeft2 + 'px';
-            });
+slider2.addEventListener("input", updateWaterSavings2);
+
+function updateWaterSavings2() {
+    const sliderVal2 = parseInt(slider2.value); // Hämta slidervärdet
+    const selectedBlandare = document.querySelector('input[name="blandare"]:checked') ? document.querySelector('input[name="blandare"]:checked').value : "ny"; 
+    
+    let savings2 = 0;
+
+    // HÄR GÖRS FUNKTIONERNA
+    if (selectedBlandare === "ny") {
+        savings2 = sliderVal2 * 8 - 16;  
+    } else if (selectedBlandare === "gammal") {
+        savings2 = sliderVal2 * 16 - 16; 
+    }
+
+    savings2 = Math.max(savings2, 0);
+
+    savings2 = Math.floor(savings2); 
+
+    // Uppdatera UI
+    sliderValue2.innerText = sliderVal2; 
+    waterSavings2.innerText = savings2; 
+
+    var sliderWidth2 = slider2.offsetWidth;
+    var newLeft2 = ((sliderVal2 - 1) / 7) * sliderWidth2; 
+    sliderValue2.style.left = newLeft2 + 'px'; 
+}
+
+updateWaterSavings2(); 
+
+
+
 
 
             document.getElementById('waterSlider3').addEventListener('input', function() {
