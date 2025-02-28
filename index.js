@@ -89,6 +89,8 @@ function generateHTML(data) {
 
                 h3 {
                     text-align: left;
+                    font-family: 'Aleo', sans-serif;
+                    color: #446F83;
                 }
                 
                 .container {
@@ -206,7 +208,7 @@ function generateHTML(data) {
 <!-- Här är det HTML-kommentarer -->
     
 
-             <h3>Har du nya eller äldre blandare?</h3>
+             <h3>Har du nya eller äldre vattenblandare?</h3>
 <div class="radio-container">
     <label>
         <input type="radio" name="blandare" value="ny" checked> Nya
