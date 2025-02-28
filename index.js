@@ -490,20 +490,20 @@ document.getElementById('infoBox6').addEventListener('click', function(event) {
 
 
         
-// Nummer 1
+// Nummer 1 (Första boxen)
 const slider = document.getElementById("waterSlider");
 const sliderValue = document.getElementById("sliderValue");
 const waterSavings = document.getElementById("waterSavings");
 
 document.querySelectorAll('input[name="blandare"]').forEach(radio => {
-    radio.addEventListener('change', updateWaterSavings); 
+    radio.addEventListener('change', updateWaterSavings);  // Lyssna på blandarändringar
 });
 
 slider.addEventListener("input", updateWaterSavings);
 
 function updateWaterSavings() {
     const sliderVal = parseInt(slider.value); // Hämta slidervärdet
-    const selectedBlandare = document.querySelector('input[name="blandare"]:checked') ? document.querySelector('input[name="blandare"]:checked').value : "ny"; 
+    const selectedBlandare = document.querySelector('input[name="blandare"]:checked') ? document.querySelector('input[name="blandare"]:checked').value : "ny"; // Hämta vald blandare, fallback till "ny" om inget valt
     
     let savings = 0;
 
@@ -516,63 +516,58 @@ function updateWaterSavings() {
 
     savings = Math.max(savings, 0);
 
-    savings = Math.round(savings); 
+    savings = Math.floor(savings); // Ta bort decimaler
 
     // Uppdatera UI
-    sliderValue.innerText = sliderVal; 
-    waterSavings.innerText = savings; 
+    sliderValue.innerText = sliderVal; // Visar sliderns aktuella värde
+    waterSavings.innerText = savings; // Uppdatera vattenbesparingen utan decimaler
 
     var sliderWidth = slider.offsetWidth;
-    var newLeft = ((sliderVal - 1) / 14) * sliderWidth; x
-    sliderValue.style.left = newLeft + 'px'; 
+    var newLeft = ((sliderVal - 1) / 14) * sliderWidth; // Justera maxvärde om slidern har ett annat max
+    sliderValue.style.left = newLeft + 'px'; // Flytta etiketten till rätt position
 }
 
-updateWaterSavings(); 
+updateWaterSavings(); // Kör funktionen vid sidladdning för att visa rätt startvärde
 
 
-
-
-
-
-// Nummer 2 
+// Nummer 2 (Andra boxen)
 const slider2 = document.getElementById("waterSlider2");
 const sliderValue2 = document.getElementById("sliderValue2");
 const waterSavings2 = document.getElementById("waterSavings2");
 
-// Lyssna på förändringar i slidern och blandaren
+slider2.addEventListener("input", updateWaterSavings2); // Lyssna på slider2 förändringar
 document.querySelectorAll('input[name="blandare"]').forEach(radio => {
-    radio.addEventListener('change', updateWaterSavings2); 
+    radio.addEventListener('change', updateWaterSavings2); // Lyssna på blandarändringar för andra boxen
 });
-
-slider2.addEventListener("input", updateWaterSavings2);
 
 function updateWaterSavings2() {
     const sliderVal2 = parseInt(slider2.value); // Hämta slidervärdet
-    const selectedBlandare = document.querySelector('input[name="blandare"]:checked') ? document.querySelector('input[name="blandare"]:checked').value : "ny"; 
+    const selectedBlandare = document.querySelector('input[name="blandare"]:checked') ? document.querySelector('input[name="blandare"]:checked').value : "ny"; // Hämta vald blandare, använder samma som första slider
     
     let savings2 = 0;
 
     // HÄR GÖRS FUNKTIONERNA
     if (selectedBlandare === "ny") {
-        savings2 = sliderVal2 * 8 - 16; 
+        savings2 = sliderVal2 * 8 - 16;  // Justera ekvationen om det behövs
     } else if (selectedBlandare === "gammal") {
-        savings2 = sliderVal2 * 16 - 16; 
+        savings2 = sliderVal2 * 16 - 16; // Justera ekvationen om det behövs
     }
 
     savings2 = Math.max(savings2, 0);
 
-    savings2 = Math.floor(savings2); 
+    savings2 = Math.floor(savings2); // Ta bort decimaler
 
     // Uppdatera UI
-    sliderValue2.innerText = sliderVal2; 
-    waterSavings2.innerText = savings2; 
+    sliderValue2.innerText = sliderVal2; // Visar sliderns aktuella värde
+    waterSavings2.innerText = savings2; // Uppdatera vattenbesparingen utan decimaler
 
     var sliderWidth2 = slider2.offsetWidth;
-    var newLeft2 = ((sliderVal2 - 1) / 7) * sliderWidth2; 
-    sliderValue2.style.left = newLeft2 + 'px'; 
+    var newLeft2 = ((sliderVal2 - 1) / 7) * sliderWidth2; // Justera för det nya intervallet 1-8
+    sliderValue2.style.left = newLeft2 + 'px'; // Flytta etiketten till rätt position
 }
 
-updateWaterSavings2(); 
+updateWaterSavings2(); // Kör funktionen vid sidladdning för att visa rätt startvärde
+
 
 
 
