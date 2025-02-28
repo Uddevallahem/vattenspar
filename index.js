@@ -247,17 +247,17 @@ function generateHTML(data) {
     <div class="box" id="infoBox2">
         <h2>Duscha kortare</h2>
         <p id="questionDuscha2" class="hidden" style="font-style: italic;">
-            Hur många är ni i hushållet?
+            Hur många minuter kan du korta ner din duschtid?
         </p>
         <div class="slider-container hidden" id="sliderContainer2">
-            <input type="range" min="1" max="8" value="1" class="slider" id="waterSlider2">
+            <input type="range" min="1" max="15" value="1" class="slider" id="waterSlider2">
             <span class="slider-value" id="sliderValue2">1</span>
             <div class="slider-labels">
                 <span>1</span>
-                <span>8</span>
+                <span>15</span>
             </div>
             <p id="moreInfo2" class="hidden">
-                Du sparar ungefär <span id="waterSavings2">8</span> liter vatten per vecka genom att stänga av kranen.
+                Du sparar ungefär <b><span id="waterSavings2">0</span> liter vatten per duschtillfälle</b> genom att korta ner din duschtid.
             </p>
         </div>
     </div>
@@ -277,25 +277,25 @@ function generateHTML(data) {
                 <span>8</span>
             </div>
             <p id="moreInfo3" class="hidden">
-                Du sparar ungefär <span id="waterSavings3">8</span> liter vatten per vecka genom att stänga av kranen.
+                Du sparar ungefär <b><span id="waterSavings3">0</span> liter vatten per dag</b> genom att stänga av vattnet när ni borstar tänderna jämfört med att ha vattnet på under tiden.
             </p>
         </div>
     </div>
 
     <div class="box" id="infoBox4">
-        <h2>Tvåla</h2>
+        <h2>Tvål & Schampo</h2>
         <p id="questionDuscha4" class="hidden" style="font-style: italic;">
-            Hur många är ni i hushållet?
+            Hur många duschar blir det i ert hushåll varje vecka?
         </p>
         <div class="slider-container hidden" id="sliderContainer4">
-            <input type="range" min="1" max="8" value="1" class="slider" id="waterSlider4">
+            <input type="range" min="1" max="49" value="1" class="slider" id="waterSlider4">
             <span class="slider-value" id="sliderValue4">1</span>
             <div class="slider-labels">
                 <span>1</span>
-                <span>8</span>
+                <span>49</span>
             </div>
             <p id="moreInfo4" class="hidden">
-                Du sparar ungefär <span id="waterSavings4">8</span> liter vatten per vecka genom att stänga av kranen.
+                Ni sparar ungefär <b><span id="waterSavings4">0</span> liter vatten per vecka</b> om ni stänger av vattnet i duschen under tiden ni tvålar/schamponerar er.
             </p>
         </div>
     </div>
@@ -314,7 +314,7 @@ function generateHTML(data) {
                 <span>8</span>
             </div>
             <p id="moreInfo5" class="hidden">
-                Du sparar ungefär <span id="waterSavings5">8</span> liter vatten per vecka genom att stänga av kranen.
+                Du sparar ungefär <b><span id="waterSavings5">0</span> liter vatten per vecka</b> genom att stänga av kranen.
             </p>
         </div>
     </div>
@@ -333,7 +333,7 @@ function generateHTML(data) {
                 <span>8</span>
             </div>
             <p id="moreInfo6" class="hidden">
-                Du sparar ungefär <span id="waterSavings6">8</span> liter vatten per vecka genom att stänga av kranen.
+                Du sparar ungefär <b><span id="waterSavings6">0</span> liter vatten per vecka</b> genom att stänga av kranen.
             </p>
         </div>
     </div>
@@ -554,9 +554,9 @@ function updateWaterSavings2() {
 
     // HÄR GÖRS FUNKTIONERNA
     if (selectedBlandare === "ny") {
-        savings2 = sliderVal2 * 8 - 16;  
+        savings2 = sliderVal2 * 7,5;  
     } else if (selectedBlandare === "gammal") {
-        savings2 = sliderVal2 * 16 - 16; 
+        savings2 = sliderVal2 * 12; 
     }
 
     savings2 = Math.max(savings2, 0);
@@ -595,9 +595,9 @@ function updateWaterSavings3() {
 
     // HÄR GÖRS FUNKTIONERNA
     if (selectedBlandare === "ny") {
-        savings3 = sliderVal3 * 8 - 16;  
+        savings3 = sliderVal3 * 4 *6,1;  
     } else if (selectedBlandare === "gammal") {
-        savings3 = sliderVal3 * 16 - 16; 
+        savings3 = sliderVal3 * 4 * 12,8; 
     }
 
     savings3 = Math.max(savings3, 0);
@@ -636,9 +636,9 @@ function updateWaterSavings4() {
 
     // HÄR GÖRS FUNKTIONERNA
     if (selectedBlandare === "ny") {
-        savings4 = sliderVal4 * 8 - 16;  
+        savings4 = sliderVal4 * 7,5 *1,5;  
     } else if (selectedBlandare === "gammal") {
-        savings4 = sliderVal4 * 16 - 16; 
+        savings4 = sliderVal4 * 12 * 1,5; 
     }
 
     savings4 = Math.max(savings4, 0);
