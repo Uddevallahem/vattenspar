@@ -521,7 +521,7 @@ function updateWaterSavings() {
     savings = Math.max(savings, 0);
 
 // Ta bort decimaler
-    savings = Math.round(savings); 
+    savings = Math.floor(savings); 
 
     // Uppdatera UI
     sliderValue.innerText = sliderVal; // Visar sliderns aktuella värde
@@ -530,7 +530,7 @@ function updateWaterSavings() {
     // Justera sliderlabelns position (om det behövs)
     var sliderWidth = slider.offsetWidth;
     var newLeft = (sliderVal / 15) * sliderWidth; // Justera maxvärde om slidern har ett annat max
-    sliderValue.style.left = newLeft + 'px'; // Flytta etiketten till rätt position
+    sliderValue.style.left = newLeft + '-5px'; // Flytta etiketten till rätt position
 }
 
 // Kör funktionen vid sidladdning för att visa rätt startvärde
