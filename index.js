@@ -212,7 +212,7 @@ function generateHTML(data) {
 <!-- Här är det HTML-kommentarer -->
     
 
-             <h3>Har du nya eller äldre vattenblandare?</h3>
+             <h3>Har du nya eller äldre vattenkranar?</h3>
 <div class="radio-container">
     <label>
         <input type="radio" name="blandare" value="ny" checked> Nya
@@ -304,17 +304,17 @@ function generateHTML(data) {
     <div class="box" id="infoBox5">
         <h2>Läckande WC</h2>
         <p id="questionDuscha5" class="hidden" style="font-style: italic;">
-            Hur många är ni i hushållet?
+            Hur många dagar tar det innan du felanmäler en läckande/rinnande toalett?
         </p>
         <div class="slider-container hidden" id="sliderContainer5">
-            <input type="range" min="1" max="8" value="1" class="slider" id="waterSlider5">
+            <input type="range" min="1" max="14" value="1" class="slider" id="waterSlider5">
             <span class="slider-value" id="sliderValue5">1</span>
             <div class="slider-labels">
                 <span>1</span>
-                <span>8</span>
+                <span>14</span>
             </div>
             <p id="moreInfo5" class="hidden">
-                Du sparar ungefär <b><span id="waterSavings5">0</span> liter vatten per vecka</b> genom att stänga av kranen.
+                Under den här tiden har det förbrukats ungefär <b><span id="waterSavings5">0</span> liter vatten</b>.
             </p>
         </div>
     </div>
@@ -323,17 +323,17 @@ function generateHTML(data) {
     <div class="box" id="infoBox6">
         <h2>Droppande kran</h2>
         <p id="questionDuscha6" class="hidden" style="font-style: italic;">
-            Hur många är ni i hushållet?
+            Hur många dagar tar det innan du felanmäler en droppande vattenkran?
         </p>
         <div class="slider-container hidden" id="sliderContainer6">
-            <input type="range" min="1" max="8" value="1" class="slider" id="waterSlider6">
+            <input type="range" min="1" max="14" value="1" class="slider" id="waterSlider6">
             <span class="slider-value" id="sliderValue6">1</span>
             <div class="slider-labels">
                 <span>1</span>
-                <span>8</span>
+                <span>14</span>
             </div>
             <p id="moreInfo6" class="hidden">
-                Du sparar ungefär <b><span id="waterSavings6">0</span> liter vatten per vecka</b> genom att stänga av kranen.
+                Under den här tiden har det förbrukats ungefär <b><span id="waterSavings6">0</span> liter vatten </b>.
             </p>
         </div>
     </div>
@@ -663,12 +663,12 @@ updateWaterSavings4();
   document.getElementById('waterSlider5').addEventListener('input', function() {
                 var slider5 = document.getElementById('waterSlider5');
                 var sliderValue5 = slider5.value;
-                var waterSavings5 = sliderValue5 * 8; // Här kan man ändra 8 till vad ekvationen egentligen skall vara
+                var waterSavings5 = sliderValue5 * 1000; // Här kan man ändra 8 till vad ekvationen egentligen skall vara
                 document.getElementById('waterSavings5').innerText = waterSavings5;
                 var sliderValueElement5 = document.getElementById('sliderValue5');
                 sliderValueElement5.innerText = sliderValue5;
                 var sliderWidth5 = slider5.offsetWidth;
-                var newLeft5 = ((sliderValue5 - 1) / 7) * sliderWidth5; // Justera för det nya intervallet 1-8
+                var newLeft5 = ((sliderValue5 - 1) / 13) * sliderWidth5; // Justera för det nya intervallet 1-8
                 sliderValueElement5.style.left = newLeft5 + 'px';
             });
 
@@ -678,12 +678,12 @@ updateWaterSavings4();
   document.getElementById('waterSlider6').addEventListener('input', function() {
                 var slider6 = document.getElementById('waterSlider6');
                 var sliderValue6 = slider6.value;
-                var waterSavings6 = sliderValue6 * 8; // Här kan man ändra 8 till vad ekvationen egentligen skall vara
+                var waterSavings6 = sliderValue6 * 55; // Här kan man ändra 8 till vad ekvationen egentligen skall vara
                 document.getElementById('waterSavings6').innerText = waterSavings6;
                 var sliderValueElement6 = document.getElementById('sliderValue6');
                 sliderValueElement6.innerText = sliderValue6;
                 var sliderWidth6 = slider6.offsetWidth;
-                var newLeft6 = ((sliderValue6 - 1) / 7) * sliderWidth6; // Justera för det nya intervallet 1-8
+                var newLeft6 = ((sliderValue6 - 1) / 13) * sliderWidth6; // Justera för det nya intervallet 1-8
                 sliderValueElement6.style.left = newLeft6 + 'px';
             });
 
