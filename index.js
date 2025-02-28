@@ -496,14 +496,14 @@ const sliderValue = document.getElementById("sliderValue");
 const waterSavings = document.getElementById("waterSavings");
 
 document.querySelectorAll('input[name="blandare"]').forEach(radio => {
-    radio.addEventListener('change', updateWaterSavings);
+    radio.addEventListener('change', updateWaterSavings); 
 });
 
 slider.addEventListener("input", updateWaterSavings);
 
 function updateWaterSavings() {
     const sliderVal = parseInt(slider.value); // Hämta slidervärdet
-    const selectedBlandare = document.querySelector('input[name="blandare"]:checked') ? document.querySelector('input[name="blandare"]:checked').value : "ny"; // Hämta vald blandare, fallback till "ny" om inget valt
+    const selectedBlandare = document.querySelector('input[name="blandare"]:checked') ? document.querySelector('input[name="blandare"]:checked').value : "ny"; 
     
     let savings = 0;
 
@@ -519,15 +519,18 @@ function updateWaterSavings() {
     savings = Math.round(savings); 
 
     // Uppdatera UI
-    sliderValue.innerText = sliderVal; // Visar sliderns aktuella värde
-    waterSavings.innerText = savings; // Uppdatera vattenbesparingen utan decimaler
+    sliderValue.innerText = sliderVal; 
+    waterSavings.innerText = savings; 
 
     var sliderWidth = slider.offsetWidth;
-    var newLeft = ((sliderVal -1)/ 14) * sliderWidth; // Justera maxvärde om slidern har ett annat max
-    sliderValue.style.left = newLeft + 'px'; // Flytta etiketten till rätt position
+    var newLeft = ((sliderVal - 1) / 14) * sliderWidth; x
+    sliderValue.style.left = newLeft + 'px'; 
 }
 
-updateWaterSavings();
+updateWaterSavings(); 
+
+
+
 
 
 
@@ -535,6 +538,11 @@ updateWaterSavings();
 const slider2 = document.getElementById("waterSlider2");
 const sliderValue2 = document.getElementById("sliderValue2");
 const waterSavings2 = document.getElementById("waterSavings2");
+
+// Lyssna på förändringar i slidern och blandaren
+document.querySelectorAll('input[name="blandare"]').forEach(radio => {
+    radio.addEventListener('change', updateWaterSavings2); 
+});
 
 slider2.addEventListener("input", updateWaterSavings2);
 
@@ -546,7 +554,7 @@ function updateWaterSavings2() {
 
     // HÄR GÖRS FUNKTIONERNA
     if (selectedBlandare === "ny") {
-        savings2 = sliderVal2 * 8 - 16;  
+        savings2 = sliderVal2 * 8 - 16; 
     } else if (selectedBlandare === "gammal") {
         savings2 = sliderVal2 * 16 - 16; 
     }
@@ -565,6 +573,7 @@ function updateWaterSavings2() {
 }
 
 updateWaterSavings2(); 
+
 
 
 
