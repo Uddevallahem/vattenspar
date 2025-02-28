@@ -194,9 +194,20 @@ function generateHTML(data) {
 
 
 <!-- Här är det HTML-kommentarer -->
-             <div class="container">
     
-    
+
+             <h2>Har du nya eller äldre blandare?</h2>
+<div class="radio-container">
+    <label>
+        <input type="radio" name="blandare" value="ny" checked> Nya
+    </label>
+    <label>
+        <input type="radio" name="blandare" value="gammal"> Äldre
+    </label>
+</div>
+
+             
+             <div class="container">   
     <div class="box" id="infoBox">
         <h2>Diska för hand</h2>
         <p id="questionDuscha" class="hidden">
@@ -218,7 +229,7 @@ function generateHTML(data) {
 
 
     <div class="box" id="infoBox2">
-        <h2>Stäng av kranen</h2>
+        <h2>Duscha kortare</h2>
         <p id="questionDuscha2" class="hidden" style="font-style: italic;">
             Hur många är ni i hushållet?
         </p>
@@ -469,17 +480,49 @@ document.getElementById('infoBox6').addEventListener('click', function(event) {
 
 
         
-        document.getElementById('waterSlider').addEventListener('input', function() {
-            var slider = document.getElementById('waterSlider');
-            var sliderValue = slider.value;
-            var waterSavings = sliderValue * 14 - 14; // Här kan man ändra till vad ekvationen egentligen skall vara
-            document.getElementById('waterSavings').innerText = waterSavings;
-            var sliderValueElement = document.getElementById('sliderValue');
-            sliderValueElement.innerText = sliderValue;
-            var sliderWidth = slider.offsetWidth;
-            var newLeft = (sliderValue / 14) * sliderWidth;    // Ändra 14 till något annat så siffrorna hamnar rätt på slidern
-            sliderValueElement.style.left = newLeft + 'px';
-        });
+// Hämta referenser till element
+const slider = document.getElementById("waterSlider");
+const sliderValue = document.getElementById("sliderValue");
+const waterSavings = document.getElementById("waterSavings");
+
+// Hämta alla radio-knappar och lyssna på förändringar
+document.querySelectorAll('input[name="blandare"]').forEach(radio => {
+    radio.addEventListener('change', updateWaterSavings);
+});
+
+// Lyssna på förändringar i slidern
+slider.addEventListener("input", updateWaterSavings);
+
+// Funktion för att uppdatera vattenbesparingen
+function updateWaterSavings() {
+    const sliderVal = parseInt(slider.value); // Hämta slidervärdet
+    const selectedBlandare = document.querySelector('input[name="blandare"]:checked') ? document.querySelector('input[name="blandare"]:checked').value : "ny"; // Hämta vald blandare, fallback till "ny" om inget valt
+    
+    let savings = 0;
+
+    // Beräkna besparingen baserat på vald blandare
+    if (selectedBlandare === "ny") {
+        savings = sliderVal * 7.4 - 14;
+    } else if (selectedBlandare === "gammal") {
+        savings = sliderVal * 14 - 14;
+    }
+
+    // Se till att värdet inte går under 0
+    savings = Math.max(savings, 0);
+
+    // Uppdatera UI
+    sliderValue.innerText = sliderVal; // Visar sliderns aktuella värde
+    waterSavings.innerText = savings.toFixed(1); // Uppdatera vattenbesparingen
+
+    // Justera sliderlabelns position (om det behövs)
+    var sliderWidth = slider.offsetWidth;
+    var newLeft = (sliderVal / 100) * sliderWidth; // Justera maxvärde om slidern har ett annat max
+    sliderValue.style.left = newLeft + 'px'; // Flytta etiketten till rätt position
+}
+
+// Kör funktionen vid sidladdning för att visa rätt startvärde
+updateWaterSavings();
+
 
 
 
