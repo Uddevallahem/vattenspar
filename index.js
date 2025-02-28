@@ -121,7 +121,17 @@ function generateHTML(data) {
                     display: block;
                 }
 
+                .radio-container {
+                    display: flex;
+                    gap: 20px;
+                    margin: 10px 0;
+                    font-size: 18px;
+                }
                 
+                .radio-container input {
+                    margin-right: 5px;
+                }
+
                 .slider-container {
                     margin-top: 20px;
                     position: relative;
@@ -196,7 +206,7 @@ function generateHTML(data) {
 <!-- Här är det HTML-kommentarer -->
     
 
-             <h2>Har du nya eller äldre blandare?</h2>
+             <h3>Har du nya eller äldre blandare?</h3>
 <div class="radio-container">
     <label>
         <input type="radio" name="blandare" value="ny" checked> Nya
@@ -516,7 +526,7 @@ function updateWaterSavings() {
 
     // Justera sliderlabelns position (om det behövs)
     var sliderWidth = slider.offsetWidth;
-    var newLeft = (sliderVal / 100) * sliderWidth; // Justera maxvärde om slidern har ett annat max
+    var newLeft = (sliderVal / 14) * sliderWidth; // Justera maxvärde om slidern har ett annat max
     sliderValue.style.left = newLeft + 'px'; // Flytta etiketten till rätt position
 }
 
