@@ -490,50 +490,43 @@ document.getElementById('infoBox6').addEventListener('click', function(event) {
 
 
         
-// Hämta referenser till element
+// Nummer 1
 const slider = document.getElementById("waterSlider");
 const sliderValue = document.getElementById("sliderValue");
 const waterSavings = document.getElementById("waterSavings");
 
-// Hämta alla radio-knappar och lyssna på förändringar
 document.querySelectorAll('input[name="blandare"]').forEach(radio => {
     radio.addEventListener('change', updateWaterSavings);
 });
 
-// Lyssna på förändringar i slidern
 slider.addEventListener("input", updateWaterSavings);
 
-// Funktion för att uppdatera vattenbesparingen
 function updateWaterSavings() {
     const sliderVal = parseInt(slider.value); // Hämta slidervärdet
     const selectedBlandare = document.querySelector('input[name="blandare"]:checked') ? document.querySelector('input[name="blandare"]:checked').value : "ny"; // Hämta vald blandare, fallback till "ny" om inget valt
     
     let savings = 0;
 
-    // Beräkna besparingen baserat på vald blandare
+    // HÄR GÖRS FUNKTIONERNA
     if (selectedBlandare === "ny") {
         savings = sliderVal * 7.4 - 14;
     } else if (selectedBlandare === "gammal") {
         savings = sliderVal * 14 - 14;
     }
 
-    // Se till att värdet inte går under 0
     savings = Math.max(savings, 0);
 
- // Ta bort decimaler genom att använda Math.round() (eller Math.floor() om du vill avrunda ner)
-    savings = Math.floor(savings); // Eller använd Math.floor(savings) om du alltid vill runda ner till närmaste heltal
+    savings = Math.floor(savings); 
 
     // Uppdatera UI
     sliderValue.innerText = sliderVal; // Visar sliderns aktuella värde
     waterSavings.innerText = savings; // Uppdatera vattenbesparingen utan decimaler
 
-    // Justera sliderlabelns position (om det behövs)
     var sliderWidth = slider.offsetWidth;
-    var newLeft = (sliderVal / 15) * sliderWidth; // Justera maxvärde om slidern har ett annat max
+    var newLeft = ((sliderVal -1)/ 15) * sliderWidth; // Justera maxvärde om slidern har ett annat max
     sliderValue.style.left = newLeft + 'px'; // Flytta etiketten till rätt position
 }
 
-// Kör funktionen vid sidladdning för att visa rätt startvärde
 updateWaterSavings();
 
 
