@@ -577,58 +577,166 @@ updateWaterSavings2();
 
 
 
+// Nummer 3 
+const slider3 = document.getElementById("waterSlider3");
+const sliderValue3 = document.getElementById("sliderValue3");
+const waterSavings3 = document.getElementById("waterSavings3");
+
+slider3.addEventListener("input", updateWaterSavings3);
+document.querySelectorAll('input[name="blandare"]').forEach(radio => {
+    radio.addEventListener('change', updateWaterSavings3); 
+});
+
+function updateWaterSavings3() {
+    const sliderVal3 = parseInt(slider3.value); 
+    const selectedBlandare = document.querySelector('input[name="blandare"]:checked') ? document.querySelector('input[name="blandare"]:checked').value : "ny"; 
+    
+    let savings3 = 0;
+
+    // HÄR GÖRS FUNKTIONERNA
+    if (selectedBlandare === "ny") {
+        savings3 = sliderVal3 * 8 - 16;  
+    } else if (selectedBlandare === "gammal") {
+        savings3 = sliderVal3 * 16 - 16; 
+    }
+
+    savings3 = Math.max(savings3, 0);
+
+    savings3 = Math.round(savings3); 
+
+   
+    sliderValue3.innerText = sliderVal3; 
+    waterSavings3.innerText = savings3; 
+
+    var sliderWidth3 = slider3.offsetWidth;
+    var newLeft3 = ((sliderVal3 - 1) / 7) * sliderWidth3; 
+    sliderValue3.style.left = newLeft3 + 'px'; 
+}
+
+updateWaterSavings3();
 
 
 
-            document.getElementById('waterSlider3').addEventListener('input', function() {
-                var slider3 = document.getElementById('waterSlider3');
-                var sliderValue3 = slider3.value;
-                var waterSavings3 = sliderValue3 * 8; // Här kan man ändra 8 till vad ekvationen egentligen skall vara
-                document.getElementById('waterSavings3').innerText = waterSavings3;
-                var sliderValueElement3 = document.getElementById('sliderValue3');
-                sliderValueElement3.innerText = sliderValue3;
-                var sliderWidth3 = slider3.offsetWidth;
-                var newLeft3 = ((sliderValue3 - 1) / 7) * sliderWidth3; // Justera för det nya intervallet 1-8
-                sliderValueElement3.style.left = newLeft3 + 'px';
-            });
 
-  document.getElementById('waterSlider4').addEventListener('input', function() {
-                var slider4 = document.getElementById('waterSlider4');
-                var sliderValue4 = slider4.value;
-                var waterSavings4 = sliderValue4 * 8; // Här kan man ändra 8 till vad ekvationen egentligen skall vara
-                document.getElementById('waterSavings4').innerText = waterSavings4;
-                var sliderValueElement4 = document.getElementById('sliderValue4');
-                sliderValueElement4.innerText = sliderValue4;
-                var sliderWidth4 = slider4.offsetWidth;
-                var newLeft4 = ((sliderValue4 - 1) / 7) * sliderWidth4; // Justera för det nya intervallet 1-8
-                sliderValueElement4.style.left = newLeft4 + 'px';
-            });
+// Nummer 4 
+const slider4 = document.getElementById("waterSlider4");
+const sliderValue4 = document.getElementById("sliderValue4");
+const waterSavings4 = document.getElementById("waterSavings4");
+
+slider4.addEventListener("input", updateWaterSavings4);
+document.querySelectorAll('input[name="blandare"]').forEach(radio => {
+    radio.addEventListener('change', updateWaterSavings4); 
+});
+
+function updateWaterSavings4() {
+    const sliderVal4 = parseInt(slider4.value); 
+    const selectedBlandare = document.querySelector('input[name="blandare"]:checked') ? document.querySelector('input[name="blandare"]:checked').value : "ny"; 
+    
+    let savings4 = 0;
+
+    // HÄR GÖRS FUNKTIONERNA
+    if (selectedBlandare === "ny") {
+        savings4 = sliderVal4 * 8 - 16;  
+    } else if (selectedBlandare === "gammal") {
+        savings4 = sliderVal4 * 16 - 16; 
+    }
+
+    savings4 = Math.max(savings4, 0);
+
+    savings4 = Math.round(savings4); 
+
+   
+    sliderValue4.innerText = sliderVal4; 
+    waterSavings4.innerText = savings4; 
+
+    var sliderWidth4 = slider4.offsetWidth;
+    var newLeft4 = ((sliderVal4 - 1) / 7) * sliderWidth4; 
+    sliderValue4.style.left = newLeft4 + 'px'; 
+}
+
+updateWaterSavings4();
 
 
-  document.getElementById('waterSlider5').addEventListener('input', function() {
-                var slider5 = document.getElementById('waterSlider5');
-                var sliderValue5 = slider5.value;
-                var waterSavings5 = sliderValue5 * 8; // Här kan man ändra 8 till vad ekvationen egentligen skall vara
-                document.getElementById('waterSavings5').innerText = waterSavings5;
-                var sliderValueElement5 = document.getElementById('sliderValue5');
-                sliderValueElement5.innerText = sliderValue5;
-                var sliderWidth5 = slider5.offsetWidth;
-                var newLeft5 = ((sliderValue5 - 1) / 7) * sliderWidth5; // Justera för det nya intervallet 1-8
-                sliderValueElement5.style.left = newLeft5 + 'px';
-            });
 
 
-  document.getElementById('waterSlider6').addEventListener('input', function() {
-                var slider6 = document.getElementById('waterSlider6');
-                var sliderValue6 = slider6.value;
-                var waterSavings6 = sliderValue6 * 8; // Här kan man ändra 8 till vad ekvationen egentligen skall vara
-                document.getElementById('waterSavings6').innerText = waterSavings6;
-                var sliderValueElement6 = document.getElementById('sliderValue6');
-                sliderValueElement6.innerText = sliderValue6;
-                var sliderWidth6 = slider6.offsetWidth;
-                var newLeft6 = ((sliderValue6 - 1) / 7) * sliderWidth6; // Justera för det nya intervallet 1-8
-                sliderValueElement6.style.left = newLeft6 + 'px';
-            });
+// Nummer 5 
+const slider5 = document.getElementById("waterSlider5");
+const sliderValue5 = document.getElementById("sliderValue5");
+const waterSavings5 = document.getElementById("waterSavings5");
+
+slider5.addEventListener("input", updateWaterSavings5);
+document.querySelectorAll('input[name="blandare"]').forEach(radio => {
+    radio.addEventListener('change', updateWaterSavings5); 
+});
+
+function updateWaterSavings5() {
+    const sliderVal5 = parseInt(slider5.value); 
+    const selectedBlandare = document.querySelector('input[name="blandare"]:checked') ? document.querySelector('input[name="blandare"]:checked').value : "ny"; 
+    
+    let savings5 = 0;
+
+    // HÄR GÖRS FUNKTIONERNA
+    if (selectedBlandare === "ny") {
+        savings5 = sliderVal5 * 8 - 16;  
+    } else if (selectedBlandare === "gammal") {
+        savings5 = sliderVal5 * 16 - 16; 
+    }
+
+    savings5 = Math.max(savings5, 0);
+
+    savings5 = Math.round(savings5); 
+
+   
+    sliderValue5.innerText = sliderVal5; 
+    waterSavings5.innerText = savings5; 
+
+    var sliderWidth5 = slider5.offsetWidth;
+    var newLeft5 = ((sliderVal5 - 1) / 7) * sliderWidth5; 
+    sliderValue5.style.left = newLeft5 + 'px'; 
+}
+
+updateWaterSavings5();
+
+
+
+// Nummer 6 
+const slider6 = document.getElementById("waterSlider6");
+const sliderValue6 = document.getElementById("sliderValue6");
+const waterSavings6 = document.getElementById("waterSavings6");
+
+slider6.addEventListener("input", updateWaterSavings6);
+document.querySelectorAll('input[name="blandare"]').forEach(radio => {
+    radio.addEventListener('change', updateWaterSavings6); 
+});
+
+function updateWaterSavings6() {
+    const sliderVal6 = parseInt(slider6.value); 
+    const selectedBlandare = document.querySelector('input[name="blandare"]:checked') ? document.querySelector('input[name="blandare"]:checked').value : "ny"; 
+    
+    let savings6 = 0;
+
+    // HÄR GÖRS FUNKTIONERNA
+    if (selectedBlandare === "ny") {
+        savings6 = sliderVal6 * 8 - 16;  
+    } else if (selectedBlandare === "gammal") {
+        savings6 = sliderVal6 * 16 - 16; 
+    }
+
+    savings6 = Math.max(savings6, 0);
+
+    savings6 = Math.round(savings6); 
+
+   
+    sliderValue6.innerText = sliderVal6; 
+    waterSavings6.innerText = savings6; 
+
+    var sliderWidth6 = slider6.offsetWidth;
+    var newLeft6 = ((sliderVal6 - 1) / 7) * sliderWidth6; 
+    sliderValue6.style.left = newLeft6 + 'px'; 
+}
+
+updateWaterSavings6();
+
 
 
             </script>
