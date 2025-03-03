@@ -173,7 +173,11 @@ function generateHTML(data) {
                     font-weight: bold;
                     color: #446F82;
                 }
-                
+
+                #questionDuscha, #moreInfo {
+                    text-align: center; 
+                    width: 100%; 
+                }
                             
                 /* Media Queries */
                 @media (max-width: 1200px) {               
@@ -211,8 +215,11 @@ function generateHTML(data) {
                 
                     .slider-container {
                         max-width: 300px;
+                        text-align: center;
                     }
-                
+                    #questionDuscha, #moreInfo {
+                        text-align: center; /* Centrera texten på mobil */
+                    }
                 }
             </style>
         </head>
