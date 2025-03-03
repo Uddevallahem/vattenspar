@@ -81,7 +81,7 @@ function generateHTML(data) {
                     font-family: 'Aleo', sans-serif;
                     color: #446F83;
                     text-align: left;
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                 }
                 
                 h2 {
@@ -92,7 +92,7 @@ function generateHTML(data) {
                     text-align: left;
                     font-family: 'Aleo', sans-serif;
                     color: #446F83;
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                 }
                 
                 .container {
@@ -189,7 +189,7 @@ function generateHTML(data) {
                     }
                 
                     h1, h3 {
-                        font-size: 1.8rem; 
+                        font-size: 1.5rem; 
                     }
                     .slider-container {
                         max-width: 350px;
