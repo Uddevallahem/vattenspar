@@ -257,7 +257,7 @@ function generateHTML(data) {
                 <span>15</span>
             </div>
             <p id="moreInfo2" class="hidden">
-                Du sparar ungefär <b><span id="waterSavings2">0</span> liter vatten per duschtillfälle</b> genom att korta ner din duschtid med <span class="sliderValue2">1</span> minuter.
+                Du sparar ungefär <b><span id="waterSavings2">0</span> liter vatten per duschtillfälle</b> genom att korta ner din duschtid med <span id="sliderValueText2">1</span> minuter.
             </p>
         </div>
     </div>
@@ -566,6 +566,8 @@ function updateWaterSavings2() {
    
     sliderValue2.innerText = sliderVal2; 
     waterSavings2.innerText = savings2; 
+    document.getElementById("sliderValueText2").innerText = sliderVal2; 
+
 
     var sliderWidth2 = slider2.offsetWidth;
     var newLeft2 = ((sliderVal2 - 1) / 14) * sliderWidth2; 
