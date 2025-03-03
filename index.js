@@ -247,7 +247,7 @@ function generateHTML(data) {
     <div class="box" id="infoBox2">
         <h2>Duschar du länge?</h2>
         <p id="questionDuscha2" class="hidden" style="font-style: italic;">
-            Ange hur många minuter du kan korta ner din duschtid för att se hur mycket vatten du kan spara!
+            Ange hur många minuter du kan korta ner din duschtid och se hur mycket vatten du kan spara!
         </p>
         <div class="slider-container hidden" id="sliderContainer2">
             <input type="range" min="1" max="15" value="1" class="slider" id="waterSlider2">
