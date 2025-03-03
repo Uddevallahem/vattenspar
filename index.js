@@ -372,7 +372,7 @@ function generateHTML(data) {
     <div class="boxg" id="infoBox7">
         <h2>Spara pengar!</h2>
         <p id="questionDuscha7" class="hidden">
-            Har du individuell mätning och debitering (IMD) av ditt vatten? Då sparar du ungefär 0,1 krona per sparad liter vatten! Så om vi summerar alla liter du fyllt i rutorna ovan så blir din ekonomiska besparing <p id="totalSavingsText"></p> kronor!.
+            Har du individuell mätning och debitering (IMD) av ditt vatten? Då sparar du ungefär 0,1 krona per sparad liter vatten!
         </p>
      </div>
 
@@ -535,11 +535,6 @@ document.getElementById('infoBox7').addEventListener('click', function(event) {
     } else {
         questionDuscha.classList.remove('visible');
         questionDuscha.classList.add('hidden');
-    }
-
-        var valueBox = document.getElementById('valueBox7'); 
-    if (valueBox) {
-        valueBox.style.display = questionDuscha.classList.contains('hidden') ? 'none' : 'block';
     }
 });
 
@@ -740,36 +735,7 @@ updateWaterSavings4();
             });
 
 
-// Funktion för att summera alla besparingar
-function updateTotalSavings() {
-    // Summera besparingarna från alla sliders
-    const savings1 = parseInt(waterSavings.innerText) || 0;
-    const savings2 = parseInt(waterSavings2.innerText) || 0;
-    const savings3 = parseInt(waterSavings3.innerText) || 0;
-    const savings4 = parseInt(waterSavings4.innerText) || 0;
-    const savings5 = parseInt(document.getElementById('waterSavings5').innerText) || 0;
-    const savings6 = parseInt(document.getElementById('waterSavings6').innerText) || 0;
 
-    const totalSavings = savings1 + savings2 + savings3 + savings4 + savings5 + savings6;
-
-    // Multiplicera totalbesparingar med 0,1
-    const finalTotal = totalSavings * 0.1;
-    finalTotal = Math.round(finalTotal);
-
-    // Uppdatera HTML med summan av besparingarna
-    document.getElementById("totalSavingsText").innerText = finalTotal.toFixed(2);
-}
-
-// Kör funktionen för att uppdatera summan varje gång en slider ändras
-slider.addEventListener("input", updateTotalSavings);
-slider2.addEventListener("input", updateTotalSavings);
-slider3.addEventListener("input", updateTotalSavings);
-slider4.addEventListener("input", updateTotalSavings);
-document.getElementById('waterSlider5').addEventListener('input', updateTotalSavings);
-document.getElementById('waterSlider6').addEventListener('input', updateTotalSavings);
-
-// Kör även när sidan laddas för att få den första uppdateringen
-updateTotalSavings();
 
 
             </script>
