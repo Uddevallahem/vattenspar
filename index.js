@@ -89,7 +89,7 @@ function generateHTML(data) {
                 }
 
                 h3 {
-                    text-align: left;
+                    text-align: center;
                     font-family: 'Aleo', sans-serif;
                     color: #446F83;
                     font-size: 2rem;
@@ -166,7 +166,7 @@ function generateHTML(data) {
                 }
                                                  
                 #savingsText {
-                    text-align: left;
+                    text-align: center;
                     margin-top: 10px;
                     font-weight: bold;
                     color: #446F82;
