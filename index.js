@@ -616,7 +616,7 @@ function updateWaterSavings2() {
 
 
     var sliderWidth2 = slider2.offsetWidth;
-    var newLeft2 = ((sliderVal2 - 1) / 15) * sliderWidth2; 
+    var newLeft2 = ((sliderVal2) / 15) * sliderWidth2; 
     sliderValue2.style.left = newLeft2 + 'px'; 
 }
 
@@ -656,7 +656,7 @@ function updateWaterSavings3() {
     waterSavings3.innerText = savings3; 
 
     var sliderWidth3 = slider3.offsetWidth;
-    var newLeft3 = ((sliderVal3 - 1) / 8) * sliderWidth3; 
+    var newLeft3 = ((sliderVal3) / 8) * sliderWidth3; 
     sliderValue3.style.left = newLeft3 + 'px'; 
 }
 
@@ -697,7 +697,7 @@ function updateWaterSavings4() {
     waterSavings4.innerText = savings4; 
 
     var sliderWidth4 = slider4.offsetWidth;
-    var newLeft4 = ((sliderVal4 - 1) / 49) * sliderWidth4; 
+    var newLeft4 = ((sliderVal4) / 49) * sliderWidth4; 
     sliderValue4.style.left = newLeft4 + 'px'; 
 }
 
@@ -739,7 +739,7 @@ function updateWaterSavings5() {
     waterSavings5.innerText = savings5; 
 
     var sliderWidth5 = slider5.offsetWidth;
-    var newLeft5 = ((sliderVal5 - 1) / 14) * sliderWidth5; 
+    var newLeft5 = ((sliderVal5) / 14) * sliderWidth5; 
     sliderValue5.style.left = newLeft5 + 'px'; 
 }
 
@@ -781,7 +781,7 @@ function updateWaterSavings6() {
     waterSavings6.innerText = savings6; 
 
     var sliderWidth6 = slider6.offsetWidth;
-    var newLeft6 = ((sliderVal6 - 1) / 14) * sliderWidth6; 
+    var newLeft6 = ((sliderVal6) / 14) * sliderWidth6; 
     sliderValue6.style.left = newLeft6 + 'px'; 
 }
 
