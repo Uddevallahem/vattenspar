@@ -575,7 +575,7 @@ function updateWaterSavings() {
     waterSavings.innerText = savings; 
 
     var sliderWidth = slider.offsetWidth;
-    var newLeft = ((sliderVal) / 14) * sliderWidth; 
+    var newLeft = ((sliderVal) / 15) * sliderWidth; 
     sliderValue.style.left = newLeft + 'px'; 
 }
 
