@@ -116,6 +116,24 @@ function generateHTML(data) {
                 .box:hover {
                     background-color: #85A1AE;
                 }
+
+
+                .boxg {
+                    background-color: ##76967D;
+                    color: white;
+                    padding: 20px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    margin-top: 20px;
+                    width: 100%; /* Gör boxen responsiv */
+                    max-width: 400px; /* Maxbredd */
+                    box-sizing: border-box; /* Se till att padding inte överskrider maxbredden */
+                }
+                
+                .boxg:hover {
+                    background-color: #CDDAD3;
+                }
                 
                 .hidden {
                     display: none;
