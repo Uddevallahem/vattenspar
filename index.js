@@ -243,7 +243,7 @@ function generateHTML(data) {
 <!-- Här är det HTML-kommentarer -->
     
 
-             <h3>Har ni nya eller äldre vattenkranar?</h3>
+             <h3>Har ni äldre eller nya vattenkranar?</h3>
 <div class="radio-container">
     <label>
             <input type="radio" name="blandare" value="gammal" checked> Äldre
