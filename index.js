@@ -132,7 +132,7 @@ function generateHTML(data) {
                 }
                 
                 .boxg:hover {
-                    background-color: #CDDAD3;
+                    background-color: #8FAF96;
                 }
                 
                 .hidden {
