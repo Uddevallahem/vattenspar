@@ -81,6 +81,7 @@ function generateHTML(data) {
                     font-family: 'Aleo', sans-serif;
                     color: #446F83;
                     text-align: left;
+                    font-size: 2rem;
                 }
                 
                 h2 {
@@ -91,6 +92,7 @@ function generateHTML(data) {
                     text-align: left;
                     font-family: 'Aleo', sans-serif;
                     color: #446F83;
+                    font-size: 2rem;
                 }
                 
                 .container {
@@ -108,6 +110,7 @@ function generateHTML(data) {
                     margin-top: 20px;
                     width: 100%; /* Gör boxen responsiv */
                     max-width: 400px; /* Maxbredd */
+                    box-sizing: border-box; /* Se till att padding inte överskrider maxbredden */
                 }
                 
                 .box:hover {
@@ -176,22 +179,29 @@ function generateHTML(data) {
                         width: 90%;
                     }
                 }
-                
+
+                /* Justera storleken för mellanliggande skärmar */
                 @media (max-width: 900px) {              
                     .box {
                         width: 90%;
                     }
                 
+                    h1, h3 {
+                        font-size: 1.8rem; 
+                    }
                     .slider-container {
                         max-width: 350px;
                     }
                 }
-                
+
+                /* Justera storleken för små skärmar */
                 @media (max-width: 600px) {
                     body {
                         padding-top: 10px;
                     }
-                
+                    h1, h3 {
+                        font-size: 1.5rem; 
+                    }
                     .box {
                         width: 100%;
                         margin: 10px 0;
