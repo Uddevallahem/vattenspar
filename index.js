@@ -257,7 +257,7 @@ function generateHTML(data) {
                 <span>15</span>
             </div>
             <p id="moreInfo2" class="hidden">
-                Du sparar ungefär <b><span id="waterSavings2">0</span> liter vatten per duschtillfälle</b> genom att korta ner din duschtid med <span id="sliderValue2">1</span> minuter.
+                Du sparar ungefär <b><span id="waterSavings2">0</span> liter vatten per duschtillfälle</b> genom att korta ner din duschtid med <span class="sliderValue2">1</span> minuter.
             </p>
         </div>
     </div>
