@@ -528,27 +528,16 @@ document.getElementById('infoBox6').addEventListener('click', function(event) {
 });
 
 document.getElementById('infoBox7').addEventListener('click', function(event) {
-    if (event.target.id !== 'waterSlider7') {
-        var moreInfo = document.getElementById('moreInfo7');
-        var questionDuscha = document.getElementById('questionDuscha7');
-        var sliderContainer = document.getElementById('sliderContainer7');
-        if (moreInfo.classList.contains('hidden')) {
-            moreInfo.classList.remove('hidden');
-            moreInfo.classList.add('visible');
-            questionDuscha.classList.remove('hidden');
-            questionDuscha.classList.add('visible');
-            sliderContainer.classList.remove('hidden');
-            sliderContainer.classList.add('visible');
-        } else {
-            moreInfo.classList.remove('visible');
-            moreInfo.classList.add('hidden');
-            questionDuscha.classList.remove('visible');
-            questionDuscha.classList.add('hidden');
-            sliderContainer.classList.remove('visible');
-            sliderContainer.classList.add('hidden');
-        }
+    var questionDuscha = document.getElementById('questionDuscha7');
+        if (questionDuscha.classList.contains('hidden')) {
+        questionDuscha.classList.remove('hidden');
+        questionDuscha.classList.add('visible');
+    } else {
+        questionDuscha.classList.remove('visible');
+        questionDuscha.classList.add('hidden');
     }
 });
+
 
 
 
