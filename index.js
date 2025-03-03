@@ -369,7 +369,7 @@ function generateHTML(data) {
         </div>
     </div>
 
-    <div class="box" id="infoBox7">
+    <div class="boxg" id="infoBox7">
         <h2>Spara pengar!</h2>
         <p id="questionDuscha7" class="hidden">
             Har du individuell mätning och debitering (IMD) av ditt vatten? Då sparar du ungefär 1 krona per sparad liter vatten! Så i rutorna ovan kan du tänka kronor istället för liter.
