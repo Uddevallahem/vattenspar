@@ -536,6 +536,11 @@ document.getElementById('infoBox7').addEventListener('click', function(event) {
         questionDuscha.classList.remove('visible');
         questionDuscha.classList.add('hidden');
     }
+
+        var valueBox = document.getElementById('valueBox7'); 
+    if (valueBox) {
+        valueBox.style.display = questionDuscha.classList.contains('hidden') ? 'none' : 'block';
+    }
 });
 
 
