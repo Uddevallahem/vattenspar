@@ -246,10 +246,10 @@ function generateHTML(data) {
              <h3>Har ni nya eller äldre vattenkranar?</h3>
 <div class="radio-container">
     <label>
-        <input type="radio" name="blandare" value="ny" checked> Nya
+            <input type="radio" name="blandare" value="gammal" checked> Äldre
     </label>
     <label>
-        <input type="radio" name="blandare" value="gammal"> Äldre
+            <input type="radio" name="blandare" value="ny"> Nya
     </label>
 </div>
 
