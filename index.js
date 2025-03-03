@@ -281,7 +281,7 @@ function generateHTML(data) {
             Ange hur många minuter du kan korta ner din duschtid och se hur mycket vatten du kan spara!
         </p>
         <div class="slider-container hidden" id="sliderContainer2">
-            <input type="range" min="0" max="15" value="1" class="slider" id="waterSlider2">
+            <input type="range" min="0" max="15" value="0" class="slider" id="waterSlider2">
             <span class="slider-value" id="sliderValue2">1</span>
             <div class="slider-labels">
                 <span>0</span>
@@ -301,7 +301,7 @@ function generateHTML(data) {
             Hur många är ni i hushållet?
         </p>
         <div class="slider-container hidden" id="sliderContainer3">
-            <input type="range" min="0" max="8" value="1" class="slider" id="waterSlider3">
+            <input type="range" min="0" max="8" value="0" class="slider" id="waterSlider3">
             <span class="slider-value" id="sliderValue3">1</span>
             <div class="slider-labels">
                 <span>0</span>
@@ -319,7 +319,7 @@ function generateHTML(data) {
             Hur många duschar blir det i ert hushåll varje vecka?
         </p>
         <div class="slider-container hidden" id="sliderContainer4">
-            <input type="range" min="0" max="49" value="1" class="slider" id="waterSlider4">
+            <input type="range" min="0" max="49" value="0" class="slider" id="waterSlider4">
             <span class="slider-value" id="sliderValue4">1</span>
             <div class="slider-labels">
                 <span>0</span>
@@ -338,7 +338,7 @@ function generateHTML(data) {
             Hur många dagar tar det innan du felanmäler en läckande/rinnande toalett?
         </p>
         <div class="slider-container hidden" id="sliderContainer5">
-            <input type="range" min="0" max="14" value="1" class="slider" id="waterSlider5">
+            <input type="range" min="0" max="14" value="0" class="slider" id="waterSlider5">
             <span class="slider-value" id="sliderValue5">1</span>
             <div class="slider-labels">
                 <span>0</span>
@@ -357,7 +357,7 @@ function generateHTML(data) {
             Hur många dagar tar det innan du felanmäler en droppande vattenkran?
         </p>
         <div class="slider-container hidden" id="sliderContainer6">
-            <input type="range" min="0" max="14" value="1" class="slider" id="waterSlider6">
+            <input type="range" min="0" max="14" value="0" class="slider" id="waterSlider6">
             <span class="slider-value" id="sliderValue6">1</span>
             <div class="slider-labels">
                 <span>0</span>
