@@ -749,9 +749,10 @@ function updateTotalSavings() {
 
     // Multiplicera totalbesparingar med 0,1
     const finalTotal = totalSavings * 0.1;
+    finalTotal = Math.round(finalTotal);
 
     // Uppdatera HTML med summan av besparingarna
-    document.getElementById("totalSavingsText").innerText = "Summan av alla besparingar är " + finalTotal.toFixed(2);
+    document.getElementById("totalSavingsText").innerText = finalTotal.toFixed(2);
 }
 
 // Kör funktionen för att uppdatera summan varje gång en slider ändras
