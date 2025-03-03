@@ -261,10 +261,10 @@ function generateHTML(data) {
             Hur länge brukar du diska under rinnande vatten?
         </p>
         <div class="slider-container hidden" id="sliderContainer">
-            <input type="range" min="1" max="15" value="0" class="slider" id="waterSlider">
+            <input type="range" min="0" max="15" value="0" class="slider" id="waterSlider">
             <span class="slider-value" id="sliderValue">0</span>
             <div class="slider-labels">
-                <span>1</span>
+                <span>0</span>
                 <span>15</span>
             </div>
             <p id="moreInfo" class="hidden">
@@ -281,14 +281,14 @@ function generateHTML(data) {
             Ange hur många minuter du kan korta ner din duschtid och se hur mycket vatten du kan spara!
         </p>
         <div class="slider-container hidden" id="sliderContainer2">
-            <input type="range" min="1" max="15" value="1" class="slider" id="waterSlider2">
+            <input type="range" min="0" max="15" value="1" class="slider" id="waterSlider2">
             <span class="slider-value" id="sliderValue2">1</span>
             <div class="slider-labels">
-                <span>1</span>
+                <span>0</span>
                 <span>15</span>
             </div>
             <p id="moreInfo2" class="hidden">
-                Du sparar ungefär <b><span id="waterSavings2">0</span> liter vatten per duschtillfälle</b> genom att korta ner din duschtid med <span id="sliderValueText2">1</span> minuter.
+                Du sparar ungefär <b><span id="waterSavings2">0</span> liter vatten per duschtillfälle</b> genom att korta ner din duschtid med <span id="sliderValueText2">0</span> minuter.
             </p>
         </div>
     </div>
@@ -301,10 +301,10 @@ function generateHTML(data) {
             Hur många är ni i hushållet?
         </p>
         <div class="slider-container hidden" id="sliderContainer3">
-            <input type="range" min="1" max="8" value="1" class="slider" id="waterSlider3">
+            <input type="range" min="0" max="8" value="1" class="slider" id="waterSlider3">
             <span class="slider-value" id="sliderValue3">1</span>
             <div class="slider-labels">
-                <span>1</span>
+                <span>0</span>
                 <span>8</span>
             </div>
             <p id="moreInfo3" class="hidden">
@@ -319,10 +319,10 @@ function generateHTML(data) {
             Hur många duschar blir det i ert hushåll varje vecka?
         </p>
         <div class="slider-container hidden" id="sliderContainer4">
-            <input type="range" min="1" max="49" value="1" class="slider" id="waterSlider4">
+            <input type="range" min="0" max="49" value="1" class="slider" id="waterSlider4">
             <span class="slider-value" id="sliderValue4">1</span>
             <div class="slider-labels">
-                <span>1</span>
+                <span>0</span>
                 <span>49</span>
             </div>
             <p id="moreInfo4" class="hidden">
@@ -338,10 +338,10 @@ function generateHTML(data) {
             Hur många dagar tar det innan du felanmäler en läckande/rinnande toalett?
         </p>
         <div class="slider-container hidden" id="sliderContainer5">
-            <input type="range" min="1" max="14" value="1" class="slider" id="waterSlider5">
+            <input type="range" min="0" max="14" value="1" class="slider" id="waterSlider5">
             <span class="slider-value" id="sliderValue5">1</span>
             <div class="slider-labels">
-                <span>1</span>
+                <span>0</span>
                 <span>14</span>
             </div>
             <p id="moreInfo5" class="hidden">
@@ -357,10 +357,10 @@ function generateHTML(data) {
             Hur många dagar tar det innan du felanmäler en droppande vattenkran?
         </p>
         <div class="slider-container hidden" id="sliderContainer6">
-            <input type="range" min="1" max="14" value="1" class="slider" id="waterSlider6">
+            <input type="range" min="0" max="14" value="1" class="slider" id="waterSlider6">
             <span class="slider-value" id="sliderValue6">1</span>
             <div class="slider-labels">
-                <span>1</span>
+                <span>0</span>
                 <span>14</span>
             </div>
             <p id="moreInfo6" class="hidden">
@@ -575,7 +575,7 @@ function updateWaterSavings() {
     waterSavings.innerText = savings; 
 
     var sliderWidth = slider.offsetWidth;
-    var newLeft = ((sliderVal - 1) / 14) * sliderWidth; 
+    var newLeft = ((sliderVal - 1) / 15) * sliderWidth; 
     sliderValue.style.left = newLeft + 'px'; 
 }
 
@@ -616,7 +616,7 @@ function updateWaterSavings2() {
 
 
     var sliderWidth2 = slider2.offsetWidth;
-    var newLeft2 = ((sliderVal2 - 1) / 14) * sliderWidth2; 
+    var newLeft2 = ((sliderVal2 - 1) / 15) * sliderWidth2; 
     sliderValue2.style.left = newLeft2 + 'px'; 
 }
 
@@ -656,7 +656,7 @@ function updateWaterSavings3() {
     waterSavings3.innerText = savings3; 
 
     var sliderWidth3 = slider3.offsetWidth;
-    var newLeft3 = ((sliderVal3 - 1) / 7) * sliderWidth3; 
+    var newLeft3 = ((sliderVal3 - 1) / 8) * sliderWidth3; 
     sliderValue3.style.left = newLeft3 + 'px'; 
 }
 
@@ -697,7 +697,7 @@ function updateWaterSavings4() {
     waterSavings4.innerText = savings4; 
 
     var sliderWidth4 = slider4.offsetWidth;
-    var newLeft4 = ((sliderVal4 - 1) / 48) * sliderWidth4; 
+    var newLeft4 = ((sliderVal4 - 1) / 49) * sliderWidth4; 
     sliderValue4.style.left = newLeft4 + 'px'; 
 }
 
@@ -715,7 +715,7 @@ updateWaterSavings4();
                 var sliderValueElement5 = document.getElementById('sliderValue5');
                 sliderValueElement5.innerText = sliderValue5;
                 var sliderWidth5 = slider5.offsetWidth;
-                var newLeft5 = ((sliderValue5 - 1) / 13) * sliderWidth5; // Justera för det nya intervallet 1-8
+                var newLeft5 = ((sliderValue5 - 1) / 14) * sliderWidth5; // Justera för det nya intervallet 1-8
                 sliderValueElement5.style.left = newLeft5 + 'px';
             });
 
@@ -730,7 +730,7 @@ updateWaterSavings4();
                 var sliderValueElement6 = document.getElementById('sliderValue6');
                 sliderValueElement6.innerText = sliderValue6;
                 var sliderWidth6 = slider6.offsetWidth;
-                var newLeft6 = ((sliderValue6 - 1) / 13) * sliderWidth6; // Justera för det nya intervallet 1-8
+                var newLeft6 = ((sliderValue6 - 1) / 14) * sliderWidth6; // Justera för det nya intervallet 1-8
                 sliderValueElement6.style.left = newLeft6 + 'px';
             });
 
