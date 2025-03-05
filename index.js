@@ -121,10 +121,10 @@ function generateHTML(data) {
                     transform: translateY(-2px); /* Liten upphöjning */
                 }
                 
-                .box:active {
-                    background-color: #2b3e4b; /* Ännu mörkare vid klick */
-                    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Mindre skugga för tryckeffekt */
-                    transform: translateY(2px); /* Knappen trycks ner */
+                .box:active:not(:has(.slider:active)) {
+                    background-color: #2b3e4b;
+                    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+                    transform: translateY(2px);
                 }
 
                 .boxg {
