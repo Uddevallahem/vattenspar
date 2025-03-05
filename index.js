@@ -265,12 +265,12 @@ function generateHTML(data) {
              
              <div class="container">   
     <div class="box" id="infoBox">
-        <h2>Diska</h2>
+        <h2>Diska smart</h2>
         <p id="questionDuscha" class="hidden">
             <u>Diskar du under rinnande vatten?</u> 
         </p>
         <p id="fraga" class="hidden">
-            Dra i reglaget nedan för att ange hur länge du brukar diska under rinnande vatten och se hur mycket vatten du kan spara.
+            Dra i reglaget nedan för att ange <b>hur många minuter</b> du brukar diska under rinnande vatten. Se direkt hur mycket vatten du kan spara genom att istället fylla diskhon.
         </p>
         <div class="slider-container hidden" id="sliderContainer">
             <input type="range" min="0" max="15" value="0" class="slider" id="waterSlider">
@@ -280,7 +280,7 @@ function generateHTML(data) {
                 <span>15</span>
             </div>
             <p id="moreInfo" class="hidden">
-                Du sparar upp till <b><span id="waterSavings">0</span> liter vatten per disktillfälle</b> om du fyller din diskho med vatten istället för att diska under rinnande vatten.
+                Du kan spara upp till <b><span id="waterSavings">0</span> liter vatten varje gång du diskar!</b> 
             </p>
         </div>
     </div>
@@ -288,9 +288,9 @@ function generateHTML(data) {
 
 
     <div class="box" id="infoBox2">
-        <h2>Duschar du länge?</h2>
+        <h2>Kortare dusch</h2>
         <p id="questionDuscha2" class="hidden" style="font-style: italic;">
-            Ange hur många minuter du kan korta ner din duschtid och se hur mycket vatten du kan spara!
+            Hur många minuter kan du korta ner din duschtid? Dra i reglaget och se direkt hur mycket vatten du sparar!
         </p>
         <div class="slider-container hidden" id="sliderContainer2">
             <input type="range" min="0" max="15" value="0" class="slider" id="waterSlider2">
@@ -310,7 +310,10 @@ function generateHTML(data) {
     <div class="box" id="infoBox3">
         <h2>Borsta tänderna</h2>
         <p id="questionDuscha3" class="hidden" style="font-style: italic;">
-            Hur många är ni i hushållet?
+            <u>Borstar ni tänderna med vattenkranen på? </u>
+        </p>
+        <p id="fraga3" class="hidden">
+            Dra i reglaget för att ange <b> hur många personer ni är i hushållet</b> och se hur mycket vatten ni kan spara varje dag genom att stänga av kranen när ni borstar tänderna.
         </p>
         <div class="slider-container hidden" id="sliderContainer3">
             <input type="range" min="0" max="8" value="0" class="slider" id="waterSlider3">
@@ -320,15 +323,19 @@ function generateHTML(data) {
                 <span>8</span>
             </div>
             <p id="moreInfo3" class="hidden">
-                Du sparar ungefär <b><span id="waterSavings3">0</span> liter vatten per dag</b> genom att stänga av vattnet när ni borstar tänderna jämfört med att ha vattnet på under tiden.
+                Ni kan spara  ungefär <b><span id="waterSavings3">0</span> liter vatten per dag</b> genom att stänga av vattnet istället för att låta det rinna.
             </p>
         </div>
     </div>
 
+
     <div class="box" id="infoBox4">
-        <h2>Tvål & Schampo</h2>
+        <h2>Duschpaus</h2>
         <p id="questionDuscha4" class="hidden" style="font-style: italic;">
-            Hur många duschar blir det i ert hushåll varje vecka?
+            <u>Är vattnet på i duschen när ni använder tvål & schampo?</u>
+        </p>
+        <p id="fraga3" class="hidden">
+            Dra i reglaget för att ange hur många duschar det blir i ert hushåll varje vecka och se hur mycket vatten ni kan spara genom att stänga av vattnet medan ni tvålar in er och schamponerar håret.
         </p>
         <div class="slider-container hidden" id="sliderContainer4">
             <input type="range" min="0" max="49" value="0" class="slider" id="waterSlider4">
@@ -338,7 +345,7 @@ function generateHTML(data) {
                 <span>49</span>
             </div>
             <p id="moreInfo4" class="hidden">
-                Ni sparar ungefär <b><span id="waterSavings4">0</span> liter vatten per vecka</b> om ni stänger av vattnet i duschen under tiden ni tvålar/schamponerar er.
+                Ni kan spara ungefär <b><span id="waterSavings4">0</span> liter vatten per vecka</b> genom att pausa vattnet i duschen.
             </p>
         </div>
     </div>
@@ -347,7 +354,10 @@ function generateHTML(data) {
     <div class="box" id="infoBox5">
         <h2>Läckande WC</h2>
         <p id="questionDuscha5" class="hidden" style="font-style: italic;">
-            Hur många dagar tar det innan du felanmäler en läckande/rinnande toalett?
+            <u> Hur snabbt felanmäler du en läckande toalett? </u>
+        </p>
+        <p id="fraga5" class="hidden">
+            Dra i reglaget för att ange hur många dagar det brukar ta innan du felanmäler en läckande eller rinnande toalett och se hur mycket vatten som kan förbrukas under den tiden.
         </p>
         <div class="slider-container hidden" id="sliderContainer5">
             <input type="range" min="0" max="14" value="0" class="slider" id="waterSlider5">
@@ -357,7 +367,7 @@ function generateHTML(data) {
                 <span>14</span>
             </div>
             <p id="moreInfo5" class="hidden">
-                Under den här tiden har det förbrukats ungefär <b><span id="waterSavings5">0</span> liter vatten</b>.
+                Under den här tiden kan det ha förbrukats ungefär <b><span id="waterSavings5">0</span> liter vatten</b>.
             </p>
         </div>
     </div>
@@ -366,7 +376,10 @@ function generateHTML(data) {
     <div class="box" id="infoBox6">
         <h2>Droppande kran</h2>
         <p id="questionDuscha6" class="hidden" style="font-style: italic;">
-            Hur många dagar tar det innan du felanmäler en droppande vattenkran?
+            <u> Hur snabbt felanmäler du en droppande vattenkran? </u>
+        </p>
+        <p id="fraga6" class="hidden">
+            Dra i reglaget för att ange hur många dagar det brukar ta innan du felanmäler en dropande vattenkran och se hur mycket vatten som kan förbrukas under den tiden.
         </p>
         <div class="slider-container hidden" id="sliderContainer6">
             <input type="range" min="0" max="14" value="0" class="slider" id="waterSlider6">
@@ -376,7 +389,7 @@ function generateHTML(data) {
                 <span>14</span>
             </div>
             <p id="moreInfo6" class="hidden">
-                Under den här tiden har det förbrukats ungefär <b><span id="waterSavings6">0</span> liter vatten </b>.
+                Under den här tiden kan det ha förbrukats ungefär <b><span id="waterSavings6">0</span> liter vatten </b>.
             </p>
         </div>
     </div>
@@ -453,12 +466,15 @@ document.getElementById('infoBox3').addEventListener('click', function(event) {
     if (event.target.id !== 'waterSlider3') {
         var moreInfo = document.getElementById('moreInfo3');
         var questionDuscha = document.getElementById('questionDuscha3');
+        var fraga3 = document.getElementById('fraga3');
         var sliderContainer = document.getElementById('sliderContainer3');
         if (moreInfo.classList.contains('hidden')) {
             moreInfo.classList.remove('hidden');
             moreInfo.classList.add('visible');
             questionDuscha.classList.remove('hidden');
             questionDuscha.classList.add('visible');
+            fraga3.classList.remove('hidden');
+            fraga3.classList.add('visible'); 
             sliderContainer.classList.remove('hidden');
             sliderContainer.classList.add('visible');
         } else {
@@ -466,6 +482,8 @@ document.getElementById('infoBox3').addEventListener('click', function(event) {
             moreInfo.classList.add('hidden');
             questionDuscha.classList.remove('visible');
             questionDuscha.classList.add('hidden');
+            fraga3.classList.remove('visible');
+            fraga3.classList.add('hidden');
             sliderContainer.classList.remove('visible');
             sliderContainer.classList.add('hidden');
         }
@@ -507,6 +525,8 @@ document.getElementById('infoBox5').addEventListener('click', function(event) {
             moreInfo.classList.add('visible');
             questionDuscha.classList.remove('hidden');
             questionDuscha.classList.add('visible');
+            fraga5.classList.remove('hidden');
+            fraga5.classList.add('visible'); 
             sliderContainer.classList.remove('hidden');
             sliderContainer.classList.add('visible');
         } else {
@@ -514,6 +534,8 @@ document.getElementById('infoBox5').addEventListener('click', function(event) {
             moreInfo.classList.add('hidden');
             questionDuscha.classList.remove('visible');
             questionDuscha.classList.add('hidden');
+            fraga5.classList.remove('visible');
+            fraga5.classList.add('hidden');
             sliderContainer.classList.remove('visible');
             sliderContainer.classList.add('hidden');
         }
@@ -531,6 +553,8 @@ document.getElementById('infoBox6').addEventListener('click', function(event) {
             moreInfo.classList.add('visible');
             questionDuscha.classList.remove('hidden');
             questionDuscha.classList.add('visible');
+            fraga6.classList.remove('hidden');
+            fraga6.classList.add('visible'); 
             sliderContainer.classList.remove('hidden');
             sliderContainer.classList.add('visible');
         } else {
@@ -538,6 +562,8 @@ document.getElementById('infoBox6').addEventListener('click', function(event) {
             moreInfo.classList.add('hidden');
             questionDuscha.classList.remove('visible');
             questionDuscha.classList.add('hidden');
+            fraga6.classList.remove('visible');
+            fraga6.classList.add('hidden');
             sliderContainer.classList.remove('visible');
             sliderContainer.classList.add('hidden');
         }
