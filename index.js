@@ -265,7 +265,7 @@ function generateHTML(data) {
              
              <div class="container">   
     <div class="box" id="infoBox">
-        <h2>Diska smart</h2>
+        <h2>Diska</h2>
         <p id="questionDuscha" class="hidden">
             <u>Diskar du under rinnande vatten?</u> 
         </p>
