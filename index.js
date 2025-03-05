@@ -270,7 +270,7 @@ function generateHTML(data) {
             <u>Diskar du under rinnande vatten?</u> 
         </p>
         <p id="fraga" class="hidden">
-            Ange hur länge du brukar diska under rinnande vatten för att se hur mycket vatten du kan spara.
+            Dra i reglaget nedan för att ange hur länge du brukar diska under rinnande vatten och se hur mycket vatten du kan spara.
         </p>
         <div class="slider-container hidden" id="sliderContainer">
             <input type="range" min="0" max="15" value="0" class="slider" id="waterSlider">
