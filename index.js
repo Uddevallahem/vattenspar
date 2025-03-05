@@ -468,7 +468,6 @@ document.getElementById('infoBox3').addEventListener('click', function(event) {
     if (event.target.id !== 'waterSlider3') {
         var moreInfo = document.getElementById('moreInfo3');
         var questionDuscha = document.getElementById('questionDuscha3');
-        var fraga3 = document.getElementById('fraga3');
         var sliderContainer = document.getElementById('sliderContainer3');
         if (moreInfo.classList.contains('hidden')) {
             moreInfo.classList.remove('hidden');
@@ -497,7 +496,6 @@ document.getElementById('infoBox4').addEventListener('click', function(event) {
     if (event.target.id !== 'waterSlider4') {
         var moreInfo = document.getElementById('moreInfo4');
         var questionDuscha = document.getElementById('questionDuscha4');
-        var fraga4 = document.getElementById('fraga4');
         var sliderContainer = document.getElementById('sliderContainer4');
         if (moreInfo.classList.contains('hidden')) {
             moreInfo.classList.remove('hidden');
@@ -526,7 +524,6 @@ document.getElementById('infoBox5').addEventListener('click', function(event) {
     if (event.target.id !== 'waterSlider5') {
         var moreInfo = document.getElementById('moreInfo5');
         var questionDuscha = document.getElementById('questionDuscha5');
-        var fraga5 = document.getElementById('fraga5');
         var sliderContainer = document.getElementById('sliderContainer5');
         if (moreInfo.classList.contains('hidden')) {
             moreInfo.classList.remove('hidden');
@@ -555,7 +552,6 @@ document.getElementById('infoBox6').addEventListener('click', function(event) {
     if (event.target.id !== 'waterSlider6') {
         var moreInfo = document.getElementById('moreInfo6');
         var questionDuscha = document.getElementById('questionDuscha6');
-        var fraga6 = document.getElementById('fraga6');
         var sliderContainer = document.getElementById('sliderContainer6');
         if (moreInfo.classList.contains('hidden')) {
             moreInfo.classList.remove('hidden');
