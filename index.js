@@ -652,7 +652,7 @@ function updateWaterSavings2() {
 
     // HÄR GÖRS FUNKTIONERNA
     if (selectedBlandare === "ny") {
-        savings2 = sliderVal2 * 7,5;  
+        savings2 = sliderVal2 * 7kk,5;  
     } else if (selectedBlandare === "gammal") {
         savings2 = sliderVal2 * 12; 
     }
@@ -735,9 +735,9 @@ function updateWaterSavings4() {
 
     // HÄR GÖRS FUNKTIONERNA
     if (selectedBlandare === "ny") {
-        savings4 = sliderVal4 * 7,5 *1,5;  
+        savings4 = sliderVal4 * 11,25;  
     } else if (selectedBlandare === "gammal") {
-        savings4 = sliderVal4 * 12 * 1,5; 
+        savings4 = sliderVal4 * 18; 
     }
 
     savings4 = Math.max(savings4, 0);
