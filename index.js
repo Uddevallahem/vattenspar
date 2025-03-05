@@ -265,9 +265,9 @@ function generateHTML(data) {
              
              <div class="container">   
     <div class="box" id="infoBox">
-        <h2>Diska för hand</h2>
+        <h2>Diska</h2>
         <p id="questionDuscha" class="hidden">
-            Hur länge brukar du diska under rinnande vatten?
+            Diskar du under rinnande vatten? Ange hur länge du brukar diska under rinnande vatten för att se hur mycket vatten du kan spara.
         </p>
         <div class="slider-container hidden" id="sliderContainer">
             <input type="range" min="0" max="15" value="0" class="slider" id="waterSlider">
