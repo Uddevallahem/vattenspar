@@ -104,11 +104,11 @@ function generateHTML(data) {
                     background-color: #446F83;
                     color: white;
                     padding: 20px;
-                    border: none;
-                    border-radius: 10px;
+                    border: 2px solid #365463;
+                    border-radius: 12px;
                     cursor: pointer;
-                    transition: all 0.3s ease;
-                    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Lätt skugga */
+                    transition: all 0.2s ease;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Lätt skugga */
                     margin-top: 20px;
                     width: 100%; /* Gör boxen responsiv */
                     max-width: 400px; /* Maxbredd */
@@ -118,8 +118,14 @@ function generateHTML(data) {
                 .box:hover {
                     background-color: #85A1AE;
                     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Ökad skugga vid hover */
+                    transform: translateY(-2px); /* Liten upphöjning */
                 }
-
+                
+                .box:active {
+                    background-color: #2b3e4b; /* Ännu mörkare vid klick */
+                    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Mindre skugga för tryckeffekt */
+                    transform: translateY(2px); /* Knappen trycks ner */
+                }
 
                 .boxg {
                     background-color: #76967D;
