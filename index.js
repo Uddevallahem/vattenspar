@@ -127,13 +127,6 @@ function generateHTML(data) {
                     transform: translateY(2px); /* Knappen trycks ner */
                 }
 
-
-                .box:active:not(.slider-container) {
-                    background-color: #2b3e4b; /* Ännu mörkare vid klick */
-                    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Mindre skugga för tryckeffekt */
-                    transform: translateY(2px); /* Knappen trycks ner */
-                }
-
                 .boxg {
                     background-color: #76967D;
                     color: white;
@@ -812,15 +805,13 @@ function updateWaterSavings6() {
 updateWaterSavings6();
 
 
-document.querySelector('.box').addEventListener('mousedown', function(event) {
-    if (!event.target.closest('.slider-container')) {
-        this.classList.add('active');
-    }
+const box = document.querySelector(".box");
+const slider = document.querySelector(".slider");
+
+slider.addEventListener("mousedown", (event) => {
+    event.stopPropagation(); // Förhindrar att .box får :active
 });
 
-document.querySelector('.box').addEventListener('mouseup', function() {
-    this.classList.remove('active');
-});
 
 
 
