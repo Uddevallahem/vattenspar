@@ -805,14 +805,6 @@ function updateWaterSavings6() {
 updateWaterSavings6();
 
 
-const box = document.querySelector(".box");
-const slider = document.querySelector(".slider");
-
-slider.addEventListener("mousedown", (event) => {
-    event.stopPropagation(); // Förhindrar att .box får :active
-});
-
-
 
 
 
