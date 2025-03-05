@@ -104,9 +104,11 @@ function generateHTML(data) {
                     background-color: #446F83;
                     color: white;
                     padding: 20px;
-                    border-radius: 5px;
+                    border: none;
+                    border-radius: 10px;
                     cursor: pointer;
                     transition: all 0.3s ease;
+                    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Lätt skugga */
                     margin-top: 20px;
                     width: 100%; /* Gör boxen responsiv */
                     max-width: 400px; /* Maxbredd */
@@ -115,6 +117,7 @@ function generateHTML(data) {
                 
                 .box:hover {
                     background-color: #85A1AE;
+                    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Ökad skugga vid hover */
                 }
 
 
