@@ -396,14 +396,6 @@ function generateHTML(data) {
         </div>
     </div>
 
-    <div class="boxg" id="infoBox7">
-        <h2>Spara pengar!</h2>
-        <p id="questionDuscha7" class="hidden">
-            Har du individuell mätning och debitering (IMD) av ditt vatten? Då sparar du ungefär 0,1 krona per sparad liter vatten!
-        </p>
-     </div>
-
-
 
     
 </div>
@@ -578,20 +570,6 @@ document.getElementById('infoBox6').addEventListener('click', function(event) {
         }
     }
 });
-
-document.getElementById('infoBox7').addEventListener('click', function(event) {
-    var questionDuscha = document.getElementById('questionDuscha7');
-        if (questionDuscha.classList.contains('hidden')) {
-        questionDuscha.classList.remove('hidden');
-        questionDuscha.classList.add('visible');
-    } else {
-        questionDuscha.classList.remove('visible');
-        questionDuscha.classList.add('hidden');
-    }
-});
-
-
-
 
         
 // Nummer 1
