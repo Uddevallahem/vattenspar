@@ -289,7 +289,7 @@ function generateHTML(data) {
 
     <div class="box" id="infoBox2">
         <h2>Kortare dusch</h2>
-        <p id="questionDuscha2" class="hidden" style="font-style: italic;">
+        <p id="questionDuscha2" class="hidden">
             Hur många minuter kan du korta ner din duschtid? Dra i reglaget och se direkt hur mycket vatten du sparar!
         </p>
         <div class="slider-container hidden" id="sliderContainer2">
