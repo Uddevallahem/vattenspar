@@ -264,6 +264,8 @@ function generateHTML(data) {
 
              
              <div class="container">   
+
+             
     <div class="box" id="infoBox">
         <h2>Diska</h2>
         <p id="questionDuscha" class="hidden">
@@ -309,7 +311,7 @@ function generateHTML(data) {
 
     <div class="box" id="infoBox3">
         <h2>Borsta tänderna</h2>
-        <p id="questionDuscha3" class="hidden" style="font-style: italic;">
+        <p id="questionDuscha3" class="hidden">
             <u>Borstar ni tänderna med vattenkranen på? </u>
         </p>
         <p id="fraga3" class="hidden">
@@ -331,11 +333,11 @@ function generateHTML(data) {
 
     <div class="box" id="infoBox4">
         <h2>Duschpaus</h2>
-        <p id="questionDuscha4" class="hidden" style="font-style: italic;">
+        <p id="questionDuscha4" class="hidden">
             <u>Är vattnet på i duschen när ni använder tvål & schampo?</u>
         </p>
         <p id="fraga3" class="hidden">
-            Dra i reglaget för att ange hur många duschar det blir i ert hushåll varje vecka och se hur mycket vatten ni kan spara genom att stänga av vattnet medan ni tvålar in er och schamponerar håret.
+            Dra i reglaget för att ange <b>hur många duschar det blir i ert hushåll varje vecka</b> och se hur mycket vatten ni kan spara genom att stänga av vattnet medan ni tvålar in er och schamponerar håret.
         </p>
         <div class="slider-container hidden" id="sliderContainer4">
             <input type="range" min="0" max="49" value="0" class="slider" id="waterSlider4">
@@ -353,11 +355,11 @@ function generateHTML(data) {
 
     <div class="box" id="infoBox5">
         <h2>Läckande WC</h2>
-        <p id="questionDuscha5" class="hidden" style="font-style: italic;">
+        <p id="questionDuscha5" class="hidden">
             <u> Hur snabbt felanmäler du en läckande toalett? </u>
         </p>
         <p id="fraga5" class="hidden">
-            Dra i reglaget för att ange hur många dagar det brukar ta innan du felanmäler en läckande eller rinnande toalett och se hur mycket vatten som kan förbrukas under den tiden.
+            Dra i reglaget för att ange <b>hur många dagar det brukar ta innan du felanmäler</b> en läckande eller rinnande toalett och se hur mycket vatten som kan förbrukas under den tiden.
         </p>
         <div class="slider-container hidden" id="sliderContainer5">
             <input type="range" min="0" max="14" value="0" class="slider" id="waterSlider5">
@@ -375,11 +377,11 @@ function generateHTML(data) {
 
     <div class="box" id="infoBox6">
         <h2>Droppande kran</h2>
-        <p id="questionDuscha6" class="hidden" style="font-style: italic;">
+        <p id="questionDuscha6" class="hidden">
             <u> Hur snabbt felanmäler du en droppande vattenkran? </u>
         </p>
         <p id="fraga6" class="hidden">
-            Dra i reglaget för att ange hur många dagar det brukar ta innan du felanmäler en dropande vattenkran och se hur mycket vatten som kan förbrukas under den tiden.
+            Dra i reglaget för att ange <b>hur många dagar det brukar ta innan du felanmäler</b> en dropande vattenkran och se hur mycket vatten som kan förbrukas under den tiden.
         </p>
         <div class="slider-container hidden" id="sliderContainer6">
             <input type="range" min="0" max="14" value="0" class="slider" id="waterSlider6">
