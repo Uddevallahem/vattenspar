@@ -336,7 +336,7 @@ function generateHTML(data) {
         <p id="questionDuscha4" class="hidden">
             <u>Är vattnet på i duschen när ni använder tvål & schampo?</u>
         </p>
-        <p id="fraga3" class="hidden">
+        <p id="fraga4" class="hidden">
             Dra i reglaget för att ange <b>hur många duschar det blir i ert hushåll varje vecka</b> och se hur mycket vatten ni kan spara genom att stänga av vattnet medan ni tvålar in er och schamponerar håret.
         </p>
         <div class="slider-container hidden" id="sliderContainer4">
@@ -497,12 +497,15 @@ document.getElementById('infoBox4').addEventListener('click', function(event) {
     if (event.target.id !== 'waterSlider4') {
         var moreInfo = document.getElementById('moreInfo4');
         var questionDuscha = document.getElementById('questionDuscha4');
+        var fraga4 = document.getElementById('fraga4');
         var sliderContainer = document.getElementById('sliderContainer4');
         if (moreInfo.classList.contains('hidden')) {
             moreInfo.classList.remove('hidden');
             moreInfo.classList.add('visible');
             questionDuscha.classList.remove('hidden');
             questionDuscha.classList.add('visible');
+            fraga4.classList.remove('hidden');
+            fraga4.classList.add('visible'); 
             sliderContainer.classList.remove('hidden');
             sliderContainer.classList.add('visible');
         } else {
@@ -510,6 +513,8 @@ document.getElementById('infoBox4').addEventListener('click', function(event) {
             moreInfo.classList.add('hidden');
             questionDuscha.classList.remove('visible');
             questionDuscha.classList.add('hidden');
+            fraga4.classList.remove('visible');
+            fraga4.classList.add('hidden');
             sliderContainer.classList.remove('visible');
             sliderContainer.classList.add('hidden');
         }
@@ -521,6 +526,7 @@ document.getElementById('infoBox5').addEventListener('click', function(event) {
     if (event.target.id !== 'waterSlider5') {
         var moreInfo = document.getElementById('moreInfo5');
         var questionDuscha = document.getElementById('questionDuscha5');
+        var fraga5 = document.getElementById('fraga5');
         var sliderContainer = document.getElementById('sliderContainer5');
         if (moreInfo.classList.contains('hidden')) {
             moreInfo.classList.remove('hidden');
@@ -549,6 +555,7 @@ document.getElementById('infoBox6').addEventListener('click', function(event) {
     if (event.target.id !== 'waterSlider6') {
         var moreInfo = document.getElementById('moreInfo6');
         var questionDuscha = document.getElementById('questionDuscha6');
+        var fraga6 = document.getElementById('fraga6');
         var sliderContainer = document.getElementById('sliderContainer6');
         if (moreInfo.classList.contains('hidden')) {
             moreInfo.classList.remove('hidden');
