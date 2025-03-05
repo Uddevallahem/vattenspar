@@ -128,7 +128,7 @@ function generateHTML(data) {
                 }
 
 
-                .box:active:not(.slider) {
+                .box:active:not(.slider-container) {
                     background-color: #2b3e4b; /* Ännu mörkare vid klick */
                     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Mindre skugga för tryckeffekt */
                     transform: translateY(2px); /* Knappen trycks ner */
