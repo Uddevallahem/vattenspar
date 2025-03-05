@@ -812,6 +812,15 @@ function updateWaterSavings6() {
 updateWaterSavings6();
 
 
+document.querySelector('.box').addEventListener('mousedown', function(event) {
+    if (!event.target.closest('.slider-container')) {
+        this.classList.add('active');
+    }
+});
+
+document.querySelector('.box').addEventListener('mouseup', function() {
+    this.classList.remove('active');
+});
 
 
 
