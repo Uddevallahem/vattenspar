@@ -269,7 +269,7 @@ function generateHTML(data) {
         <p id="questionDuscha" class="hidden">
             <u>Diskar du under rinnande vatten?</u> 
         </p>
-        <p>
+        <p id="questionDuscha2" class="hidden">
             Ange hur länge du brukar diska under rinnande vatten för att se hur mycket vatten du kan spara.
         </p>
         <div class="slider-container hidden" id="sliderContainer">
@@ -400,12 +400,15 @@ function generateHTML(data) {
     if (event.target.id !== 'waterSlider') {
         var moreInfo = document.getElementById('moreInfo');
         var questionDuscha = document.getElementById('questionDuscha');
+        var questionDuscha2 = document.getElementById('questionDuscha');
         var sliderContainer = document.getElementById('sliderContainer');
         if (moreInfo.classList.contains('hidden')) {
             moreInfo.classList.remove('hidden');
             moreInfo.classList.add('visible');
             questionDuscha.classList.remove('hidden');
             questionDuscha.classList.add('visible');
+            questionDuscha2.classList.remove('hidden');
+            questionDuscha2.classList.add('visible');
             sliderContainer.classList.remove('hidden');
             sliderContainer.classList.add('visible');
         } else {
@@ -413,6 +416,8 @@ function generateHTML(data) {
             moreInfo.classList.add('hidden');
             questionDuscha.classList.remove('visible');
             questionDuscha.classList.add('hidden'); 
+            questionDuscha2.classList.remove('visible');
+            questionDuscha2.classList.add('hidden'); 
             sliderContainer.classList.remove('visible');
             sliderContainer.classList.add('hidden');
         }
